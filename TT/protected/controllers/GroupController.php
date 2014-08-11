@@ -36,12 +36,9 @@
              if($group->save()){
                  if(!empty($seluserid)){
                      $i = 1;
-<<<<<<< HEAD
-=======
                      $oldGroupRelation = IMGroupRelation::model()->deleteAll(array(
                         'condition' => 'groupId = '.$group->groupId,
                      ));
->>>>>>> 427ec866d736f3b672658e82782376f93ee9fa1b
                      foreach($seluserid as $k => $v){
                          if(!empty($v)){
                              $groupRelation = new IMGroupRelation();
@@ -55,10 +52,6 @@
                              }
                          }
                      }
-<<<<<<< HEAD
-
-=======
->>>>>>> 427ec866d736f3b672658e82782376f93ee9fa1b
                  }
 
                  if($countsel == $i){
