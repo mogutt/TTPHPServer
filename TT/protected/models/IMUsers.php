@@ -36,11 +36,11 @@ class IMUsers extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('title, uname, pwd, avatar ,sex, telphone, jobNumber, isDeleted, created, updated ', 'required'),
+			array('title, uname, pwd, avatar ,sex, telphone, jobNumber,  created, updated ', 'required'),
 			array('title', 'length', 'max'=>100),
             array('uname,nickName', 'length', 'max'=>40),
             array('avatar,position,mail', 'length', 'max'=>255),
-            array('id, title, uname, pwd, avatar ,sex, telphone, jobNumber, isDeleted, created, updated ', 'safe'),
+            array('id, title, uname, pwd, avatar ,sex, telphone, jobNumber , created, updated ', 'safe'),
 		);
 	}
 
@@ -75,7 +75,7 @@ class IMUsers extends CActiveRecord
             'telphone' => 'Telphone',
             'mail' => 'Mail',
             'jobnumber' => 'Jobnumber',
-            'isdeleted' => 'Isdeleted',
+
             'created' => 'Created',
             'updated' => 'Updated',
 		);
