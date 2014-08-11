@@ -35,7 +35,7 @@
         <td><?php echo $v['groupName'];?></td>
         <td><?php echo $v['avatar'];?></td>
         <td><?php echo $v['adesc'];?></td>
-        <td><?php echo $v['createUserId'];?></td>
+        <td><?php echo $this->getUserInfo($v['createUserId']);?></td>
         <td><?php echo $this->groupType($v['groupType']);?></td>
         <td><?php echo $v['memberCnt'];?></td>
         <td><?php echo date('Y-m-d',$v['created']);?></td>
