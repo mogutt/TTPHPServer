@@ -62,7 +62,7 @@
                     ?>
                 <tr>
                     <td>
-                        <input type="checkbox" value="<?php echo $v['id'];?>" <?php if($selUser[$k]['userId'] == $v['id']){echo 'checked';}?>>
+                        <input type="checkbox" value="<?php echo $v['userId'];?>" <?php if($selUser[$k]['userid'] == $v['userId']){echo 'checked';}?>>
                     </td>
                     <td>
                         <?php
@@ -78,10 +78,7 @@
                     <?php
                     }
                     ?>
-
             </table>
-
-
     </div>
 
     <div class="form-group">
