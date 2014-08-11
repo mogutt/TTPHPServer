@@ -62,7 +62,7 @@
                     ?>
                 <tr>
                     <td>
-                        <input type="checkbox" value="<?php echo $v['userId'];?>" <?php if($selUser[$k]['userid'] == $v['userId']){echo 'checked';}?>>
+                        <input type="checkbox" value="<?php echo $v['userId'];?>" <?php if(isset($selUser) && $selUser[$k]['userid'] == $v['userId']){echo 'checked';}?>>
                     </td>
                     <td>
                         <?php
