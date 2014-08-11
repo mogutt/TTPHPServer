@@ -4,7 +4,7 @@
 	 * 
 	 */
 	return array(
-        'index' => 'site/index',
+        'index' => 'site/login',
         'login' => 'site/login',
         'loginout' => 'site/loginout',
 
