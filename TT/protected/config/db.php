@@ -9,9 +9,9 @@
  */
 return array(
     'class'=>'CDbConnection',
-    'connectionString' => 'mysql:host=127.0.0.1;dbname=IM',
+    'connectionString' => 'mysql:host=192.168.2.76;dbname=macim',
     'emulatePrepare' => true,
-    'username' => 'root',
+    'username' => 'qihe2222',
     'password' => '123456',
     'charset' => 'utf8',
 );

@@ -123,7 +123,6 @@
          if(empty($id))
              return;
          $group = IMGroup::model()->findByPk($id);
-
          if(Yii::app()->request->isPostRequest){
 
              $data = Yii::app()->request->getPost('data');
@@ -139,7 +138,6 @@
          $groupSelUserId = IMGroupRelation::model()->findAll(array(
              'condition' => 'groupId = '.$id,
          ));
-
          $users = Yii::app()->cache->get('cache_user');
          $this->render('add',array(
              'data' => $group,

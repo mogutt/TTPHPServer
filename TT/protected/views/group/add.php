@@ -43,6 +43,8 @@
         </div>
     </div>
     <div class="form-group">
+<?php
+?>
         <label for="exampleInputPassword1">群组人员</label>&nbsp;<a href="#" id="showtable">添加用户</a>
         <input type="hidden" id="adduserid" name="data[seluserid]">
             <table class="table" id="showtablediv">
@@ -62,7 +64,7 @@
                     ?>
                 <tr>
                     <td>
-                        <input type="checkbox" value="<?php echo $v['userId'];?>" <?php if(isset($selUser) && $selUser[$k]['userid'] == $v['userId']){echo 'checked';}?>>
+                        <input type="checkbox" value="<?php echo $v['userId'];?>" <?php if(isset($selUser[$k]->userId) && $selUser[$k]->userId == $v['userId']){echo 'checked';}?>>
                     </td>
                     <td>
                         <?php
