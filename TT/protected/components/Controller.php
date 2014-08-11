@@ -102,6 +102,23 @@ class Controller extends CController
     }
 
     /**
+     * 获取管理员缓存
+     */
+    public function getAdminCache(){
+        $adminInfo = IMAdmin::model()->findAll(array(
+            'condition' => 'status = 1',
+        ));
+        foreach($adminInfo as $k => $v){
+            $cache[$k]['id'] = $v->id;
+            $cache[$k]['uname'] = $v->uname;
+            $cache[$k]['pwd'] = $v->pwd;
+        }
+        if(!empty($cache))
+            Yii::app()->cache->set('cache_admininfo',$cache);
+        return $cache;
+    }
+
+    /**
      * 获取部门级别
      *
      */
@@ -119,7 +136,24 @@ class Controller extends CController
                 return $v['title'];
             }
         }
+    }
 
+    /**
+     * 判断用户身份
+     */
+    public function getUserInfo($userId){
+        if($userId == 0){
+            return '管理员';
+        }
+        $users = Yii::app()->cache->get('cache_user');
+        if(empty($users)){
+            $users = $this->getUserCache();
+        }
+        foreach($users as $k => $v){
+            if($v['userId'] == $userId){
+                return $v['uname'];
+            }
+        }
 
     }
 }

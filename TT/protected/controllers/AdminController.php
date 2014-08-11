@@ -29,16 +29,7 @@
                      $oldadmin->updated = time();
                      if($oldadmin->update()){
                              echo '<div class="alert alert-success" role="alert">添加成功</div>';
-                             $adminInfo = IMAdmin::model()->findAll(array(
-                                 'condition' => 'status = 1',
-                             ));
-                             foreach($adminInfo as $k => $v){
-                                 $cache[$k]['id'] = $v->id;
-                                 $cache[$k]['uname'] = $v->uname;
-                                 $cache[$k]['pwd'] = $v->pwd;
-                             }
-                             if(!empty($cache))
-                                 Yii::app()->cache->set('cache_admininfo',$cache);
+                             $this->getAdminCache();
 
                          }else{
                              echo $admin->getErrors();
