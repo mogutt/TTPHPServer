@@ -31,7 +31,7 @@
         <select class="select">
             <?php
                 foreach($users as $v){
-                    echo '<option value="'.$v['id'].'">'.$v['uname'].'</option>';
+                    echo '<option value="'.$v['userId'].'">'.$v['uname'].'</option>';
                 }
             ?>
         </select>
