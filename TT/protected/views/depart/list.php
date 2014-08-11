@@ -16,7 +16,6 @@
     <thead>
     <tr>
         <td>ID</td>
-        <td>原始部门ID</td>
         <td>部门名称</td>
         <td>部门描述</td>
         <td>上级部门</td>
@@ -29,7 +28,6 @@
 ?>
     <tr>
         <td><?php echo $v['id'];?></td>
-        <td><?php echo $v['departId'];?></td>
         <td><?php echo $v['title'];?></td>
         <td><?php echo $v['desc'];?></td>
         <td><?php if($v['pid'] == 0){echo '暂无';};?></td>

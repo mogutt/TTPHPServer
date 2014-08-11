@@ -72,7 +72,6 @@ class Controller extends CController
         ));
         foreach($departs as $k => $v){
             $cache[$k]['id'] = $v->id;
-            $cache[$k]['departId'] = $v->departId;
             $cache[$k]['title'] = $v->title;
             $cache[$k]['desc'] = $v->desc;
             $cache[$k]['pid'] = $v->pid;
