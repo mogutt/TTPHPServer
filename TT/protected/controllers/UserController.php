@@ -13,7 +13,7 @@
 
         if(Yii::app()->request->isPostRequest){
 
-            $user = new IMUser();
+            $user = new IMUsers();
             $data = Yii::app()->request->getPost('data');
             $user->attributes = $data;
             $user->pwd = md5($data['pwd']);
@@ -49,14 +49,14 @@
       */
      public function actionList($page = 1){
 
-        $count = IMUser::model()->count();
+        $count = IMUsers::model()->count();
         $pager = new CPagination($count);
         $pager->pageSize = Yii::app()->params['perPage'];
 
         if(empty($page))
             $pager->currentPage = 1;
 
-        $list = IMUser::model()->findAll(array(
+        $list = IMUsers::model()->findAll(array(
             'order' => 'id DESC',
             'offset' => $pager->getCurrentPage()*$pager->getPageSize(),
             'limit' => $pager->pageSize,
@@ -82,7 +82,7 @@
              return;
 
 
-         $count = IMUser::model()->deleteByPk($id);
+         $count = IMUsers::model()->deleteByPk($id);
          if($count > 0){
              echo '<div class="alert alert-success" role="alert">添加成功</div>';
          }else{
@@ -98,7 +98,7 @@
 
          if(empty($id))
              return;
-         $user = IMUser::model()->findByPk($id);
+         $user = IMUsers::model()->findByPk($id);
 
          if(Yii::app()->request->isPostRequest){
 
@@ -119,7 +119,7 @@
              if($user->update()){
                  echo '<div class="alert alert-success" role="alert">修改成功</div>';
                  //更新用户之后更新用户缓存
-                 $users = IMUser::model()->findAll(array(
+                 $users = IMUsers::model()->findAll(array(
                      'condition' => 'status = 1',
                  ));
 

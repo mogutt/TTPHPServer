@@ -47,7 +47,7 @@
             ?>
         </select>
     </div>
-  
+
     <div class="form-group">
         <label for="exampleInputPassword1">手机号码</label>
         <input type="text" class="form-control" id="exampleInputPassword1" placeholder="输入手机号码" name="data[telphone]" value="<?php $str = !empty($data->telphone) ? $data->telphone : ''; echo $str; ?>">

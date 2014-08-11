@@ -89,7 +89,7 @@ class Controller extends CController
      *
      */
     public function getUserCache(){
-        $users = IMUser::model()->findAll(array(
+        $users = IMUsers::model()->findAll(array(
             'condition' => 'status = 1',
         ));
         foreach($users as $k => $v){
