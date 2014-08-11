@@ -93,8 +93,7 @@ class Controller extends CController
             'condition' => 'status = 1',
         ));
         foreach($users as $k => $v){
-            $cache[$k]['id'] = $v->id;
-            $cache[$k]['userId'] = $v->userId;
+            $cache[$k]['userId'] = $v->id;
             $cache[$k]['title'] = $v->title;
             $cache[$k]['uname'] = $v->uname;
         }

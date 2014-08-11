@@ -118,20 +118,7 @@
              if($user->update()){
                  echo '<div class="alert alert-success" role="alert">修改成功</div>';
                  //更新用户之后更新用户缓存
-                 $users = IMUsers::model()->findAll(array(
-                     'condition' => 'status = 1',
-                 ));
-
-                 foreach($users as $k => $v){
-                     $cache[$k]['id'] = $v->id;
-                     $cache[$k]['userId'] = $v->userId;
-                     $cache[$k]['title'] = $v->title;
-                     $cache[$k]['uname'] = $v->uname;
-                 }
-
-                 if(!empty($cache))
-                     Yii::app()->cache->set('cache_user',$cache);
-                 unset($cache);
+                 $this->getUserCache();
              }else{
                  echo '<div class="alert alert-danger" role="alert">修改失败</div>';
              }
