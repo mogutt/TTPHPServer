@@ -84,6 +84,7 @@
              $pager->currentPage = 1;
 
          $list = IMGroup::model()->findAll(array(
+             'condition' => 'status = 1',
              'order' => 'groupId DESC',
              'offset' => $pager->getCurrentPage()*$pager->getPageSize(),
              'limit' => $pager->pageSize,
