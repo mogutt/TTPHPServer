@@ -27,24 +27,16 @@
             if($user->save())
             {
                 echo '<div class="alert alert-success" role="alert">添加成功</div>';
-                $users = IMUser::model()->findAll(array(
-                    'condition' => 'status = 1',
-                ));
-
-                foreach($users as $k => $v){
-                    $cache[$k]['id'] = $v->id;
-                    $cache[$k]['userId'] = $v->userId;
-                    $cache[$k]['title'] = $v->title;
-                    $cache[$k]['uname'] = $v->uname;
-                }
-
-                if(!empty($cache))
-                    Yii::app()->cache->set('cache_user',$cache);
+                $this->getUserCache();
             }else{
                 echo '<div class="alert alert-danger" role="alert">添加失败</div>';
             }
         }
          $departs = Yii::app()->cache->get('cache_depart');
+         if(empty($departs))
+         {
+            $departs = $this->getDepartCache();
+         }
 
          $this->render('add',array(
              'departs' => $departs,

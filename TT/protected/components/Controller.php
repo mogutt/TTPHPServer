@@ -62,6 +62,45 @@ class Controller extends CController
         }
     }
 
+    /**
+     * 获取缓存
+     *
+     */
+    public function getDepartCache(){
+        $departs = IMDepartment::model()->findAll(array(
+            'condition' => 'status = 1',
+        ));
+        foreach($departs as $k => $v){
+            $cache[$k]['id'] = $v->id;
+            $cache[$k]['departId'] = $v->departId;
+            $cache[$k]['title'] = $v->title;
+            $cache[$k]['desc'] = $v->desc;
+            $cache[$k]['pid'] = $v->pid;
+            $cache[$k]['leader'] = $v->leader;
+        }
+        if(!empty($cache))
+            Yii::app()->cache->set('cache_depart',$cache);
 
+        return $cache;
+    }
+
+    /**
+     * 获取用户缓存
+     *
+     */
+    public function getUserCache(){
+        $users = IMUser::model()->findAll(array(
+            'condition' => 'status = 1',
+        ));
+        foreach($users as $k => $v){
+            $cache[$k]['id'] = $v->id;
+            $cache[$k]['userId'] = $v->userId;
+            $cache[$k]['title'] = $v->title;
+            $cache[$k]['uname'] = $v->uname;
+        }
+        if(!empty($cache))
+            Yii::app()->cache->set('cache_user',$cache);
+        return $cache;
+    }
 
 }

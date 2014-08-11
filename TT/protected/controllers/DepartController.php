@@ -27,27 +27,16 @@
              if($depart->save())
              {
                  echo '<div class="alert alert-success" role="alert">添加成功</div>';
-                 $departs = IMDepartment::model()->findAll(array(
-                     'condition' => 'status = 1',
-                 ));
-
-                 foreach($departs as $k => $v){
-                     $cache[$k]['id'] = $v->id;
-                     $cache[$k]['departId'] = $v->departId;
-                     $cache[$k]['title'] = $v->title;
-                     $cache[$k]['desc'] = $v->desc;
-                     $cache[$k]['pid'] = $v->pid;
-                     $cache[$k]['leader'] = $v->leader;
-                 }
-
-                 if(!empty($cache))
-                     Yii::app()->cache->set('cache_depart',$cache);
+                 $this->getDepartCache();
              }else{
                  echo $depart->getErrors();
                  echo '<div class="alert alert-danger" role="alert">添加失败</div>';
              }
          }
          $users = Yii::app()->cache->get('cache_user');
+         if(empty($users)){
+            $users = $this->getUserCache();
+         }
 
          $this->render('add',array(
              'users' => $users,
