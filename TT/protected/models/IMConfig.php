@@ -36,9 +36,9 @@ class IMConfig extends CActiveRecord
         // NOTE: you should only define rules for those attributes that
         // will receive user inputs.
         return array(
-            array('cname, value,status , created, updated ', 'required'),
+            array('cname, value , created, updated ', 'required'),
 
-            array('id, cname, value, status, created, updated ', 'safe'),
+            array('id, cname, value, created, updated ', 'safe'),
         );
     }
 
@@ -63,7 +63,7 @@ class IMConfig extends CActiveRecord
             'id' => 'Id',
             'cname' => 'Cname',
             'value' => 'Value',
-            'status' => 'Status',
+
             'created' => 'Created',
             'updated' => 'Updated',
         );

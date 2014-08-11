@@ -25,7 +25,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="#">TT后台管理</a>
+                <a class="navbar-brand" href="/">TT后台管理</a>
             </div>
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">

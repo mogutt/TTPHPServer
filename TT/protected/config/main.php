@@ -30,7 +30,7 @@ return array(
 
         ),
     ),
-	'defaultController'=>'site/index',
+	'defaultController'=>'site/login',
     'language' => 'zh_cn',
 
 	'components'=>array(
