@@ -101,4 +101,25 @@ class Controller extends CController
         return $cache;
     }
 
+    /**
+     * 获取部门级别
+     *
+     */
+    public function getDepartLevel($pid){
+        if($pid == 0){
+            return '父级部门';
+        }
+        $departInfo = Yii::app()->cache->get('cache_depart');
+        if(empty($departInfo))
+        {
+            $departInfo = $this->getDepartCache();
+        }
+        foreach($departInfo as $k => $v){
+            if($v['id'] == $pid){
+                return $v['title'];
+            }
+        }
+
+
+    }
 }

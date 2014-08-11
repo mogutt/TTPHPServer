@@ -30,7 +30,7 @@
         <td><?php echo $v['id'];?></td>
         <td><?php echo $v['title'];?></td>
         <td><?php echo $v['desc'];?></td>
-        <td><?php if($v['pid'] == 0){echo '暂无';};?></td>
+        <td><?php echo $this->getDepartLevel($v['pid']);?></td>
         <td><?php echo $this->showStatus($v['status']);?></td>
         <td>
             <a href="/depart/edit/<?php echo $v['id'];?>"><button type="button" class="btn btn-info">修改</button></a>
