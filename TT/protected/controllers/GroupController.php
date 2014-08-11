@@ -36,10 +36,6 @@
              if($group->save()){
                  if(!empty($seluserid)){
                      $i = 1;
-                     $oldGroupRelation = IMGroupRelation::model()->deleteAll(array(
-                        'condition' => 'groupId = '.$group->groupId,
-                     ));
-                     if($oldGroupRelation > 0){
                      foreach($seluserid as $k => $v){
                          if(!empty($v)){
                              $groupRelation = new IMGroupRelation();
@@ -53,7 +49,7 @@
                              }
                          }
                      }
-                     }
+
                  }
 
                  if($countsel == $i){
@@ -131,13 +127,52 @@
          if(Yii::app()->request->isPostRequest){
 
              $data = Yii::app()->request->getPost('data');
-             $group->attributes = $data;
-             $time = time();
-             $group->updated = $time;
-             if($group->update()){
-                 echo '<div class="alert alert-success" role="alert">修改成功</div>';
-             }else{
-                 echo '<div class="alert alert-danger" role="alert">修改失败</div>';
+             try{
+                 $group->attributes = $data;
+                 if(!empty($data['avatar'])){
+                     $group->avatar = $this->upload('data[avatar]');
+                 }else{
+                     $group->avatar = '/avatar/avatar_group_default.jpg';
+                 }
+                 if(!empty($data['seluserid'])){
+                     $seluserid = explode(',',$data['seluserid']);
+                     $countsel = count($seluserid);
+                 }
+                 $group->memberCnt = $countsel;
+                 $group->updated = time();
+                 if($group->save()){
+                     if(!empty($seluserid)){
+                         $i = 1;
+                         $oldGroupRelation = IMGroupRelation::model()->deleteAll(array(
+                             'condition' => 'groupId = '.$group->groupId,
+                         ));
+
+                         foreach($seluserid as $k => $v){
+                             if(!empty($v)){
+                                 $groupRelation = new IMGroupRelation();
+                                 $groupRelation->groupId = $group->groupId;
+                                 $groupRelation->userId = $v;
+                                 $groupRelation->groupType = $group->groupType;
+                                 $groupRelation->status = 1;
+                                 $groupRelation->created = $group->created;
+                                 if($groupRelation->save()){
+                                     $i++;
+                                 }
+                             }
+                         }
+
+                     }
+
+                     if($countsel == $i){
+                         echo '<div class="alert alert-success" role="alert">添加成功</div>';
+                     }
+
+                 }else{
+                     echo '<div class="alert alert-danger" role="alert">添加失败</div>';
+                 }
+
+             }catch(Exception $e){
+
              }
          }
          $groupSelUserId = IMGroupRelation::model()->findAll(array(

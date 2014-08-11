@@ -152,6 +152,8 @@ class Controller extends CController
         foreach($users as $k => $v){
             if($v['userId'] == $userId){
                 return $v['uname'];
+            }else{
+                return '未知用户';
             }
         }
 
