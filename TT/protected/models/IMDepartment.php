@@ -38,7 +38,7 @@ class IMDepartment extends CActiveRecord
         return array(
             array('title, pid, leader, status , created, updated ', 'required'),
             array('title', 'length', 'max'=>100),
-            array('id, title, departId, desc, pid ,leader, status, created, updated ', 'safe'),
+            array('id, title, desc, pid ,leader, status, created, updated ', 'safe'),
         );
     }
 
@@ -62,7 +62,6 @@ class IMDepartment extends CActiveRecord
         return array(
             'id' => 'Id',
             'title' => 'Title',
-            'departId' => 'DepartId',
             'desc' => 'Desc',
             'pid' => 'Pid',
             'leader' => 'Leader',

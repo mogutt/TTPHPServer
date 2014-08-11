@@ -79,12 +79,13 @@
          if(empty($id))
              return;
 
+         $depart = IMDepartment::model()->findByPk($id);
+         $depart->status = 0;
 
-         $count = IMDepartment::model()->deleteByPk($id);
-         if($count > 0){
-             echo '<div class="alert alert-success" role="alert">添加成功</div>';
+         if($depart->save()){
+             echo '<div class="alert alert-success" role="alert">删除成功</div>';
          }else{
-             echo '<div class="alert alert-success" role="alert">添加成功</div>';
+             echo '<div class="alert alert-danger" role="alert">删除失败</div>';
          }
 
      }
@@ -108,20 +109,7 @@
              $depart->updated = $time;
              if($depart->update()){
                  echo '<div class="alert alert-success" role="alert">修改成功</div>';
-                 $departs = IMDepartment::model()->findAll(array(
-                     'condition' => 'status = 1',
-                 ));
-
-                 foreach($departs as $k => $v){
-                     $cache[$k]['id'] = $v->id;
-                     $cache[$k]['departId'] = $v->departId;
-                     $cache[$k]['title'] = $v->title;
-                     $cache[$k]['desc'] = $v->desc;
-                     $cache[$k]['pid'] = $v->pid;
-                     $cache[$k]['leader'] = $v->leader;
-                 }
-                 if(!empty($cache))
-                     Yii::app()->cache->set('cache_depart',$cache);
+                 $this->getDepartCache();
              }else{
                  echo '<div class="alert alert-danger" role="alert">修改失败</div>';
              }

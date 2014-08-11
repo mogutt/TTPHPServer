@@ -79,13 +79,13 @@
 
          if(empty($id))
              return;
+         $user = IMUsers::model()->findByPk($id);
+         $user->status = 0;
 
-
-         $count = IMUsers::model()->deleteByPk($id);
-         if($count > 0){
-             echo '<div class="alert alert-success" role="alert">添加成功</div>';
+         if($user->save()){
+             echo '<div class="alert alert-success" role="alert">删除成功</div>';
          }else{
-             echo '<div class="alert alert-success" role="alert">添加成功</div>';
+             echo '<div class="alert alert-danger" role="alert">删除失败</div>';
          }
 
      }
