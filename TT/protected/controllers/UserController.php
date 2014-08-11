@@ -18,7 +18,6 @@
             $user->attributes = $data;
             $user->pwd = md5($data['pwd']);
             $user->avatar = $this->upload('data[avatar]');
-            $user->isDeleted = 0;
             $time = time();
             $user->status = $data['status'];
             $user->created = $time;
