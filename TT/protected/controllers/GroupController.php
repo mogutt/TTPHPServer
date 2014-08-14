@@ -149,6 +149,7 @@
                  }else{
                      $group->avatar = '/avatar/avatar_group_default.jpg';
                  }
+                 $countsel = 0;
                  if(!empty($data['seluserid'])){
                      $seluserid = explode(',',$data['seluserid']);
                      $countsel = count($seluserid);
