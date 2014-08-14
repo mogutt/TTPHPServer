@@ -59,7 +59,7 @@
 				if(!empty($users)){
 					foreach($users as $k => $v){
 			?>			
-                                <option value="<?php echo $v['userId'];?>" <?php if(in_array($v['userId'],$selUsers)){echo 'selected="selected"';}?>><?php echo $v['uname'];?></option>
+                                <option value="<?php echo $v['userId'];?>" <?php if(isset($selUsers) && in_array($v['userId'],$selUsers)){echo 'selected="selected"';}?>><?php echo $v['uname'];?></option>
 			<?php
 					}
 				}
