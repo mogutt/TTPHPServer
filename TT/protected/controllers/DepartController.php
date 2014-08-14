@@ -48,7 +48,9 @@
       */
      public function actionList($page = 1){
 
-         $count = IMDepartment::model()->count();
+         $count = IMDepartment::model()->count(array(
+             'condition' => 'status = 0',
+         ));
          $pager = new CPagination($count);
          $pager->pageSize = Yii::app()->params['perPage'];
          if(empty($page))

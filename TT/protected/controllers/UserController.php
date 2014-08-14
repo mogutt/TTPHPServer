@@ -18,6 +18,9 @@
             $user->attributes = $data;
             $user->pwd = md5($data['pwd']);
             $user->avatar = $this->upload('data[avatar]');
+            if(empty($user->avatar)){
+                $user->avatar = Yii::app()->params['avatar'];
+            }
             $time = time();
             $user->status = $data['status'];
             $user->created = $time;
@@ -47,7 +50,9 @@
       */
      public function actionList($page = 1){
 
-        $count = IMUsers::model()->count();
+        $count = IMUsers::model()->count(array(
+            'condition' => 'status = 0',
+        ));
         $pager = new CPagination($count);
         $pager->pageSize = Yii::app()->params['perPage'];
 

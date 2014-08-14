@@ -21,10 +21,9 @@
             try{
              $group = new IMGroup();
              $group->attributes = $data;
-             if(!empty($data['avatar'])){
-                 $group->avatar = $this->upload('data[avatar]');
-             }else{
-                 $group->avatar = '/avatar/avatar_group_default.jpg';
+             $group->avatar = $this->upload('data[avatar]');
+             if(empty($group->avatar)){
+                 $group->avatar = Yii::app()->params['avatar'];
              }
              $seluserid = array();
              $countsel = 0;
@@ -80,7 +79,9 @@
       */
      public function actionList($page = 1){
 
-         $count = IMGroup::model()->count();
+         $count = IMGroup::model()->count(array(
+            'condition' => 'status = 0',
+         ));
          $pager = new CPagination($count);
          $pager->pageSize = Yii::app()->params['perPage'];
          if(empty($page))
