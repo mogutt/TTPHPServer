@@ -8,6 +8,11 @@
  * Desc: 
  */
 ?>
+<style>
+    .uploadclass{
+        width:80px;
+    }
+</style>
 <form role="form" method="post" enctype="multipart/form-data">
     <div class="form-group">
         <label for="exampleInputEmail1">用户标题</label>
@@ -32,7 +37,7 @@
         <?php
             if(!empty($data->avatar)){
         ?>
-            <img src="<?php echo $data->avatar;?>">
+            <img src="<?php echo $data->avatar;?>" class="uploadclass">
         <?php
             }
         ?>
