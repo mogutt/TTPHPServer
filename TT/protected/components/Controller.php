@@ -53,10 +53,10 @@ class Controller extends CController
      */
     public function showStatus($type){
         switch($type){
-            case 1:
+            case 0:
                 return '正常';
                 break;
-            case 0:
+            case 1:
                 return '禁用';
                 break;
         }
@@ -68,7 +68,7 @@ class Controller extends CController
      */
     public function getDepartCache(){
         $departs = IMDepartment::model()->findAll(array(
-            'condition' => 'status = 1',
+            'condition' => 'status = 0',
         ));
         foreach($departs as $k => $v){
             $cache[$k]['id'] = $v->id;
@@ -89,7 +89,7 @@ class Controller extends CController
      */
     public function getUserCache(){
         $users = IMUsers::model()->findAll(array(
-            'condition' => 'status = 1',
+            'condition' => 'status = 0',
         ));
         foreach($users as $k => $v){
             $cache[$k]['userId'] = $v->id;
@@ -106,7 +106,7 @@ class Controller extends CController
      */
     public function getAdminCache(){
         $adminInfo = IMAdmin::model()->findAll(array(
-            'condition' => 'status = 1',
+            'condition' => 'status = 0',
         ));
         foreach($adminInfo as $k => $v){
             $cache[$k]['id'] = $v->id;
@@ -156,6 +156,30 @@ class Controller extends CController
                 return '未知用户';
             }
         }
+    }
+
+    /**
+     * curl模块
+     * $site curl的接口url
+     * $userList “user_list”: [1,2,3,4,5,6]
+     * $groupName urlEncode
+     */
+    public function sendGroupInterface($groupId,$userList,$groupName){
+
+        $domain = Yii::app()->params['sendGroupInfodomain'];
+
+        $curlPost = 'group_id='.$groupId.'&
+                    group_name='.$userList.'&
+                    user_list='.urlencode($groupName);
+        $ch = curl_init();//初始化curl
+        curl_setopt($ch,CURLOPT_URL,$domain);//抓取指定网页
+        curl_setopt($ch, CURLOPT_HEADER, 0);//设置header
+        curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);//要求结果为字符串且输出到屏幕上
+        curl_setopt($ch, CURLOPT_POST, 1);//post提交方式
+        curl_setopt($ch, CURLOPT_POSTFIELDS, $curlPost);
+        $data = curl_exec($ch);//运行curl
+        curl_close($ch);
 
     }
+
 }

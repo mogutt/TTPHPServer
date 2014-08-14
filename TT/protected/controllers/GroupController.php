@@ -29,6 +29,7 @@
              if(!empty($data['seluserid'])){
                 $seluserid = explode(',',$data['seluserid']);
                 $countsel = count($seluserid);
+                $userList = implode(',',$seluserid);
              }
              $group->memberCnt = $countsel;
              $group->created = time();
@@ -36,10 +37,10 @@
              if($group->save()){
                  if(!empty($seluserid)){
                      $i = 1;
-                     $oldGroupRelation = IMGroupRelation::model()->deleteAll(array(
+                     IMGroupRelation::model()->deleteAll(array(
                         'condition' => 'groupId = '.$group->groupId,
                      ));
-                     foreach($seluserid as $k => $v){
+                     foreach($seluserid as $v){
                          if(!empty($v)){
                              $groupRelation = new IMGroupRelation();
                              $groupRelation->groupId = $group->groupId;
@@ -53,8 +54,8 @@
                          }
                      }
                  }
-
                  if($countsel == $i){
+                     $this->sendGroupInterface($group->groupId,$userList,$group->groupName);
                      echo '<div class="alert alert-success" role="alert">添加成功</div>';
                  }
 

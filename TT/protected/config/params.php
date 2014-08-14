@@ -18,5 +18,8 @@ return array(
     'perPage' => 10,
     'uploadPath' => dirname(Yii::app()->BasePath).'uploadImage',
     'site' => 'www.tt.tt',
+    //创建群组时跟server端通信,发送群组内容
+    'sendGroupInfodomain' => 'http://122.225.68.125:9800/query/createNormalGroup',
+
 
 );
