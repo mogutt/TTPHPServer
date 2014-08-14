@@ -50,7 +50,7 @@
 <?php
 ?>
         <label for="exampleInputPassword1">群组人员</label>&nbsp;<a href="#" id="showtable">添加用户</a>
-        <input type="hidden" id="adduserid" name="data[seluserid]">
+        <input type="hidden" id="adduserid" name="data[seluserid]" value="<?php if(isset($selUsers)){echo $selUsers;}?>">
             <table class="table" id="showtablediv">
                 <tr>
                     <td>

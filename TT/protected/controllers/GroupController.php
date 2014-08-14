@@ -146,9 +146,9 @@
              $data = Yii::app()->request->getPost('data');
              try{
                  $group->attributes = $data;
-                 if(!empty($data['avatar'])){
+                 if(!empty($data['avatar']) && $group->avatar != $data['avatar']){
                      $group->avatar = $this->upload('data[avatar]');
-                 }else{
+                 }elseif(empty($data['avatar'])){
                      $group->avatar = '/avatar/avatar_group_default.jpg';
                  }
                  $countsel = 0;
@@ -175,7 +175,9 @@
                                  $groupRelation->created = $group->created;
                                  if($groupRelation->save()){
                                      $i++;
-                                 }
+                                 }else{
+				    var_dump($groupRelation->getErrors());
+				 }
                              }
                          }
 
@@ -190,6 +192,7 @@
 
                  }else{
                      echo '<div class="alert alert-danger" role="alert">添加失败</div>';
+	var_dump($group->getErrors());
                  }
 
              }catch(Exception $e){
@@ -199,15 +202,24 @@
             $transaction->commit ();
          }catch(Exception $e){
              $transaction->rollback();
+		
          }
          $groupSelUserId = IMGroupRelation::model()->findAll(array(
              'condition' => 'groupId = '.$id,
          ));
          $users = Yii::app()->cache->get('cache_user');
+	 if(!empty($groupSelUserId)){
+		$selUsers = array();
+		foreach($groupSelUserId as $v){
+		        $selUsers[] = $v->userId;	
+		}
+		$selUsers = implode(',',$selUsers);
+	 }
          $this->render('add',array(
              'data' => $group,
              'users' => $users,
              'selUser' => $groupSelUserId,
+	     'selUsers' => $selUsers,
          ));
      }
 
