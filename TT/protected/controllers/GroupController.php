@@ -90,10 +90,12 @@
              'offset' => $pager->getCurrentPage()*$pager->getPageSize(),
              'limit' => $pager->pageSize,
          ));
-         foreach($list as $v){
-             $data[] = $v->attributes;
+         $data = array();
+         if(!empty($list)){
+             foreach($list as $v){
+                 $data[] = $v->attributes;
+             }
          }
-
          $this->render('list',array(
              'list' => $data,
              'pager' => $pager,
