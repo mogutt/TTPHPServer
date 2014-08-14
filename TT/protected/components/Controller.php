@@ -30,11 +30,19 @@ class Controller extends CController
         $domain = Yii::app()->params['uploadSite'];
 
         $image = CUploadedFile::getInstanceByName($filename);
+
+        if(empty($image)){
+            return '';
+        }
+
         $name = Yii::app()->params['uploadPath'].'/'.mt_rand(0,99999).$image->name;
-        print_r($image);exit;
+
+        if(!in_array($image->type,array('image/jpeg','image/jpg','image/png'))){
+            return '';
+        }
 
 
-        $curlPost = '';
+        $curlPost = $image;
         $ch = curl_init();//初始化curl
         curl_setopt($ch,CURLOPT_URL,$domain);//抓取指定网页
         curl_setopt($ch, CURLOPT_HEADER, 0);//设置header

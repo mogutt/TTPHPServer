@@ -22,5 +22,8 @@ return array(
     'sendGroupInfodomain' => 'http://122.225.68.125:9800/query/createNormalGroup',
     //图片上传接口域名
     'uploadSite' => 'http://122.225.68.125:8001',
+    //默认头像地址
+    'avatar' => '/images/avatar_default.jpg',
+
 
 );
