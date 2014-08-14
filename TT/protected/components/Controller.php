@@ -42,8 +42,7 @@ class Controller extends CController
         }
 	//图片文件上传调用接口
 	$data = array('txt' => '@'.$name);
-	$url = 'http://122.225.68.125:8001/';
-	$ch = curl_init($url);
+	$ch = curl_init($domain);
         curl_setopt($ch, CURLOPT_HEADER, 0);//设置header
         curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);//要求结果为字符串且输出到屏幕上
         curl_setopt($ch, CURLOPT_POST, 1);//post提交方式
