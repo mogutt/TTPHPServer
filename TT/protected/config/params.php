@@ -20,6 +20,7 @@ return array(
     'site' => 'www.tt.tt',
     //创建群组时跟server端通信,发送群组内容
     'sendGroupInfodomain' => 'http://122.225.68.125:9800/query/createNormalGroup',
-
+    //图片上传接口域名
+    'uploadSite' => 'http://122.225.68.125:8001',
 
 );
