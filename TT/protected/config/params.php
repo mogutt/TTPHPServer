@@ -16,12 +16,13 @@ return array(
 	'commentNeedApproval'=>true,
     //列表页面每页显示10条
     'perPage' => 10,
-    'uploadPath' => dirname(Yii::app()->BasePath).'uploadImage',
+    
+    'uploadPath' => '/var/www/html/tt.mogujie.com/TT/uploadImage',
     'site' => 'www.tt.tt',
     //创建群组时跟server端通信,发送群组内容
     'sendGroupInfodomain' => 'http://122.225.68.125:9800/query/createNormalGroup',
     //图片上传接口域名
-    'uploadSite' => 'http://122.225.68.125:8001',
+    'uploadSite' => 'http://122.225.68.125:8001/',
     //默认头像地址
     'avatar' => '/images/avatar_default.jpg',
 

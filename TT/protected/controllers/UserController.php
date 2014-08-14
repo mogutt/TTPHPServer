@@ -22,7 +22,6 @@
             $user->status = $data['status'];
             $user->created = $time;
             $user->updated = $user->created;
-
             if($user->save())
             {
                 echo '<div class="alert alert-success" role="alert">添加成功</div>';

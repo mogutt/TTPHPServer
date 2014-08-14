@@ -26,33 +26,33 @@ class Controller extends CController
      * $name file类型input 的name
      */
     public function upload($filename){
+ 	$image = CUploadedFile::getInstanceByName($filename);
 
+        $name = Yii::app()->params['uploadPath'].'/'.time().mt_rand(0,99999).$image->name;
+	if(!empty($name)){
+		//验证图片后缀
+		if(!in_array($image->type,array('image/jpeg','image/jpg','image/png'),true)){
+			return ;
+		}
+	}
+        $image->saveAs($name);
         $domain = Yii::app()->params['uploadSite'];
-
-        $image = CUploadedFile::getInstanceByName($filename);
-
-        if(empty($image)){
+        if(empty($name)){
             return '';
         }
-
-        $name = Yii::app()->params['uploadPath'].'/'.mt_rand(0,99999).$image->name;
-
-        if(!in_array($image->type,array('image/jpeg','image/jpg','image/png'))){
-            return '';
-        }
-
-
-        $curlPost = $image;
-        $ch = curl_init();//初始化curl
-        curl_setopt($ch,CURLOPT_URL,$domain);//抓取指定网页
+	//图片文件上传调用接口
+	$data = array('txt' => '@'.$name);
+	$url = 'http://122.225.68.125:8001/';
+	$ch = curl_init($url);
         curl_setopt($ch, CURLOPT_HEADER, 0);//设置header
         curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);//要求结果为字符串且输出到屏幕上
         curl_setopt($ch, CURLOPT_POST, 1);//post提交方式
-        curl_setopt($ch, CURLOPT_POSTFIELDS, $curlPost);
+        curl_setopt($ch, CURLOPT_POSTFIELDS, $data);
+	curl_setopt($ch, CURLOPT_FOLLOWLOCATION , 1);
         $data = curl_exec($ch);//运行curl
         curl_close($ch);
-        print_r($data);exit;
-
+	$data = json_decode($data);
+	return $data->url;	
     }
 
     /**
