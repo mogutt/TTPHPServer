@@ -37,9 +37,10 @@
          if(empty($users)){
             $users = $this->getUserCache();
          }
-
+         $departs = Yii::app()->cache('cache_depart');
          $this->render('add',array(
              'users' => $users,
+             'departs' => $departs,
          ));
      }
 

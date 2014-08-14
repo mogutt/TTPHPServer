@@ -13,7 +13,7 @@
         width:80px;
     }
     span .import{
-        color:read;
+        color:red;
     }
 </style>
 <form role="form" method="post" enctype="multipart/form-data">

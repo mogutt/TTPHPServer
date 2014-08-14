@@ -19,7 +19,17 @@
 
         <select name="data[pid]">
             <option value="0" class="form-control">初始部门</option>
-
+            <?php
+                if($departs){
+                    foreach($departs as $v){
+                        if($v['pid'] == 0){
+            ?>
+                            <option value="<?php echo $v['id']?>"><?php echo $v['title']?></option>
+            <?php
+                        }
+                    }
+                }
+            ?>
         </select>
     </div>
     <div class="form-group">
