@@ -11,7 +11,7 @@ return array(
     'class'=>'CDbConnection',
     'connectionString' => 'mysql:host=192.168.2.76;dbname=macim',
     'emulatePrepare' => true,
-    'username' => 'qihe2222',
-    'password' => '123456',
+    'username' => 'im',
+    'password' => 'im123',
     'charset' => 'utf8',
 );

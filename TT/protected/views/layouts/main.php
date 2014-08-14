@@ -43,8 +43,6 @@
                         <ul class="dropdown-menu" role="menu">
                             <li><a href="/depart/add">添加</a></li>
                             <li><a href="/depart/list">列表</a></li>
-
-
                         </ul>
                     </li>
                     <li class="dropdown">
