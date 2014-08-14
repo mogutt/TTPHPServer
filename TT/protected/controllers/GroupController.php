@@ -26,10 +26,12 @@
              }else{
                  $group->avatar = '/avatar/avatar_group_default.jpg';
              }
+             $seluserid = array();
+             $countsel = 0;
              if(!empty($data['seluserid'])){
                 $seluserid = explode(',',$data['seluserid']);
                 $countsel = count($seluserid);
-                $userList = implode(',',$seluserid);
+
              }
              $group->memberCnt = $countsel;
              $group->created = time();
@@ -55,7 +57,7 @@
                      }
                  }
                  if($countsel == $i){
-                     $this->sendGroupInterface($group->groupId,$userList,$group->groupName,$group->avatar);
+                     $this->sendGroupInterface($group->groupId,$seluserid,$group->groupName,$group->avatar);
                      echo '<div class="alert alert-success" role="alert">添加成功</div>';
                  }
 
