@@ -139,6 +139,8 @@
          if(empty($id))
              return;
          $group = IMGroup::model()->findByPk($id);
+         $transaction = Yii::app ()->db->beginTransaction ();
+         try{
          if(Yii::app()->request->isPostRequest){
 
              $data = Yii::app()->request->getPost('data');
@@ -178,10 +180,13 @@
                          }
 
                      }
-
-                     if($countsel == $i){
+                     if(isset($i) && $countsel == $i){
+                         $this->sendGroupInterface($group->groupId,$seluserid,$group->groupName,$group->avatar);
                          echo '<div class="alert alert-success" role="alert">添加成功</div>';
+                     }else{
+                         echo '<div class="alert alert-danger" role="alert">添加失败</div>';
                      }
+
 
                  }else{
                      echo '<div class="alert alert-danger" role="alert">添加失败</div>';
@@ -190,6 +195,10 @@
              }catch(Exception $e){
 
              }
+         }
+            $transaction->commit ();
+         }catch(Exception $e){
+             $transaction->rollback();
          }
          $groupSelUserId = IMGroupRelation::model()->findAll(array(
              'condition' => 'groupId = '.$id,
