@@ -27,25 +27,22 @@
              if(empty($group->avatar)){
                  $group->avatar = Yii::app()->params['avatar'];
              }
-             $seluserid = array();
+             $selUserId = $data['selUserId'];
              $countsel = 0;
-             if(!empty($data['seluserid'])){
-                $seluserid = explode(',',$data['seluserid']);
-                $countsel = count($seluserid);
-
+             if(!empty($selUserId)){
+                $countsel = count($data['selUserId']);
              }
              $group->memberCnt = $countsel;
              $group->created = time();
              $group->updated = $group->created;
 
-
                 if($group->save()){
-                 if(!empty($seluserid)){
-                     $i = 1;
+                 if(!empty($selUserId)){
+                     $i = 0;
                      IMGroupRelation::model()->deleteAll(array(
                         'condition' => 'groupId = '.$group->groupId,
                      ));
-                     foreach($seluserid as $v){
+                     foreach($selUserId as $v){
                          if(!empty($v)){
                              $groupRelation = new IMGroupRelation();
                              $groupRelation->groupId = $group->groupId;
@@ -54,13 +51,13 @@
                              $groupRelation->status = 0;
                              $groupRelation->created = $group->created;
                              if($groupRelation->save()){
-                                $i++;
+                                ++$i;
                              }
                          }
                      }
                  }
                  if(isset($i) && $countsel == $i){
-                     $this->sendGroupInterface($group->groupId,$seluserid,$group->groupName,$group->avatar);
+                     $this->sendGroupInterface($group->groupId,$selUserId,$group->groupName,$group->avatar);
                      echo '<div class="alert alert-success" role="alert">添加成功</div>';
                  }else{
                      echo '<div class="alert alert-danger" role="alert">添加失败</div>';
@@ -151,21 +148,23 @@
                  }elseif(empty($data['avatar'])){
                      $group->avatar = '/avatar/avatar_group_default.jpg';
                  }
-                 $countsel = 0;
-                 if(!empty($data['seluserid'])){
-                     $seluserid = explode(',',$data['seluserid']);
-                     $countsel = count($seluserid);
-                 }
+
+		     $selUserId = $data['selUserId'];
+		     $countsel = 0;
+		     if(!empty($selUserId)){
+			$countsel = count($data['selUserId']);
+		     }
+
                  $group->memberCnt = $countsel;
                  $group->updated = time();
                  if($group->save()){
-                     if(!empty($seluserid)){
-                         $i = 1;
+                     if(!empty($selUserId)){
+                         $i = 0;
                          $oldGroupRelation = IMGroupRelation::model()->deleteAll(array(
                              'condition' => 'groupId = '.$group->groupId,
                          ));
 
-                         foreach($seluserid as $k => $v){
+                         foreach($selUserId as $k => $v){
                              if(!empty($v)){
                                  $groupRelation = new IMGroupRelation();
                                  $groupRelation->groupId = $group->groupId;
@@ -183,7 +182,7 @@
 
                      }
                      if(isset($i) && $countsel == $i){
-                         $this->sendGroupInterface($group->groupId,$seluserid,$group->groupName,$group->avatar);
+                         $this->updateGroupInterface($group->groupId,$selUserId);
                          echo '<div class="alert alert-success" role="alert">添加成功</div>';
                      }else{
                          echo '<div class="alert alert-danger" role="alert">添加失败</div>';
@@ -213,12 +212,10 @@
 		foreach($groupSelUserId as $v){
 		        $selUsers[] = $v->userId;	
 		}
-		$selUsers = implode(',',$selUsers);
 	 }
          $this->render('add',array(
              'data' => $group,
              'users' => $users,
-             'selUser' => $groupSelUserId,
 	     'selUsers' => $selUsers,
          ));
      }

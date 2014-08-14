@@ -51,42 +51,21 @@
     <div class="form-group">
 <?php
 ?>
-        <label for="exampleInputPassword1">群组人员</label>&nbsp;<a href="#" id="showtable">添加用户</a>
-        <input type="hidden" id="adduserid" name="data[seluserid]" value="<?php if(isset($selUsers)){echo $selUsers;}?>">
-            <table class="table" id="showtablediv">
-                <tr>
-                    <td>
+        <label for="exampleInputPassword1">群组人员</label>
+	<div>
 
-                    </td>
-                    <td>
-                        昵称
-                    </td>
-                    <td>
-                        姓名
-                    </td>
-                </tr>
-                    <?php
-                    foreach($users as $k => $v){
-                    ?>
-                <tr>
-                    <td>
-                        <input type="checkbox" value="<?php echo $v['userId'];?>" <?php if(isset($selUser[$k]->userId) && $selUser[$k]->userId == $v['userId']){echo 'checked';}?>>
-                    </td>
-                    <td>
-                        <?php
-                            echo $v['title'];
-                        ?>
-                    </td>
-                    <td>
-                        <?php
-                        echo $v['uname'];
-                        ?>
-                    </td>
-                </tr>
-                    <?php
-                    }
-                    ?>
-            </table>
+	<select id="test-build-filter-select" multiple="multiple" name ="data[selUserId][]">
+			<?php 
+				if(!empty($users)){
+					foreach($users as $k => $v){
+			?>			
+                                <option value="<?php echo $v['userId'];?>" <?php if(in_array($v['userId'],$selUsers)){echo 'selected="selected"';}?>><?php echo $v['uname'];?></option>
+			<?php
+					}
+				}
+			?>
+                            </select>
+	</div>
     </div>
 
     <div class="form-group">
@@ -109,13 +88,6 @@
         ?>
     </button>
 </form>
-<select id="test-build-filter-select" multiple="multiple">
-                                <option value="1">1</option>
-                                <option value="2">2</option>
-                                <option value="3">3</option>
-                                <option value="4">4</option>
-                                <option value="5">5</option>
-                            </select>
 <script type="text/javascript" src="/js/bootstrap-multiselect.js"></script>
 <script type="text/javascript">
  $(document).ready(function() {                                                       
