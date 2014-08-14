@@ -32,7 +32,7 @@
         <?php
             if(!empty($data->avatar)){
         ?>
-            <img src="file://<?php echo $data->avatar;?>">
+            <img src="<?php echo $data->avatar;?>">
         <?php
             }
         ?>
