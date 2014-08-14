@@ -170,12 +170,15 @@ class Controller extends CController
         $userLists = array();
         if(!empty($userList)){
             foreach($userList as $v){
-                $userLists[] = intval($v);
+                if(!empty($v))
+                    $userLists[] = intval($v);
             }
         }
-        if(empty($userlists))
+
+        if(empty($userLists))
             return ;
         $curlPost = json_encode(array('group_id' => intval($groupId),'user_list' => $userLists,'group_name' => urlencode($groupName),'group_avatar' => $groupAvatar));
+
         $ch = curl_init();//初始化curl
         curl_setopt($ch,CURLOPT_URL,$domain);//抓取指定网页
         curl_setopt($ch, CURLOPT_HEADER, 0);//设置header
