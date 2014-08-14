@@ -24,7 +24,7 @@ return array(
     //图片上传接口域名
     'uploadSite' => 'http://122.225.68.125:8001/',
     //默认头像地址
-    'avatar' => '/images/avatar_default.jpg',
+    'avatar' => Yii::app()->params['uploadPath'].'/avatar_default.jpg',
 
 
 );

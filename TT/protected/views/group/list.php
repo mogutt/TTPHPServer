@@ -33,7 +33,7 @@
     <tr>
         <td><?php echo $v['groupId'];?></td>
         <td><?php echo $v['groupName'];?></td>
-        <td><?php echo $v['avatar'];?></td>
+        <td><img src="<?php echo $v['avatar'];?>" style="width:100px;max-height: 200px;"></td>
         <td><?php echo $v['adesc'];?></td>
         <td><?php echo $this->getUserInfo($v['createUserId']);?></td>
         <td><?php echo $this->groupType($v['groupType']);?></td>
