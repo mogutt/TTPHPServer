@@ -164,13 +164,10 @@ class Controller extends CController
      * $userList “user_list”: [1,2,3,4,5,6]
      * $groupName urlEncode
      */
-    public function sendGroupInterface($groupId,$userList,$groupName){
+    public function sendGroupInterface($groupId,$userList,$groupName,$groupAvatar){
 
         $domain = Yii::app()->params['sendGroupInfodomain'];
-
-        $curlPost = 'group_id='.$groupId.'&
-                    group_name='.$userList.'&
-                    user_list='.urlencode($groupName);
+        $curlPost = json_encode(array('group_id' => $groupId,'user_list' => $userList,'group_name' => urlencode($groupName),'group_avatar' => $groupAvatar));
         $ch = curl_init();//初始化curl
         curl_setopt($ch,CURLOPT_URL,$domain);//抓取指定网页
         curl_setopt($ch, CURLOPT_HEADER, 0);//设置header

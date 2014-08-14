@@ -55,7 +55,7 @@
                      }
                  }
                  if($countsel == $i){
-                     $this->sendGroupInterface($group->groupId,$userList,$group->groupName);
+                     $this->sendGroupInterface($group->groupId,$userList,$group->groupName,$group->avatar);
                      echo '<div class="alert alert-success" role="alert">添加成功</div>';
                  }
 
