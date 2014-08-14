@@ -9,6 +9,7 @@
  */
 ?>
 <link rel="stylesheet" href="/css/bootstrap-multiselect.css" type="text/css"/>
+<link rel="stylesheet" href="/css/bootstrap-3.0.3.min.css" type="text/css"/>
 <style>
     .uploadclass{
         width:80px;
@@ -108,21 +109,29 @@
         ?>
     </button>
 </form>
-<select class="multiselect" multiple="multiple">
-    <option value="cheese">Cheese</option>
-    <option value="tomatoes">Tomatoes</option>
-    <option value="mozarella">Mozzarella</option>
-    <option value="mushrooms">Mushrooms</option>
-    <option value="pepperoni">Pepperoni</option>
-    <option value="onions">Onions</option>
-</select>
-<script type="text/javascript" src="js/bootstrap-multiselect.js"></script>
-
+<select id="test-build-filter-select" multiple="multiple">
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                            </select>
+<script type="text/javascript" src="/js/bootstrap-multiselect.js"></script>
 <script type="text/javascript">
-    $(document).ready(function() {
-        $('.multiselect').multiselect();
-    });
+ $(document).ready(function() {                                                       
+                var buildFilter = function(select, tr) {
+                    select.multiselect({
+                        enableFiltering: true
+                    });
+                    
+                    if ($('.multiselect-search', tr).length !== 1) {
+                        return 'No search input present.';
+                    }
+                    
+                }($('#test-build-filter-select'), $('#test-build-filter-tr'));
+            });
 </script>
+
 <script type="text/javascript">
     $(document).ready(function(){
         $('#showtablediv').hide();
