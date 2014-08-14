@@ -114,7 +114,7 @@
              if($depart->update()){
                  echo '<div class="alert alert-success" role="alert">修改成功</div>';
                  $departs = IMDepartment::model()->findAll(array(
-                     'condition' => 'status = 1',
+                     'condition' => 'status = 0',
                  ));
 
                  foreach($departs as $k => $v){

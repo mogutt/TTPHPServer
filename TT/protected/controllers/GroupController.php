@@ -46,7 +46,7 @@
                              $groupRelation->groupId = $group->groupId;
                              $groupRelation->userId = $v;
                              $groupRelation->groupType = $group->groupType;
-                             $groupRelation->status = 1;
+                             $groupRelation->status = 0;
                              $groupRelation->created = $group->created;
                              if($groupRelation->save()){
                                 $i++;
@@ -85,7 +85,7 @@
              $pager->currentPage = 1;
 
          $list = IMGroup::model()->findAll(array(
-             'condition' => 'status = 1',
+             'condition' => 'status = 0',
              'order' => 'groupId DESC',
              'offset' => $pager->getCurrentPage()*$pager->getPageSize(),
              'limit' => $pager->pageSize,
@@ -157,7 +157,7 @@
                                  $groupRelation->groupId = $group->groupId;
                                  $groupRelation->userId = $v;
                                  $groupRelation->groupType = $group->groupType;
-                                 $groupRelation->status = 1;
+                                 $groupRelation->status = 0;
                                  $groupRelation->created = $group->created;
                                  if($groupRelation->save()){
                                      $i++;

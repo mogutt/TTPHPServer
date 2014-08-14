@@ -87,10 +87,10 @@
         <label for="exampleInputPassword1">状态</label>
         <div class="radio">
             <label>
-                <input type="radio" name="data[status]" value="1"  <?php if(isset($data->status) && $data->status == 1){echo 'checked';}elseif(empty($data->status)){echo 'checked';}?>>启用
+                <input type="radio" name="data[status]" value="0"  <?php if(isset($data->status) && $data->status == 0){echo 'checked';}elseif(!isset($data->status)){echo 'checked';}?>>启用
             </label>&nbsp;
             <label>
-                <input type="radio" name="data[status]" value="0" <?php if(isset($data->status) && $data->status == 0){echo 'checked';} ?>>禁用
+                <input type="radio" name="data[status]" value="1" <?php if(isset($data->status) && $data->status == 1){echo 'checked';} ?>>禁用
             </label>
         </div>
     </div>
