@@ -18,7 +18,7 @@
         <label for="exampleInputPassword1">所属部门</label>
 
         <select name="data[pid]">
-            <option value="0" class="form-control">初始部门</option>
+            <option value="0" class="form-control">父级部门</option>
             <?php
                 if($departs){
                     foreach($departs as $v){

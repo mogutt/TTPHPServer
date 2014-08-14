@@ -18,6 +18,8 @@
          if(Yii::app()->request->isPostRequest){
 
              $data = Yii::app()->request->getPost('data');
+             //事务处理
+             $transaction = Yii::app ()->db->beginTransaction ();
             try{
              $group = new IMGroup();
              $group->attributes = $data;
@@ -35,7 +37,9 @@
              $group->memberCnt = $countsel;
              $group->created = time();
              $group->updated = $group->created;
-             if($group->save()){
+
+
+                if($group->save()){
                  if(!empty($seluserid)){
                      $i = 1;
                      IMGroupRelation::model()->deleteAll(array(
@@ -55,17 +59,19 @@
                          }
                      }
                  }
-                 if($countsel == $i){
+                 if(isset($i) && $countsel == $i){
                      $this->sendGroupInterface($group->groupId,$seluserid,$group->groupName,$group->avatar);
                      echo '<div class="alert alert-success" role="alert">添加成功</div>';
+                 }else{
+                     echo '<div class="alert alert-danger" role="alert">添加失败</div>';
                  }
 
              }else{
                  echo '<div class="alert alert-danger" role="alert">添加失败</div>';
              }
-
+                $transaction->commit ();
              }catch(Exception $e){
-
+                $transaction->rollback ();
              }
          }
          $users = Yii::app()->cache->get('cache_user');
