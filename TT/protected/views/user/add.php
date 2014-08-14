@@ -12,22 +12,25 @@
     .uploadclass{
         width:80px;
     }
+    span .import{
+        color:read;
+    }
 </style>
 <form role="form" method="post" enctype="multipart/form-data">
     <div class="form-group">
-        <label for="exampleInputEmail1">用户标题</label>
+        <label for="exampleInputEmail1">用户标题<span>(*)</span></label>
         <input type="text" class="form-control" id="exampleInputEmail1" placeholder="输入用户标题" name="data[title]" value="<?php $str = !empty($data->title) ? $data->title : ''; echo $str; ?>">
     </div>
     <div class="form-group">
-        <label for="exampleInputPassword1">用户名</label>
+        <label for="exampleInputPassword1">用户名<span>(*)</span></label>
         <input type="text" class="form-control" id="exampleInputPassword1" placeholder="输入用户名" name="data[uname]" value="<?php $str = !empty($data->uname) ? $data->uname : ''; echo $str; ?>">
     </div>
     <div class="form-group">
-        <label for="exampleInputPassword1">花名</label>
+        <label for="exampleInputPassword1">花名<span>(*)</span></label>
         <input type="text" class="form-control" id="exampleInputPassword1" placeholder="输入花名" name="data[nickName]" value="<?php $str = !empty($data->nickName) ? $data->nickName : ''; echo $str; ?>">
     </div>
     <div class="form-group">
-        <label for="exampleInputPassword1">密码</label>
+        <label for="exampleInputPassword1">密码<span>(*)</span></label>
         <input type="password" class="form-control" id="exampleInputPassword1" placeholder="输入密码" name="data[pwd]" value="<?php $str = !empty($data->pwd) ? $data->pwd : ''; echo $str; ?>">
     </div>
     <div class="form-group">
@@ -43,7 +46,7 @@
         ?>
     </div>
     <div class="form-group">
-        <label for="exampleInputPassword1">部门</label>
+        <label for="exampleInputPassword1">部门<span>(*)</span></label>
         <select class="select" name="data[departId]">
             <?php
             foreach($departs as $v){
@@ -54,15 +57,15 @@
     </div>
 
     <div class="form-group">
-        <label for="exampleInputPassword1">手机号码</label>
+        <label for="exampleInputPassword1">手机号码<span>(*)</span></label>
         <input type="text" class="form-control" id="exampleInputPassword1" placeholder="输入手机号码" name="data[telphone]" value="<?php $str = !empty($data->telphone) ? $data->telphone : ''; echo $str; ?>">
     </div>
     <div class="form-group">
-        <label for="exampleInputPassword1">邮箱</label>
+        <label for="exampleInputPassword1">邮箱<span>(*)</span></label>
         <input type="mail" class="form-control" id="exampleInputPassword1" placeholder="输入邮箱" name="data[mail]" value="<?php $str = !empty($data->mail) ? $data->mail : ''; echo $str; ?>">
     </div>
     <div class="form-group">
-        <label for="exampleInputPassword1">性别</label>
+        <label for="exampleInputPassword1">性别<span>(*)</span></label>
         <div class="radio">
         <label>
             <input type="radio" name="data[sex]" value="1"  <?php if(isset($data->sex) && $data->sex == 1){echo 'checked';}elseif(empty($data->sex)){echo 'checked';}?>>男
@@ -73,15 +76,15 @@
         </div>
     </div>
     <div class="form-group">
-        <label for="exampleInputPassword1">地址</label>
+        <label for="exampleInputPassword1">地址<span>(*)</span></label>
         <input type="text" class="form-control" id="exampleInputPassword1" placeholder="输入地址" name="data[position]" value="<?php $str = !empty($data->position) ? $data->position : ''; echo $str; ?>">
     </div>
     <div class="form-group">
-        <label for="exampleInputPassword1">工号</label>
+        <label for="exampleInputPassword1">工号<span>(*)</span></label>
         <input type="text" class="form-control" id="exampleInputPassword1" placeholder="输入工号" name="data[jobNumber]" value="<?php $str = !empty($data->jobNumber) ? $data->jobNumber : ''; echo $str; ?>">
     </div>
     <div class="form-group">
-        <label for="exampleInputPassword1">状态</label>
+        <label for="exampleInputPassword1">状态<span>(*)</span></label>
         <div class="radio">
             <label>
                 <input type="radio" name="data[status]" value="0"  <?php if(isset($data->status) && $data->status == 0){echo 'checked';}elseif(!isset($data->status)){echo 'checked';}?>>启用
