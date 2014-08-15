@@ -144,7 +144,7 @@
                  if(!empty($data['avatar']) && $group->avatar != $data['avatar']){
                      $group->avatar = $this->upload('data[avatar]');
                  }elseif(empty($data['avatar'])){
-                     $group->avatar = '/avatar/avatar_group_default.jpg';
+                     $group->avatar = Yii::app()->params['avatar'];
                  }
                  $selUserId = $data['selUserId'];
                  $countSel = 0;
