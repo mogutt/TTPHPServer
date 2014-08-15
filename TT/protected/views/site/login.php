@@ -27,7 +27,7 @@
     </div>
 </div>
 <div class="avatar">
-    <img src="/image/yaya.png" alt="蘑菇街TT开源小组">
+    <img src="/image/yaya.png" alt="蘑菇街TT开源小组" style="background-color: white;height: 110px;">
 </div>
 <div class="submit">
     <button type="button" class="btn btn-success btn-submit">Login</button>
@@ -59,7 +59,10 @@
                                     $('.progress .progress-bar').progressbar();
                                 },
                                 500);
-                                window.location.href = data.url;
+                            setTimeout(function () {
+                                    window.location.href = data.url;
+                                },
+                                1500);
                         }else{
                             $('.alert').remove();
                             var prependHtml = '<div class="alert alert-danger" role="alert">登录失败,用户名或者密码不正确!</div>';
