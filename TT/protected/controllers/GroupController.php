@@ -58,13 +58,13 @@
                  }
                  if(isset($i) && $countsel == $i){
                      $this->sendGroupInterface($group->groupId,$selUserId,$group->groupName,$group->avatar);
-                     echo '<div class="alert alert-success" role="alert">添加成功</div>';
+                     $this->showAlert('success','群组创建成功');
                  }else{
-                     echo '<div class="alert alert-danger" role="alert">添加失败</div>';
+                     $this->showAlert('fail','群组创建失败');
                  }
 
              }else{
-                 echo '<div class="alert alert-danger" role="alert">添加失败</div>';
+                $this->showAlert('fail','群组创建失败');
              }
                 $transaction->commit ();
              }catch(Exception $e){
@@ -114,18 +114,18 @@
       */
      public function actionDel($id){
 
+         $result['status'] = false;
          if(empty($id))
              return;
 
          $group = IMGroup::model()->findByPk($id);
-         $group->status = 0;
+         $group->status = 1;
 
          if($group->save()){
              echo '<div class="alert alert-success" role="alert">删除成功</div>';
          }else{
              echo '<div class="alert alert-success" role="alert">删除失败</div>';
          }
-
      }
 
      /**
@@ -138,24 +138,20 @@
          $group = IMGroup::model()->findByPk($id);
          $transaction = Yii::app ()->db->beginTransaction ();
          try{
-         if(Yii::app()->request->isPostRequest){
-
-             $data = Yii::app()->request->getPost('data');
-             try{
+             if(Yii::app()->request->isPostRequest){
+                 $data = Yii::app()->request->getPost('data');
                  $group->attributes = $data;
                  if(!empty($data['avatar']) && $group->avatar != $data['avatar']){
                      $group->avatar = $this->upload('data[avatar]');
                  }elseif(empty($data['avatar'])){
                      $group->avatar = '/avatar/avatar_group_default.jpg';
                  }
-
-		     $selUserId = $data['selUserId'];
-		     $countsel = 0;
-		     if(!empty($selUserId)){
-			$countsel = count($data['selUserId']);
-		     }
-
-                 $group->memberCnt = $countsel;
+                 $selUserId = $data['selUserId'];
+                 $countSel = 0;
+                 if(!empty($selUserId)){
+                    $countSel = count($data['selUserId']);
+                 }
+                 $group->memberCnt = $countSel;
                  $group->updated = time();
                  if($group->save()){
                      if(!empty($selUserId)){
@@ -163,7 +159,6 @@
                          $oldGroupRelation = IMGroupRelation::model()->deleteAll(array(
                              'condition' => 'groupId = '.$group->groupId,
                          ));
-
                          foreach($selUserId as $k => $v){
                              if(!empty($v)){
                                  $groupRelation = new IMGroupRelation();
@@ -175,49 +170,40 @@
                                  if($groupRelation->save()){
                                      $i++;
                                  }else{
-				    var_dump($groupRelation->getErrors());
-				 }
+                                    var_dump($groupRelation->getErrors());
+                                 }
                              }
                          }
-
                      }
                      if(isset($i) && $countsel == $i){
                          $this->updateGroupInterface($group->groupId,$selUserId);
-                         echo '<div class="alert alert-success" role="alert">添加成功</div>';
+                         $this->showAlert('success','群组创建成功');
                      }else{
-                         echo '<div class="alert alert-danger" role="alert">添加失败</div>';
+                         $this->showAlert('fail','群组创建失败');
                      }
-
-
                  }else{
-                     echo '<div class="alert alert-danger" role="alert">添加失败</div>';
-	var_dump($group->getErrors());
+                     $this->showAlert('fail','群组创建失败');
+                     var_dump($group->getErrors());
                  }
-
-             }catch(Exception $e){
-
              }
-         }
             $transaction->commit ();
          }catch(Exception $e){
              $transaction->rollback();
-		
          }
          $groupSelUserId = IMGroupRelation::model()->findAll(array(
              'condition' => 'groupId = '.$id,
          ));
          $users = Yii::app()->cache->get('cache_user');
-	 if(!empty($groupSelUserId)){
-		$selUsers = array();
-		foreach($groupSelUserId as $v){
-		        $selUsers[] = $v->userId;	
-		}
-	 }
+         if(!empty($groupSelUserId)){
+            $selUsers = array();
+            foreach($groupSelUserId as $v){
+                $selUsers[] = $v->userId;
+            }
+         }
          $this->render('add',array(
              'data' => $group,
              'users' => $users,
 	     'selUsers' => $selUsers,
          ));
      }
-
  }

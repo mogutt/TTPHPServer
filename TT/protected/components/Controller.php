@@ -239,4 +239,27 @@ class Controller extends CController
         curl_close($ch);
     }
 
+    /**
+     * 输出成功信息
+     */
+    public function showAlert($type = 'success',$msg){
+
+        switch($type){
+            case 'success':
+                if(empty($msg))
+                    $msg = '操作成功';
+                echo '<div class="alert alert-success" role="alert">'.$msg.'</div>';
+                break;
+            case 'fail' :
+                if(empty($msg))
+                    $msg = '操作失败';
+                echo '<div class="alert alert-danger" role="alert">$msg</div>';
+                break;
+            default :
+                break;
+
+        }
+
+    }
+
 }
