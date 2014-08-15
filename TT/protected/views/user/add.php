@@ -8,6 +8,8 @@
  * Desc: 
  */
 ?>
+<link rel="stylesheet" href="/css/bootstrap-multiselect.css" type="text/css"/>
+<link rel="stylesheet" href="/css/bootstrap-3.0.3.min.css" type="text/css"/>
 <style>
     .uploadclass{
         width:80px;
@@ -47,10 +49,14 @@
     </div>
     <div class="form-group">
         <label for="exampleInputPassword1">部门<span>(*)</span></label>
-        <select class="select" name="data[departId]">
+        <select id="depart"  name ="data[departId]">
             <?php
-            foreach($departs as $v){
-                echo '<option value="'.$v['id'].'">'.$v['title'].'</option>';
+            if(!empty($departs)){
+                foreach($departs as $k => $v){
+            ?>
+                    <option value="<?php echo $v['id'];?>" ><?php echo $v['title'];?></option>
+            <?php
+                }
             }
             ?>
         </select>
@@ -103,3 +109,9 @@
         ?>
     </button>
 </form>
+<script type="text/javascript" src="/js/bootstrap-multiselect.js"></script>
+<script type="text/javascript">
+    $(document).ready(function() {
+        $('#depart').multiselect();
+    })
+</script>

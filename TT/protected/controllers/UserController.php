@@ -27,10 +27,10 @@
             $user->updated = $user->created;
             if($user->save())
             {
-                echo '<div class="alert alert-success" role="alert">添加成功</div>';
+                $this->showAlert('success','添加成功');
                 $this->getUserCache();
             }else{
-                echo '<div class="alert alert-danger" role="alert">添加失败</div>';
+                $this->showAlert('fail','添加失败');
             }
         }
          $departs = Yii::app()->cache->get('cache_depart');
@@ -120,11 +120,11 @@
              $time = time();
              $user->updated = $time;
              if($user->update()){
-                 echo '<div class="alert alert-success" role="alert">修改成功</div>';
+                 $this->showAlert('success','修改成功');
                  //更新用户之后更新用户缓存
                  $this->getUserCache();
              }else{
-                 echo '<div class="alert alert-danger" role="alert">修改失败</div>';
+                 $this->showAlert('fail','修改失败');
              }
          }
          $departs = Yii::app()->cache->get('cache_depart');
