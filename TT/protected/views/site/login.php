@@ -17,9 +17,11 @@
 <div class="lock-holder">
     <div class="form-group pull-left input-username">
         <div class="input-group">
-            <span class="input-group-addon">账户</span>
-            <input type="text" class="form-control "  placeholder="输入账号" id="uname">
+            <input type="text" class="form-control " name="uname" placeholder="输入账号">
+            <span class="input-group-addon"><i class="fa fa-user"></i></span>
         </div>
+
+        
     </div>
     <div class="form-group pull-right input-password">
         <div class="input-group">
