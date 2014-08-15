@@ -42,7 +42,7 @@
         <?php
             if(!empty($data->avatar)){
         ?>
-            <img src="<?php echo $data->avatar;?>" class="uploadclass">
+            <img src="<?php echo $this->showImg($data->avatar);?>" class="uploadclass">
         <?php
             }
         ?>

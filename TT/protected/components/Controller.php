@@ -275,7 +275,14 @@ class Controller extends CController
                 break;
 
         }
+    }
 
+    //输出图片
+    public function showImg($imgUrl){
+        if(empty($imgUrl))
+            return '';
+        $domain = Yii::app()->params['uploadSite'];
+        return $domain.$imgUrl;
     }
 
 }
