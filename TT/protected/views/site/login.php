@@ -27,7 +27,7 @@
     </div>
 </div>
 <div class="avatar">
-    <img src="/image/yaya.png" alt="蘑菇街TT开源小组" style="background-color: white;height: 110px;">
+    <img src="/image/yaya.png" alt="蘑菇街TT开源小组" style="background-color: white;height: 110px;padding: 10px 0px 0px 0px;">
 </div>
 <div class="submit">
     <button type="button" class="btn btn-success btn-submit">Login</button>
