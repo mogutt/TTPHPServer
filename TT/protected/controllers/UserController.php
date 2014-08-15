@@ -22,9 +22,11 @@
                 $user->avatar = Yii::app()->params['avatar'];
             }
             $time = time();
+            $user->departId = $data['departId'];
             $user->status = $data['status'];
             $user->created = $time;
             $user->updated = $user->created;
+	   
             if($user->save())
             {
                 $this->showAlert('success','添加成功');
