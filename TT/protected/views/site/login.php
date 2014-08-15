@@ -26,7 +26,9 @@
         </div>
     </div>
 </div>
-
+<div class="avatar">
+    <img src="/image/yaya.png" alt="蘑菇街TT开源小组">
+</div>
 <div class="submit">
     <button type="button" class="btn btn-success btn-submit">Login</button>
 </div>
@@ -38,26 +40,36 @@
     $(document).ready(function(){
 
         $('.btn-submit').click(function(e){
-            $('.input-username,dot-left').addClass('animated fadeOutRight')
-            $('.input-password,dot-right').addClass('animated fadeOutLeft')
-            $('.btn-submit').addClass('animated fadeOutUp')
-            setTimeout(function () {
-                    $('.avatar').addClass('avatar-top');
-                    //$('.submit').html('<i class="fa fa-spinner fa-spin text-white"></i>');
-                    $('.submit').html('<div class="progress"><div class="progress-bar progress-bar-success" aria-valuetransitiongoal="100"></div></div>');
-                    $('.progress .progress-bar').progressbar();
-                },
-                500);
 
-            setTimeout(function () {
-                    window.location.href = 'index.html#redirect';
 
-                },
-                1500);
+                $.ajax({
+                    type: "POST",
+                    url: "/ajax/login",
+                    data: {uname:$("#uname").val(), pwd:$("#pwd").val()},
+                    dataType: "json",
+                    success: function(data){
+                        if(data.status)
+                        {
+                            $('.input-username,dot-left').addClass('animated fadeOutRight')
+                            $('.input-password,dot-right').addClass('animated fadeOutLeft')
+                            $('.btn-submit').addClass('animated fadeOutUp')
+                            setTimeout(function () {
+                                    $('.avatar').addClass('avatar-top');
+                                    $('.submit').html('<div class="progress"><div class="progress-bar progress-bar-success" aria-valuetransitiongoal="100"></div></div>');
+                                    $('.progress .progress-bar').progressbar();
+                                },
+                                500);
+                                window.location.href = data.url;
+                        }else{
+                            $('.alert').remove();
+                            var prependHtml = '<div class="alert alert-danger" role="alert">登录失败,用户名或者密码不正确!</div>';
+                            $("body").prepend(prependHtml);
+                        }
+                    }
+                });
+
 
         });
-
-
     });
 </script>
 <!--script type="text/javascript">
