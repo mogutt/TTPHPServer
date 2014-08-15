@@ -53,21 +53,19 @@
 ?>
         <label for="exampleInputPassword1">群组人员</label>
 	<div>
-
 	<select id="test-build-filter-select" multiple="multiple" name ="data[selUserId][]">
 			<?php 
 				if(!empty($users)){
 					foreach($users as $k => $v){
 			?>			
-                                <option value="<?php echo $v['userId'];?>" <?php if(isset($selUsers) && in_array($v['userId'],$selUsers)){echo 'selected="selected"';}?>><?php echo $v['uname'];?></option>
+                       <option value="<?php echo $v['userId'];?>" <?php if(isset($selUsers) && in_array($v['userId'],$selUsers)){echo 'selected="selected"';}?>><?php echo $v['uname'];?></option>
 			<?php
 					}
 				}
 			?>
-                            </select>
+    </select>
 	</div>
     </div>
-
     <div class="form-group">
         <label for="exampleInputPassword1">状态</label>
         <div class="radio">
@@ -91,16 +89,13 @@
 <script type="text/javascript" src="/js/bootstrap-multiselect.js"></script>
 <script type="text/javascript">
  $(document).ready(function() {
-     $('#form').validation();
-                var buildFilter = function(select, tr) {
-                    select.multiselect({
-                        enableFiltering: true
-                    });
-                    
-                    if ($('.multiselect-search', tr).length !== 1) {
-                        return 'No search input present.';
-                    }
-                    
-                }($('#test-build-filter-select'), $('#test-build-filter-tr'));
-            });
+    var buildFilter = function(select, tr) {
+        select.multiselect({
+            enableFiltering: true
+        });
+        if ($('.multiselect-search', tr).length !== 1) {
+            return 'No search input present.';
+        }
+    }($('#test-build-filter-select'), $('#test-build-filter-tr'));
+});
 </script>
