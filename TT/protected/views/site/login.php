@@ -38,6 +38,32 @@
     $(document).ready(function(){
 
         $('.btn-submit').click(function(e){
+            $('.input-username,dot-left').addClass('animated fadeOutRight')
+            $('.input-password,dot-right').addClass('animated fadeOutLeft')
+            $('.btn-submit').addClass('animated fadeOutUp')
+            setTimeout(function () {
+                    $('.avatar').addClass('avatar-top');
+                    //$('.submit').html('<i class="fa fa-spinner fa-spin text-white"></i>');
+                    $('.submit').html('<div class="progress"><div class="progress-bar progress-bar-success" aria-valuetransitiongoal="100"></div></div>');
+                    $('.progress .progress-bar').progressbar();
+                },
+                500);
+
+            setTimeout(function () {
+                    window.location.href = 'index.html#redirect';
+
+                },
+                1500);
+
+        });
+
+
+    });
+</script>
+<!--script type="text/javascript">
+    $(document).ready(function(){
+
+        $('.btn-submit').click(function(e){
             $.ajax({
                 type: "POST",
                 url: "/ajax/login",
@@ -61,6 +87,6 @@
             });
         });
     });
-</script>
+</script-->
 
 </body></html>
