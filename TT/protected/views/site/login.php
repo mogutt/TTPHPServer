@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-<!-- saved from url=(0052)http://preview.bootstrapguru.com/delighted/lock.html -->
 <html><head><meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
     <title>Delighted</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,7 +7,6 @@
     <!-- Styles -->
     <link href="/css/lock.css" rel="stylesheet">
     <link href="/css/animate.css" rel="stylesheet">
-
     <link href="/css/font-awesome.css" rel="stylesheet">
 </head>
 <body>
@@ -27,57 +25,16 @@
     </div>
 </div>
 <div class="avatar">
-    <img src="/image/yaya.png" alt="蘑菇街TT开源小组" style="background-color: white;height: 110px;padding: 10px 0px 0px 0px;">
+    <img src="/image/yaya.png" alt="蘑菇街TT开源小组" style="background-color: white;height: 110px;padding: 5px 0px 0px 0px;">
 </div>
 <div class="submit">
     <button type="button" class="btn btn-success btn-submit">Login</button>
 </div>
-
 <script src="/js/jquery.js"></script>
 <script src="/js/bootstrap.min.js"></script>
 <script src="/js/bootstrap-progressbar.js"></script>
 <script type="text/javascript">
     $(document).ready(function(){
-
-        $('.btn-submit').click(function(e){
-
-
-                $.ajax({
-                    type: "POST",
-                    url: "/ajax/login",
-                    data: {uname:$("#uname").val(), pwd:$("#pwd").val()},
-                    dataType: "json",
-                    success: function(data){
-                        if(data.status)
-                        {
-                            $('.input-username,dot-left').addClass('animated fadeOutRight')
-                            $('.input-password,dot-right').addClass('animated fadeOutLeft')
-                            $('.btn-submit').addClass('animated fadeOutUp')
-                            setTimeout(function () {
-                                    $('.avatar').addClass('avatar-top');
-                                    $('.submit').html('<div class="progress"><div class="progress-bar progress-bar-success" aria-valuetransitiongoal="100"></div></div>');
-                                    $('.progress .progress-bar').progressbar();
-                                },
-                                500);
-                            setTimeout(function () {
-                                    window.location.href = data.url;
-                                },
-                                1500);
-                        }else{
-                            $('.alert').remove();
-                            var prependHtml = '<div class="alert alert-danger" role="alert">登录失败,用户名或者密码不正确!</div>';
-                            $("body").prepend(prependHtml);
-                        }
-                    }
-                });
-
-
-        });
-    });
-</script>
-<!--script type="text/javascript">
-    $(document).ready(function(){
-
         $('.btn-submit').click(function(e){
             $.ajax({
                 type: "POST",
@@ -91,8 +48,15 @@
                         $('.input-password,dot-right').addClass('animated fadeOutLeft')
                         $('.btn-submit').addClass('animated fadeOutUp')
                         setTimeout(function () {
-                            window.location.href = data.url;
-                        },500);
+                                $('.avatar').addClass('avatar-top');
+                                $('.submit').html('<div class="progress"><div class="progress-bar progress-bar-success" aria-valuetransitiongoal="100"></div></div>');
+                                $('.progress .progress-bar').progressbar();
+                            },
+                            500);
+                        setTimeout(function () {
+                                window.location.href = data.url;
+                            },
+                            1500);
                     }else{
                         $('.alert').remove();
                         var prependHtml = '<div class="alert alert-danger" role="alert">登录失败,用户名或者密码不正确!</div>';
@@ -102,6 +66,5 @@
             });
         });
     });
-</script-->
-
+</script>
 </body></html>
