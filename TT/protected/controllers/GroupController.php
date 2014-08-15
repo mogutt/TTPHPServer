@@ -159,6 +159,9 @@
                          $oldGroupRelation = IMGroupRelation::model()->deleteAll(array(
                              'condition' => 'groupId = '.$group->groupId,
                          ));
+			//把relation表中涉及的用户全部干掉,在新增
+			//千帆.这一块的代码是个坑.你抽空优化下吧.@明心
+			 if(!empty($selUserId)){
                          foreach($selUserId as $k => $v){
                              if(!empty($v)){
                                  $groupRelation = new IMGroupRelation();
@@ -174,6 +177,7 @@
                                  }
                              }
                          }
+			}
                      }
                      if(isset($i) && $countSel == $i){
                          $this->updateGroupInterface($group->groupId,$selUserId);

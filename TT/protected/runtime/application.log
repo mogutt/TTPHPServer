@@ -932,3 +932,105 @@ Stack trace:
 REQUEST_URI=/user/edit/MTIyLjIyNS42OC4xMjU7MTAxLjY4LjIxOC4xMjUvL2hvbWUvbGFuaHUvbXNmcy9ydW4vdG1wLy8wMDAvMDAwLzE0MDgxMDE2MDY5NTU1MjFfMTQwNTcyNzA2NjgyXzE0MDgxMDE2MDYyNDE1M1A1KE9WMDJfNkh7RkVKTik1NSU0V3swLmpwZw==.jpg
 HTTP_REFERER=http://imteamtalk.com/user/edit/10023
 ---
+2014/08/15 20:10:58 [error] [php] Undefined variable: departs (/var/www/html/tt.mogujie.com/TT/protected/views/depart/add.php:23)
+Stack trace:
+#0 /var/www/html/tt.mogujie.com/TT/framework/web/CController.php(869): DepartController->renderFile()
+#1 /var/www/html/tt.mogujie.com/TT/framework/web/CController.php(782): DepartController->renderPartial()
+#2 /var/www/html/tt.mogujie.com/TT/protected/controllers/DepartController.php(124): DepartController->render()
+#3 unknown(0): DepartController->actionEdit()
+#4 /var/www/html/tt.mogujie.com/TT/framework/web/actions/CAction.php(108): ReflectionMethod->invokeArgs()
+#5 /var/www/html/tt.mogujie.com/TT/framework/web/actions/CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#6 /var/www/html/tt.mogujie.com/TT/framework/web/CController.php(308): CInlineAction->runWithParams()
+#7 /var/www/html/tt.mogujie.com/TT/framework/web/CController.php(286): DepartController->runAction()
+#8 /var/www/html/tt.mogujie.com/TT/framework/web/CController.php(265): DepartController->runActionWithFilters()
+#9 /var/www/html/tt.mogujie.com/TT/framework/web/CWebApplication.php(282): DepartController->run()
+#10 /var/www/html/tt.mogujie.com/TT/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#11 /var/www/html/tt.mogujie.com/TT/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#12 /var/www/html/tt.mogujie.com/TT/index.php(12): CWebApplication->run()
+REQUEST_URI=/depart/edit/1003
+2014/08/15 20:11:19 [error] [php] Undefined variable: departs (/var/www/html/tt.mogujie.com/TT/protected/views/depart/add.php:23)
+Stack trace:
+#0 /var/www/html/tt.mogujie.com/TT/framework/web/CController.php(869): DepartController->renderFile()
+#1 /var/www/html/tt.mogujie.com/TT/framework/web/CController.php(782): DepartController->renderPartial()
+#2 /var/www/html/tt.mogujie.com/TT/protected/controllers/DepartController.php(124): DepartController->render()
+#3 unknown(0): DepartController->actionEdit()
+#4 /var/www/html/tt.mogujie.com/TT/framework/web/actions/CAction.php(108): ReflectionMethod->invokeArgs()
+#5 /var/www/html/tt.mogujie.com/TT/framework/web/actions/CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#6 /var/www/html/tt.mogujie.com/TT/framework/web/CController.php(308): CInlineAction->runWithParams()
+#7 /var/www/html/tt.mogujie.com/TT/framework/web/CController.php(286): DepartController->runAction()
+#8 /var/www/html/tt.mogujie.com/TT/framework/web/CController.php(265): DepartController->runActionWithFilters()
+#9 /var/www/html/tt.mogujie.com/TT/framework/web/CWebApplication.php(282): DepartController->run()
+#10 /var/www/html/tt.mogujie.com/TT/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#11 /var/www/html/tt.mogujie.com/TT/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#12 /var/www/html/tt.mogujie.com/TT/index.php(12): CWebApplication->run()
+REQUEST_URI=/depart/edit/14
+2014/08/15 20:11:40 [error] [php] Undefined variable: departs (/var/www/html/tt.mogujie.com/TT/protected/views/depart/add.php:23)
+Stack trace:
+#0 /var/www/html/tt.mogujie.com/TT/framework/web/CController.php(869): DepartController->renderFile()
+#1 /var/www/html/tt.mogujie.com/TT/framework/web/CController.php(782): DepartController->renderPartial()
+#2 /var/www/html/tt.mogujie.com/TT/protected/controllers/DepartController.php(124): DepartController->render()
+#3 unknown(0): DepartController->actionEdit()
+#4 /var/www/html/tt.mogujie.com/TT/framework/web/actions/CAction.php(108): ReflectionMethod->invokeArgs()
+#5 /var/www/html/tt.mogujie.com/TT/framework/web/actions/CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#6 /var/www/html/tt.mogujie.com/TT/framework/web/CController.php(308): CInlineAction->runWithParams()
+#7 /var/www/html/tt.mogujie.com/TT/framework/web/CController.php(286): DepartController->runAction()
+#8 /var/www/html/tt.mogujie.com/TT/framework/web/CController.php(265): DepartController->runActionWithFilters()
+#9 /var/www/html/tt.mogujie.com/TT/framework/web/CWebApplication.php(282): DepartController->run()
+#10 /var/www/html/tt.mogujie.com/TT/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#11 /var/www/html/tt.mogujie.com/TT/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#12 /var/www/html/tt.mogujie.com/TT/index.php(12): CWebApplication->run()
+REQUEST_URI=/depart/edit/14
+2014/08/15 20:18:46 [error] [php] Undefined variable: countsel (/var/www/html/tt.mogujie.com/TT/protected/controllers/GroupController.php:178)
+Stack trace:
+#0 /var/www/html/tt.mogujie.com/TT/framework/web/actions/CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#1 /var/www/html/tt.mogujie.com/TT/framework/web/CController.php(308): CInlineAction->runWithParams()
+#2 /var/www/html/tt.mogujie.com/TT/framework/web/CController.php(286): GroupController->runAction()
+#3 /var/www/html/tt.mogujie.com/TT/framework/web/CController.php(265): GroupController->runActionWithFilters()
+#4 /var/www/html/tt.mogujie.com/TT/framework/web/CWebApplication.php(282): GroupController->run()
+#5 /var/www/html/tt.mogujie.com/TT/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#6 /var/www/html/tt.mogujie.com/TT/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#7 /var/www/html/tt.mogujie.com/TT/index.php(12): CWebApplication->run()
+REQUEST_URI=/group/edit/104230
+2014/08/15 20:18:54 [error] [php] Undefined variable: countsel (/var/www/html/tt.mogujie.com/TT/protected/controllers/GroupController.php:178)
+Stack trace:
+#0 /var/www/html/tt.mogujie.com/TT/framework/web/actions/CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#1 /var/www/html/tt.mogujie.com/TT/framework/web/CController.php(308): CInlineAction->runWithParams()
+#2 /var/www/html/tt.mogujie.com/TT/framework/web/CController.php(286): GroupController->runAction()
+#3 /var/www/html/tt.mogujie.com/TT/framework/web/CController.php(265): GroupController->runActionWithFilters()
+#4 /var/www/html/tt.mogujie.com/TT/framework/web/CWebApplication.php(282): GroupController->run()
+#5 /var/www/html/tt.mogujie.com/TT/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#6 /var/www/html/tt.mogujie.com/TT/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#7 /var/www/html/tt.mogujie.com/TT/index.php(12): CWebApplication->run()
+REQUEST_URI=/group/edit/104230
+2014/08/15 20:22:07 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[HY000]: General error: 1205 Lock wait timeout exceeded; try restarting transaction. The SQL statement executed was: UPDATE `IMGroup` SET `groupId`=:yp0, `groupName`=:yp1, `avatar`=:yp2, `adesc`=:yp3, `createUserId`=:yp4, `groupType`=:yp5, `memberCnt`=:yp6, `status`=:yp7, `updated`=:yp8, `created`=:yp9 WHERE `IMGroup`.`groupId`=104230.
+2014/08/15 20:24:39 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[HY000]: General error: 1205 Lock wait timeout exceeded; try restarting transaction. The SQL statement executed was: UPDATE `IMGroup` SET `groupId`=:yp0, `groupName`=:yp1, `avatar`=:yp2, `adesc`=:yp3, `createUserId`=:yp4, `groupType`=:yp5, `memberCnt`=:yp6, `status`=:yp7, `updated`=:yp8, `created`=:yp9 WHERE `IMGroup`.`groupId`=104230.
+2014/08/15 20:24:42 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[HY000]: General error: 1205 Lock wait timeout exceeded; try restarting transaction. The SQL statement executed was: UPDATE `IMGroup` SET `groupId`=:yp0, `groupName`=:yp1, `avatar`=:yp2, `adesc`=:yp3, `createUserId`=:yp4, `groupType`=:yp5, `memberCnt`=:yp6, `status`=:yp7, `updated`=:yp8, `created`=:yp9 WHERE `IMGroup`.`groupId`=104230.
+2014/08/15 20:26:24 [error] [php] PDO::commit(): MySQL server has gone away (/var/www/html/tt.mogujie.com/TT/framework/db/CDbTransaction.php:64)
+Stack trace:
+#0 unknown(0): GroupController->actionEdit()
+#1 /var/www/html/tt.mogujie.com/TT/framework/web/actions/CAction.php(108): ReflectionMethod->invokeArgs()
+#2 /var/www/html/tt.mogujie.com/TT/framework/web/actions/CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#3 /var/www/html/tt.mogujie.com/TT/framework/web/CController.php(308): CInlineAction->runWithParams()
+#4 /var/www/html/tt.mogujie.com/TT/framework/web/CController.php(286): GroupController->runAction()
+#5 /var/www/html/tt.mogujie.com/TT/framework/web/CController.php(265): GroupController->runActionWithFilters()
+#6 /var/www/html/tt.mogujie.com/TT/framework/web/CWebApplication.php(282): GroupController->run()
+#7 /var/www/html/tt.mogujie.com/TT/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#8 /var/www/html/tt.mogujie.com/TT/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#9 /var/www/html/tt.mogujie.com/TT/index.php(12): CWebApplication->run()
+REQUEST_URI=/group/edit/104230
+2014/08/15 20:26:24 [error] [php] PDO::commit(): MySQL server has gone away (/var/www/html/tt.mogujie.com/TT/framework/db/CDbTransaction.php:64)
+Stack trace:
+#0 unknown(0): GroupController->actionEdit()
+#1 /var/www/html/tt.mogujie.com/TT/framework/web/actions/CAction.php(108): ReflectionMethod->invokeArgs()
+#2 /var/www/html/tt.mogujie.com/TT/framework/web/actions/CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#3 /var/www/html/tt.mogujie.com/TT/framework/web/CController.php(308): CInlineAction->runWithParams()
+#4 /var/www/html/tt.mogujie.com/TT/framework/web/CController.php(286): GroupController->runAction()
+#5 /var/www/html/tt.mogujie.com/TT/framework/web/CController.php(265): GroupController->runActionWithFilters()
+#6 /var/www/html/tt.mogujie.com/TT/framework/web/CWebApplication.php(282): GroupController->run()
+#7 /var/www/html/tt.mogujie.com/TT/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#8 /var/www/html/tt.mogujie.com/TT/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#9 /var/www/html/tt.mogujie.com/TT/index.php(12): CWebApplication->run()
+REQUEST_URI=/group/edit/104230
+2014/08/15 20:31:34 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[HY000]: General error: 1205 Lock wait timeout exceeded; try restarting transaction. The SQL statement executed was: UPDATE `IMGroup` SET `groupId`=:yp0, `groupName`=:yp1, `avatar`=:yp2, `adesc`=:yp3, `createUserId`=:yp4, `groupType`=:yp5, `memberCnt`=:yp6, `status`=:yp7, `updated`=:yp8, `created`=:yp9 WHERE `IMGroup`.`groupId`=104230.
+2014/08/15 20:32:14 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[HY000]: General error: 1205 Lock wait timeout exceeded; try restarting transaction. The SQL statement executed was: UPDATE `IMGroup` SET `groupId`=:yp0, `groupName`=:yp1, `avatar`=:yp2, `adesc`=:yp3, `createUserId`=:yp4, `groupType`=:yp5, `memberCnt`=:yp6, `status`=:yp7, `updated`=:yp8, `created`=:yp9 WHERE `IMGroup`.`groupId`=104230.
+2014/08/15 20:34:33 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[HY000]: General error: 1205 Lock wait timeout exceeded; try restarting transaction. The SQL statement executed was: UPDATE `IMGroup` SET `groupId`=:yp0, `groupName`=:yp1, `avatar`=:yp2, `adesc`=:yp3, `createUserId`=:yp4, `groupType`=:yp5, `memberCnt`=:yp6, `status`=:yp7, `updated`=:yp8, `created`=:yp9 WHERE `IMGroup`.`groupId`=104229.
