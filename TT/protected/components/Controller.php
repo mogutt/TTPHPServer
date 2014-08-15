@@ -269,20 +269,47 @@ class Controller extends CController
             case 'fail' :
                 if(empty($msg))
                     $msg = '操作失败';
-                echo '<div class="alert alert-danger" role="alert">$msg</div>';
+                echo '<div class="alert alert-danger" role="alert">'.$msg.'</div>';
                 break;
             default :
                 break;
 
         }
     }
-
     //输出图片
     public function showImg($imgUrl){
         if(empty($imgUrl))
             return '';
         $domain = Yii::app()->params['uploadSite'];
         return $domain.$imgUrl;
+    }
+
+    //输出部门名称
+    public function getDepartName($departId){
+        $departIds = Yii::app()->cache->get('cache_depart');
+        if(empty($departIds))
+            $departIds = $this->getDepartCache();
+
+        if(!empty($departIds)){
+            foreach($departIds as $v)
+            {
+                if($v['id'] == $departId){
+                    return $v['title'];
+                }
+            }
+        }
+    }
+
+    //输出性别
+    public function getSex($type){
+        if(!isset($type))
+            return '男';
+        if($type == 1)
+            return '男';
+        elseif($type == 0)
+            return '女';
+        else
+            return '外星人';
     }
 
 }

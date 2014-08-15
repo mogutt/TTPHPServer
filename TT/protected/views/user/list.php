@@ -36,8 +36,8 @@
         <td><?php echo $v['title'];?></td>
         <td><?php echo $v['uname'];?></td>
         <td><?php echo $v['nickName'];?></td>
-        <td><?php echo $v['departId'];?></td>
-        <td><?php echo $v['sex'];?></td>
+        <td><?php echo $this->getDepartName($v['departId']);?></td>
+        <td><?php echo $this->getSex($v['sex']);?></td>
         <td><?php echo $v['telphone'];?></td>
         <td><?php echo $v['jobNumber'];?></td>
         <td><?php echo $v['mail'];?></td>
