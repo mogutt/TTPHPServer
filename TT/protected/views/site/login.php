@@ -3,10 +3,8 @@
 <html><head><meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
     <title>Delighted</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <!-- Bootstrap -->
     <link href="/css/bootstrap.css" rel="stylesheet">
-
     <!-- Styles -->
     <link href="/css/lock.css" rel="stylesheet">
     <link href="/css/animate.css" rel="stylesheet">
@@ -17,16 +15,14 @@
 <div class="lock-holder">
     <div class="form-group pull-left input-username">
         <div class="input-group">
-            <input type="text" class="form-control " name="uname" placeholder="输入账号">
-            <span class="input-group-addon"><i class="fa fa-user"></i></span>
+            <input type="text" class="form-control" name="uname" placeholder="输入账号">
+	    <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>  
         </div>
-
-        
     </div>
     <div class="form-group pull-right input-password">
         <div class="input-group">
-            <span class="input-group-addon">密码</span>
             <input type="password" class="form-control " placeholder="输入密码" id="pwd">
+	    <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>  
         </div>
     </div>
 </div>
