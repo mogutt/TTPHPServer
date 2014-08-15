@@ -20,7 +20,7 @@
         <select name="data[pid]">
             <option value="0" class="form-control">父级部门</option>
             <?php
-                if($departs){
+                if(isset($departs) && !empty($departs)){
                     foreach($departs as $v){
                         if($v['pid'] == 0){
             ?>
