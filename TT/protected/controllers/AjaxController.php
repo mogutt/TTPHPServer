@@ -20,7 +20,6 @@ class AjaxController extends Controller{
         $admin['pwd'] = $adminInfo[0]['pwd'];
         $uname = trim(Yii::app()->request->getPost('uname'));
         $pwd = md5(trim(Yii::app()->request->getPost('pwd')));
-
         if($admin['uname'] == $uname && $admin['pwd'] == $pwd){
             $result['status'] = true;
             $result['msg'] = '登录成功';

@@ -27,6 +27,8 @@ return array(
     'uploadSite' => 'http://122.225.68.125:8001/',
     //默认头像地址
     'avatar' => Yii::app()->params['uploadPath'].'/avatar_default.jpg',
-
+    //默认后台管理员用户名密码
+    'defaultAdminUname' => 'admin',
+    'defaultAdminPwd' => 'admin',
 
 );

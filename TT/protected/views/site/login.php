@@ -15,7 +15,7 @@
 <div class="lock-holder">
     <div class="form-group pull-left input-username">
         <div class="input-group">
-            <input type="text" class="form-control" name="uname" placeholder="输入账号">
+            <input type="text" class="form-control" id="uname" placeholder="输入账号">
 	    <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>  
         </div>
     </div>
