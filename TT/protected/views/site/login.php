@@ -65,6 +65,13 @@
                 }
             });
         });
+	//绑定回车事件
+	$(document).keydown(function(e){
+		if(e.keyCode == 13){
+			$('.btn-submit').click();
+		}
+	});
+
     });
 </script>
 </body></html>
