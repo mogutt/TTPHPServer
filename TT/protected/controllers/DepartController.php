@@ -26,11 +26,10 @@
 
              if($depart->save())
              {
-                 echo '<div class="alert alert-success" role="alert">添加成功</div>';
+                 $this->showAlert('success','创建成功');
                  $this->getDepartCache();
              }else{
-                 echo $depart->getErrors();
-                 echo '<div class="alert alert-danger" role="alert">添加失败</div>';
+                 $this->showAlert('fail','创建失败');
              }
          }
          $users = Yii::app()->cache->get('cache_user');
@@ -75,25 +74,6 @@
      }
 
      /**
-      * 删除部门
-      */
-     public function actionDel($id){
-
-         if(empty($id))
-             return;
-
-         $depart = IMDepartment::model()->findByPk($id);
-         $depart->status = 0;
-
-         if($depart->save()){
-             echo '<div class="alert alert-success" role="alert">删除成功</div>';
-         }else{
-             echo '<div class="alert alert-danger" role="alert">删除失败</div>';
-         }
-
-     }
-
-     /**
       * 修改部门
       */
      public function actionEdit($id){
@@ -111,16 +91,18 @@
              $time = time();
              $depart->updated = $time;
              if($depart->update()){
-                 echo '<div class="alert alert-success" role="alert">修改成功</div>';
+                 $this->showAlert('success','修改成功');
                  $this->getDepartCache();
              }else{
-                 echo '<div class="alert alert-danger" role="alert">修改失败</div>';
+                 $this->showAlert('fail','修改失败');
              }
          }
+         $departs = Yii::app()->cache->get('cache_depart');
          $users = Yii::app()->cache->get('cache_user');
          $this->render('add',array(
              'data' => $depart,
              'users' => $users,
+             'departs' => $departs,
          ));
      }
 
