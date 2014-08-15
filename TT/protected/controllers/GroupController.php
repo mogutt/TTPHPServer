@@ -28,11 +28,11 @@
                  $group->avatar = Yii::app()->params['avatar'];
              }
              $selUserId = $data['selUserId'];
-             $countsel = 0;
+             $countSel = 0;
              if(!empty($selUserId)){
-                $countsel = count($data['selUserId']);
+                $countSel = count($data['selUserId']);
              }
-             $group->memberCnt = $countsel;
+             $group->memberCnt = $countSel;
              $group->created = time();
              $group->updated = $group->created;
 
@@ -56,7 +56,7 @@
                          }
                      }
                  }
-                 if(isset($i) && $countsel == $i){
+                 if(isset($i) && $countSel == $i){
                      $this->sendGroupInterface($group->groupId,$selUserId,$group->groupName,$group->avatar);
                      $this->showAlert('success','群组创建成功');
                  }else{
@@ -175,7 +175,7 @@
                              }
                          }
                      }
-                     if(isset($i) && $countsel == $i){
+                     if(isset($i) && $countSel == $i){
                          $this->updateGroupInterface($group->groupId,$selUserId);
                          $this->showAlert('success','群组创建成功');
                      }else{

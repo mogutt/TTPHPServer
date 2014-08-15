@@ -41,7 +41,7 @@
         <td><?php echo date('Y-m-d',$v['created']);?></td>
         <td><?php echo $this->showStatus($v['status']);?></td>
         <td>
-            <a href="/group/edit/<?php echo $v['groupId'];?>"><button type="button" class="btn btn-info">修改</button></a>
+            <!--a href="/group/edit/<?php echo $v['groupId'];?>"><button type="button" class="btn btn-info">修改</button></a-->
             <a href="/group/del/<?php echo $v['groupId'];?>"><button type="button" class="btn btn-danger">删除</button></a>
 
         </td>
