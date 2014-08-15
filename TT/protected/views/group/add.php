@@ -90,7 +90,8 @@
 </form>
 <script type="text/javascript" src="/js/bootstrap-multiselect.js"></script>
 <script type="text/javascript">
- $(document).ready(function() {                                                       
+ $(document).ready(function() {
+     $('#form').validation();
                 var buildFilter = function(select, tr) {
                     select.multiselect({
                         enableFiltering: true
@@ -102,17 +103,4 @@
                     
                 }($('#test-build-filter-select'), $('#test-build-filter-tr'));
             });
-</script>
-
-<script type="text/javascript">
-    $(document).ready(function(){
-        $('#showtablediv').hide();
-        $('#showtable').click(function(){
-            $('#showtablediv').toggle('fadeIn');
-        })
-        $('#showtablediv input').click(function(){
-            var seluserid = $('#adduserid').val()+$(this).val() + ',';
-            $('#adduserid').val(seluserid);
-        })
-    })
 </script>
