@@ -15,16 +15,9 @@
 <?php
     if(Yii::app()->controller->action->id != 'login'){
 ?>
-
     <div class="navbar navbar-default">
         <div class="container">
             <div class="navbar-header">
-                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
                 <a class="navbar-brand" href="/user/list">TT后台管理</a>
             </div>
             <div class="navbar-collapse collapse">
@@ -87,4 +80,5 @@
 </div><!-- page -->
 </body>
 <script src="/js/bootstrap.min.js"></script>
+<script src="/js/jquery.validate.min.js"></script>
 </html>
