@@ -29,7 +29,7 @@
                  $this->showAlert('success','创建成功');
                  $this->getDepartCache();
              }else{
-                 $this->showAlert('fail','创建失败');
+                 $this->showAlert('fail','创建失败,请添加完整信息');
              }
          }
          $users = Yii::app()->cache->get('cache_user');
@@ -85,9 +85,7 @@
          if(Yii::app()->request->isPostRequest){
 
              $data = Yii::app()->request->getPost('data');
-
              $depart->attributes = $data;
-
              $time = time();
              $depart->updated = $time;
              if($depart->update()){

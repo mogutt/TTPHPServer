@@ -9,7 +9,12 @@
  */
 
 ?>
-<form role="form" method="post" enctype="multipart/form-data">
+<style>
+ .formclass{
+        width:600px;
+  } 
+</style>
+<form role="form" method="post" enctype="multipart/form-data" class="formclass">
     <div class="form-group">
         <label for="exampleInputEmail1">用户名</label>
         <input type="text" class="form-control" id="exampleInputEmail1" placeholder="输入用户名" name="data[uname]" value="admin">

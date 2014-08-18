@@ -14,8 +14,11 @@
     .uploadclass{
         width:80px;
     }
+ .formclass{
+        width:600px;
+  } 
 </style>
-<form role="form" method="post" enctype="multipart/form-data" class="form-horizontal">
+<form role="form" method="post" enctype="multipart/form-data" class="form-horizontal formclass">
     <div class="form-group">
         <label for="exampleInputEmail1">群名称</label>
         <input type="text" class="form-control" id="exampleInputEmail1" placeholder="输入群名称" name="data[groupName]" value="<?php $str = !empty($data->groupName) ? $data->groupName : ''; echo $str; ?>" check-type="required" required-message="密码不能为空！">

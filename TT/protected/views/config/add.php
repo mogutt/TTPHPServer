@@ -9,7 +9,7 @@
  */
 
 ?>
-<form role="form" method="post" enctype="multipart/form-data">
+<form role="form" method="post" enctype="multipart/form-data" class="formclass">
     <div class="form-group">
         <label for="exampleInputEmail1">Login Server IP</label>
         <input type="text" class="form-control" id="exampleInputEmail1" placeholder="" name="data[cname]" value="<?php $str = !empty($data->cname) ? $data->cname : ''; echo $str; ?>">

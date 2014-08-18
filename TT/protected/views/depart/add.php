@@ -9,7 +9,14 @@
  */
 
 ?>
-<form role="form" method="post" enctype="multipart/form-data">
+<style>
+.formclass{
+    width:600px;
+}
+</style>
+<link rel="stylesheet" href="/css/bootstrap-multiselect.css" type="text/css"/>
+<link rel="stylesheet" href="/css/bootstrap-3.0.3.min.css" type="text/css"/>
+<form role="form" method="post" enctype="multipart/form-data" class="formclass">
     <div class="form-group">
         <label for="exampleInputEmail1">部门名称</label>
         <input type="text" class="form-control" id="exampleInputEmail1" placeholder="输入部门名称" name="data[title]" value="<?php $str = !empty($data->title) ? $data->title : ''; echo $str; ?>">
@@ -38,15 +45,18 @@
     </div>
     <div class="form-group">
         <label for="exampleInputPassword1">部门leader</label>
-        <select class="select">
-            <?php
-                foreach($users as $v){
-                    echo '<option value="'.$v['userId'].'">'.$v['uname'].'</option>';
-                }
-            ?>
-        </select>
+	<select id="test-build-filter-select"  name ="data[leader]">
+	<?php 
+		if(!empty($users)){
+			foreach($users as $k => $v){
+	?>			
+                       <option value="<?php echo $v['userId'];?>" <?php if(isset($data->leader) && $v['userId']== $data->leader){echo 'selected="selected"';}?>><?php echo $v['uname'];?></option>
+			<?php
+					}
+				}
+			?>
+    </select>
     </div>
-
     <div class="form-group">
         <label for="exampleInputPassword1">状态</label>
         <div class="radio">
@@ -67,3 +77,17 @@
         ?>
     </button>
 </form>
+<script type="text/javascript" src="/js/bootstrap-multiselect.js"></script>
+<script type="text/javascript">
+ $(document).ready(function() {
+    var buildFilter = function(select, tr) {
+        select.multiselect({
+            enableFiltering: true
+        });
+        if ($('.multiselect-search', tr).length !== 1) {
+            return '未选择';
+        }
+    }($('#test-build-filter-select'), $('#test-build-filter-tr'));
+});
+</script>
+

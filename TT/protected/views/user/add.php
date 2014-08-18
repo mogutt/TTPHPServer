@@ -21,7 +21,7 @@
         width:600px;
     }
 </style>
-<form role="form" method="post" enctype="multipart/form-data" class="formclass" id="signupForm">
+<form role="form" method="post" enctype="multipart/form-data" class="formclass">
     <div class="form-group">
         <label for="title">用户标题<span class="import">*</span></label>
         <input type="text" class="form-control" id="title" placeholder="输入用户标题" name="data[title]" value="<?php $str = !empty($data->title) ? $data->title : ''; echo $str; ?>">
@@ -117,55 +117,4 @@
     $(document).ready(function() {
         $('#depart').multiselect();
     })
-</script>
-<script>
-    $().ready(function() {
-        $("#signupForm").validate({
-            rules: {
-                title: "required",
-                lastname: "required",
-                username: {
-                    required: true,
-                    minlength: 2
-                },
-                password: {
-                    required: true,
-                    minlength: 5
-                },
-                confirm_password: {
-                    required: true,
-                    minlength: 5,
-                    equalTo: "#password"
-                },
-                email: {
-                    required: true,
-                    email: true
-                },
-                topic: {
-                    required: "#newsletter:checked",
-                    minlength: 2
-                },
-                agree: "required"
-            },
-            messages: {
-                title: "Please enter your firstname",
-                lastname: "Please enter your lastname",
-                username: {
-                    required: "Please enter a username",
-                    minlength: "Your username must consist of at least 2 characters"
-                },
-                password: {
-                    required: "Please provide a password",
-                    minlength: "Your password must be at least 5 characters long"
-                },
-                confirm_password: {
-                    required: "Please provide a password",
-                    minlength: "Your password must be at least 5 characters long",
-                    equalTo: "Please enter the same password as above"
-                },
-                email: "Please enter a valid email address",
-                agree: "Please accept our policy"
-            }
-        });
-    });
 </script>

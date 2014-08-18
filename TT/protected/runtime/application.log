@@ -1034,3 +1034,409 @@ REQUEST_URI=/group/edit/104230
 2014/08/15 20:31:34 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[HY000]: General error: 1205 Lock wait timeout exceeded; try restarting transaction. The SQL statement executed was: UPDATE `IMGroup` SET `groupId`=:yp0, `groupName`=:yp1, `avatar`=:yp2, `adesc`=:yp3, `createUserId`=:yp4, `groupType`=:yp5, `memberCnt`=:yp6, `status`=:yp7, `updated`=:yp8, `created`=:yp9 WHERE `IMGroup`.`groupId`=104230.
 2014/08/15 20:32:14 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[HY000]: General error: 1205 Lock wait timeout exceeded; try restarting transaction. The SQL statement executed was: UPDATE `IMGroup` SET `groupId`=:yp0, `groupName`=:yp1, `avatar`=:yp2, `adesc`=:yp3, `createUserId`=:yp4, `groupType`=:yp5, `memberCnt`=:yp6, `status`=:yp7, `updated`=:yp8, `created`=:yp9 WHERE `IMGroup`.`groupId`=104230.
 2014/08/15 20:34:33 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[HY000]: General error: 1205 Lock wait timeout exceeded; try restarting transaction. The SQL statement executed was: UPDATE `IMGroup` SET `groupId`=:yp0, `groupName`=:yp1, `avatar`=:yp2, `adesc`=:yp3, `createUserId`=:yp4, `groupType`=:yp5, `memberCnt`=:yp6, `status`=:yp7, `updated`=:yp8, `created`=:yp9 WHERE `IMGroup`.`groupId`=104229.
+2014/08/15 20:36:09 [error] [php] PDO::commit(): MySQL server has gone away (/var/www/html/tt.mogujie.com/TT/framework/db/CDbTransaction.php:64)
+Stack trace:
+#0 unknown(0): GroupController->actionEdit()
+#1 /var/www/html/tt.mogujie.com/TT/framework/web/actions/CAction.php(108): ReflectionMethod->invokeArgs()
+#2 /var/www/html/tt.mogujie.com/TT/framework/web/actions/CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#3 /var/www/html/tt.mogujie.com/TT/framework/web/CController.php(308): CInlineAction->runWithParams()
+#4 /var/www/html/tt.mogujie.com/TT/framework/web/CController.php(286): GroupController->runAction()
+#5 /var/www/html/tt.mogujie.com/TT/framework/web/CController.php(265): GroupController->runActionWithFilters()
+#6 /var/www/html/tt.mogujie.com/TT/framework/web/CWebApplication.php(282): GroupController->run()
+#7 /var/www/html/tt.mogujie.com/TT/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#8 /var/www/html/tt.mogujie.com/TT/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#9 /var/www/html/tt.mogujie.com/TT/index.php(12): CWebApplication->run()
+REQUEST_URI=/group/edit/104229
+2014/08/15 20:36:09 [error] [php] PDO::commit(): MySQL server has gone away (/var/www/html/tt.mogujie.com/TT/framework/db/CDbTransaction.php:64)
+Stack trace:
+#0 unknown(0): GroupController->actionEdit()
+#1 /var/www/html/tt.mogujie.com/TT/framework/web/actions/CAction.php(108): ReflectionMethod->invokeArgs()
+#2 /var/www/html/tt.mogujie.com/TT/framework/web/actions/CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#3 /var/www/html/tt.mogujie.com/TT/framework/web/CController.php(308): CInlineAction->runWithParams()
+#4 /var/www/html/tt.mogujie.com/TT/framework/web/CController.php(286): GroupController->runAction()
+#5 /var/www/html/tt.mogujie.com/TT/framework/web/CController.php(265): GroupController->runActionWithFilters()
+#6 /var/www/html/tt.mogujie.com/TT/framework/web/CWebApplication.php(282): GroupController->run()
+#7 /var/www/html/tt.mogujie.com/TT/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#8 /var/www/html/tt.mogujie.com/TT/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#9 /var/www/html/tt.mogujie.com/TT/index.php(12): CWebApplication->run()
+REQUEST_URI=/group/edit/104230
+2014/08/18 09:52:25 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "favicon.ico"。' in /var/www/html/tt.mogujie.com/TT/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/html/tt.mogujie.com/TT/framework/web/CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 /var/www/html/tt.mogujie.com/TT/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /var/www/html/tt.mogujie.com/TT/index.php(12): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2014/08/18 10:23:15 [error] [php] Trying to get property of non-object (/var/www/html/tt.mogujie.com/TT/protected/components/Controller.php:33)
+Stack trace:
+#0 /var/www/html/tt.mogujie.com/TT/framework/web/CController.php(308): CInlineAction->runWithParams()
+#1 /var/www/html/tt.mogujie.com/TT/framework/web/CController.php(286): UserController->runAction()
+#2 /var/www/html/tt.mogujie.com/TT/framework/web/CController.php(265): UserController->runActionWithFilters()
+#3 /var/www/html/tt.mogujie.com/TT/framework/web/CWebApplication.php(282): UserController->run()
+#4 /var/www/html/tt.mogujie.com/TT/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#5 /var/www/html/tt.mogujie.com/TT/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#6 /var/www/html/tt.mogujie.com/TT/index.php(12): CWebApplication->run()
+REQUEST_URI=/user/add
+2014/08/18 11:26:23 [error] [php] Trying to get property of non-object (/var/www/html/tt.mogujie.com/TT/protected/components/Controller.php:33)
+Stack trace:
+#0 /var/www/html/tt.mogujie.com/TT/framework/web/CController.php(308): CInlineAction->runWithParams()
+#1 /var/www/html/tt.mogujie.com/TT/framework/web/CController.php(286): UserController->runAction()
+#2 /var/www/html/tt.mogujie.com/TT/framework/web/CController.php(265): UserController->runActionWithFilters()
+#3 /var/www/html/tt.mogujie.com/TT/framework/web/CWebApplication.php(282): UserController->run()
+#4 /var/www/html/tt.mogujie.com/TT/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#5 /var/www/html/tt.mogujie.com/TT/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#6 /var/www/html/tt.mogujie.com/TT/index.php(12): CWebApplication->run()
+REQUEST_URI=/user/add
+2014/08/18 11:27:15 [error] [php] Trying to get property of non-object (/var/www/html/tt.mogujie.com/TT/protected/components/Controller.php:33)
+Stack trace:
+#0 /var/www/html/tt.mogujie.com/TT/framework/web/CController.php(308): CInlineAction->runWithParams()
+#1 /var/www/html/tt.mogujie.com/TT/framework/web/CController.php(286): UserController->runAction()
+#2 /var/www/html/tt.mogujie.com/TT/framework/web/CController.php(265): UserController->runActionWithFilters()
+#3 /var/www/html/tt.mogujie.com/TT/framework/web/CWebApplication.php(282): UserController->run()
+#4 /var/www/html/tt.mogujie.com/TT/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#5 /var/www/html/tt.mogujie.com/TT/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#6 /var/www/html/tt.mogujie.com/TT/index.php(12): CWebApplication->run()
+REQUEST_URI=/user/add
+2014/08/18 11:28:37 [error] [php] Trying to get property of non-object (/var/www/html/tt.mogujie.com/TT/protected/components/Controller.php:33)
+Stack trace:
+#0 /var/www/html/tt.mogujie.com/TT/framework/web/CController.php(308): CInlineAction->runWithParams()
+#1 /var/www/html/tt.mogujie.com/TT/framework/web/CController.php(286): UserController->runAction()
+#2 /var/www/html/tt.mogujie.com/TT/framework/web/CController.php(265): UserController->runActionWithFilters()
+#3 /var/www/html/tt.mogujie.com/TT/framework/web/CWebApplication.php(282): UserController->run()
+#4 /var/www/html/tt.mogujie.com/TT/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#5 /var/www/html/tt.mogujie.com/TT/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#6 /var/www/html/tt.mogujie.com/TT/index.php(12): CWebApplication->run()
+REQUEST_URI=/user/add
+2014/08/18 11:28:40 [error] [php] Trying to get property of non-object (/var/www/html/tt.mogujie.com/TT/protected/components/Controller.php:33)
+Stack trace:
+#0 /var/www/html/tt.mogujie.com/TT/framework/web/CController.php(308): CInlineAction->runWithParams()
+#1 /var/www/html/tt.mogujie.com/TT/framework/web/CController.php(286): UserController->runAction()
+#2 /var/www/html/tt.mogujie.com/TT/framework/web/CController.php(265): UserController->runActionWithFilters()
+#3 /var/www/html/tt.mogujie.com/TT/framework/web/CWebApplication.php(282): UserController->run()
+#4 /var/www/html/tt.mogujie.com/TT/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#5 /var/www/html/tt.mogujie.com/TT/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#6 /var/www/html/tt.mogujie.com/TT/index.php(12): CWebApplication->run()
+REQUEST_URI=/user/add
+2014/08/18 11:28:43 [error] [php] Trying to get property of non-object (/var/www/html/tt.mogujie.com/TT/protected/components/Controller.php:33)
+Stack trace:
+#0 /var/www/html/tt.mogujie.com/TT/framework/web/CController.php(308): CInlineAction->runWithParams()
+#1 /var/www/html/tt.mogujie.com/TT/framework/web/CController.php(286): UserController->runAction()
+#2 /var/www/html/tt.mogujie.com/TT/framework/web/CController.php(265): UserController->runActionWithFilters()
+#3 /var/www/html/tt.mogujie.com/TT/framework/web/CWebApplication.php(282): UserController->run()
+#4 /var/www/html/tt.mogujie.com/TT/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#5 /var/www/html/tt.mogujie.com/TT/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#6 /var/www/html/tt.mogujie.com/TT/index.php(12): CWebApplication->run()
+REQUEST_URI=/user/add
+2014/08/18 11:32:13 [error] [php] Trying to get property of non-object (/var/www/html/tt.mogujie.com/TT/protected/components/Controller.php:33)
+Stack trace:
+#0 /var/www/html/tt.mogujie.com/TT/framework/web/CController.php(308): CInlineAction->runWithParams()
+#1 /var/www/html/tt.mogujie.com/TT/framework/web/CController.php(286): UserController->runAction()
+#2 /var/www/html/tt.mogujie.com/TT/framework/web/CController.php(265): UserController->runActionWithFilters()
+#3 /var/www/html/tt.mogujie.com/TT/framework/web/CWebApplication.php(282): UserController->run()
+#4 /var/www/html/tt.mogujie.com/TT/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#5 /var/www/html/tt.mogujie.com/TT/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#6 /var/www/html/tt.mogujie.com/TT/index.php(12): CWebApplication->run()
+REQUEST_URI=/user/add?data%5Btitle%5D=&data%5Buname%5D=&data%5BnickName%5D=&data%5Bpwd%5D=&data%5Bavatar%5D=&data%5BdepartId%5D=14&data%5Btelphone%5D=&data%5Bmail%5D=&data%5Bsex%5D=1&data%5Bposition%5D=&data%5BjobNumber%5D=&data%5Bstatus%5D=0
+2014/08/18 11:32:16 [error] [php] Trying to get property of non-object (/var/www/html/tt.mogujie.com/TT/protected/components/Controller.php:33)
+Stack trace:
+#0 /var/www/html/tt.mogujie.com/TT/framework/web/CController.php(308): CInlineAction->runWithParams()
+#1 /var/www/html/tt.mogujie.com/TT/framework/web/CController.php(286): UserController->runAction()
+#2 /var/www/html/tt.mogujie.com/TT/framework/web/CController.php(265): UserController->runActionWithFilters()
+#3 /var/www/html/tt.mogujie.com/TT/framework/web/CWebApplication.php(282): UserController->run()
+#4 /var/www/html/tt.mogujie.com/TT/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#5 /var/www/html/tt.mogujie.com/TT/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#6 /var/www/html/tt.mogujie.com/TT/index.php(12): CWebApplication->run()
+REQUEST_URI=/user/add?data%5Btitle%5D=&data%5Buname%5D=&data%5BnickName%5D=&data%5Bpwd%5D=&data%5Bavatar%5D=&data%5BdepartId%5D=14&data%5Btelphone%5D=&data%5Bmail%5D=&data%5Bsex%5D=1&data%5Bposition%5D=&data%5BjobNumber%5D=&data%5Bstatus%5D=0
+2014/08/18 11:34:11 [error] [php] Trying to get property of non-object (/var/www/html/tt.mogujie.com/TT/protected/components/Controller.php:33)
+Stack trace:
+#0 /var/www/html/tt.mogujie.com/TT/framework/web/CController.php(308): CInlineAction->runWithParams()
+#1 /var/www/html/tt.mogujie.com/TT/framework/web/CController.php(286): UserController->runAction()
+#2 /var/www/html/tt.mogujie.com/TT/framework/web/CController.php(265): UserController->runActionWithFilters()
+#3 /var/www/html/tt.mogujie.com/TT/framework/web/CWebApplication.php(282): UserController->run()
+#4 /var/www/html/tt.mogujie.com/TT/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#5 /var/www/html/tt.mogujie.com/TT/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#6 /var/www/html/tt.mogujie.com/TT/index.php(12): CWebApplication->run()
+REQUEST_URI=/user/add?data%5Btitle%5D=&data%5Buname%5D=&data%5BnickName%5D=&data%5Bpwd%5D=&data%5Bavatar%5D=&data%5BdepartId%5D=14&data%5Btelphone%5D=&data%5Bmail%5D=&data%5Bsex%5D=1&data%5Bposition%5D=&data%5BjobNumber%5D=&data%5Bstatus%5D=0
+2014/08/18 11:41:12 [error] [php] Trying to get property of non-object (/var/www/html/tt.mogujie.com/TT/protected/components/Controller.php:33)
+Stack trace:
+#0 /var/www/html/tt.mogujie.com/TT/framework/web/CController.php(308): CInlineAction->runWithParams()
+#1 /var/www/html/tt.mogujie.com/TT/framework/web/CController.php(286): UserController->runAction()
+#2 /var/www/html/tt.mogujie.com/TT/framework/web/CController.php(265): UserController->runActionWithFilters()
+#3 /var/www/html/tt.mogujie.com/TT/framework/web/CWebApplication.php(282): UserController->run()
+#4 /var/www/html/tt.mogujie.com/TT/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#5 /var/www/html/tt.mogujie.com/TT/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#6 /var/www/html/tt.mogujie.com/TT/index.php(12): CWebApplication->run()
+REQUEST_URI=/user/add?data%5Btitle%5D=&data%5Buname%5D=&data%5BnickName%5D=&data%5Bpwd%5D=&data%5Bavatar%5D=&data%5BdepartId%5D=14&data%5Btelphone%5D=&data%5Bmail%5D=&data%5Bsex%5D=1&data%5Bposition%5D=&data%5BjobNumber%5D=&data%5Bstatus%5D=0
+2014/08/18 11:45:29 [error] [php] Trying to get property of non-object (/var/www/html/tt.mogujie.com/TT/protected/components/Controller.php:33)
+Stack trace:
+#0 /var/www/html/tt.mogujie.com/TT/framework/web/CController.php(308): CInlineAction->runWithParams()
+#1 /var/www/html/tt.mogujie.com/TT/framework/web/CController.php(286): UserController->runAction()
+#2 /var/www/html/tt.mogujie.com/TT/framework/web/CController.php(265): UserController->runActionWithFilters()
+#3 /var/www/html/tt.mogujie.com/TT/framework/web/CWebApplication.php(282): UserController->run()
+#4 /var/www/html/tt.mogujie.com/TT/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#5 /var/www/html/tt.mogujie.com/TT/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#6 /var/www/html/tt.mogujie.com/TT/index.php(12): CWebApplication->run()
+REQUEST_URI=/user/add?data%5Btitle%5D=&data%5Buname%5D=&data%5BnickName%5D=&data%5Bpwd%5D=&data%5Bavatar%5D=&data%5BdepartId%5D=14&data%5Btelphone%5D=&data%5Bmail%5D=&data%5Bsex%5D=1&data%5Bposition%5D=&data%5BjobNumber%5D=&data%5Bstatus%5D=0
+2014/08/18 11:52:14 [error] [php] Trying to get property of non-object (/var/www/html/tt.mogujie.com/TT/protected/components/Controller.php:33)
+Stack trace:
+#0 /var/www/html/tt.mogujie.com/TT/framework/web/CController.php(308): CInlineAction->runWithParams()
+#1 /var/www/html/tt.mogujie.com/TT/framework/web/CController.php(286): UserController->runAction()
+#2 /var/www/html/tt.mogujie.com/TT/framework/web/CController.php(265): UserController->runActionWithFilters()
+#3 /var/www/html/tt.mogujie.com/TT/framework/web/CWebApplication.php(282): UserController->run()
+#4 /var/www/html/tt.mogujie.com/TT/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#5 /var/www/html/tt.mogujie.com/TT/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#6 /var/www/html/tt.mogujie.com/TT/index.php(12): CWebApplication->run()
+REQUEST_URI=/user/add?data%5Btitle%5D=&data%5Buname%5D=&data%5BnickName%5D=&data%5Bpwd%5D=&data%5Bavatar%5D=&data%5BdepartId%5D=14&data%5Btelphone%5D=&data%5Bmail%5D=&data%5Bsex%5D=1&data%5Bposition%5D=&data%5BjobNumber%5D=&data%5Bstatus%5D=0
+2014/08/18 11:54:46 [error] [php] Trying to get property of non-object (/var/www/html/tt.mogujie.com/TT/protected/components/Controller.php:33)
+Stack trace:
+#0 /var/www/html/tt.mogujie.com/TT/framework/web/CController.php(308): CInlineAction->runWithParams()
+#1 /var/www/html/tt.mogujie.com/TT/framework/web/CController.php(286): UserController->runAction()
+#2 /var/www/html/tt.mogujie.com/TT/framework/web/CController.php(265): UserController->runActionWithFilters()
+#3 /var/www/html/tt.mogujie.com/TT/framework/web/CWebApplication.php(282): UserController->run()
+#4 /var/www/html/tt.mogujie.com/TT/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#5 /var/www/html/tt.mogujie.com/TT/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#6 /var/www/html/tt.mogujie.com/TT/index.php(12): CWebApplication->run()
+REQUEST_URI=/user/add?data%5Btitle%5D=&data%5Buname%5D=&data%5BnickName%5D=&data%5Bpwd%5D=&data%5Bavatar%5D=&data%5BdepartId%5D=14&data%5Btelphone%5D=&data%5Bmail%5D=&data%5Bsex%5D=1&data%5Bposition%5D=&data%5BjobNumber%5D=&data%5Bstatus%5D=0
+2014/08/18 11:54:58 [error] [php] Trying to get property of non-object (/var/www/html/tt.mogujie.com/TT/protected/components/Controller.php:33)
+Stack trace:
+#0 /var/www/html/tt.mogujie.com/TT/framework/web/CController.php(308): CInlineAction->runWithParams()
+#1 /var/www/html/tt.mogujie.com/TT/framework/web/CController.php(286): UserController->runAction()
+#2 /var/www/html/tt.mogujie.com/TT/framework/web/CController.php(265): UserController->runActionWithFilters()
+#3 /var/www/html/tt.mogujie.com/TT/framework/web/CWebApplication.php(282): UserController->run()
+#4 /var/www/html/tt.mogujie.com/TT/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#5 /var/www/html/tt.mogujie.com/TT/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#6 /var/www/html/tt.mogujie.com/TT/index.php(12): CWebApplication->run()
+REQUEST_URI=/user/add?data%5Btitle%5D=&data%5Buname%5D=&data%5BnickName%5D=&data%5Bpwd%5D=&data%5Bavatar%5D=&data%5BdepartId%5D=14&data%5Btelphone%5D=&data%5Bmail%5D=&data%5Bsex%5D=1&data%5Bposition%5D=&data%5BjobNumber%5D=&data%5Bstatus%5D=0
+2014/08/18 11:55:01 [error] [php] Trying to get property of non-object (/var/www/html/tt.mogujie.com/TT/protected/components/Controller.php:33)
+Stack trace:
+#0 /var/www/html/tt.mogujie.com/TT/framework/web/CController.php(308): CInlineAction->runWithParams()
+#1 /var/www/html/tt.mogujie.com/TT/framework/web/CController.php(286): UserController->runAction()
+#2 /var/www/html/tt.mogujie.com/TT/framework/web/CController.php(265): UserController->runActionWithFilters()
+#3 /var/www/html/tt.mogujie.com/TT/framework/web/CWebApplication.php(282): UserController->run()
+#4 /var/www/html/tt.mogujie.com/TT/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#5 /var/www/html/tt.mogujie.com/TT/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#6 /var/www/html/tt.mogujie.com/TT/index.php(12): CWebApplication->run()
+REQUEST_URI=/user/add?data%5Btitle%5D=&data%5Buname%5D=&data%5BnickName%5D=&data%5Bpwd%5D=&data%5Bavatar%5D=&data%5BdepartId%5D=14&data%5Btelphone%5D=&data%5Bmail%5D=&data%5Bsex%5D=1&data%5Bposition%5D=&data%5BjobNumber%5D=&data%5Bstatus%5D=0
+2014/08/18 13:26:21 [error] [php] Trying to get property of non-object (/var/www/html/tt.mogujie.com/TT/protected/components/Controller.php:33)
+Stack trace:
+#0 /var/www/html/tt.mogujie.com/TT/framework/web/CController.php(308): CInlineAction->runWithParams()
+#1 /var/www/html/tt.mogujie.com/TT/framework/web/CController.php(286): UserController->runAction()
+#2 /var/www/html/tt.mogujie.com/TT/framework/web/CController.php(265): UserController->runActionWithFilters()
+#3 /var/www/html/tt.mogujie.com/TT/framework/web/CWebApplication.php(282): UserController->run()
+#4 /var/www/html/tt.mogujie.com/TT/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#5 /var/www/html/tt.mogujie.com/TT/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#6 /var/www/html/tt.mogujie.com/TT/index.php(12): CWebApplication->run()
+REQUEST_URI=/user/add?data%5Btitle%5D=&data%5Buname%5D=&data%5BnickName%5D=&data%5Bpwd%5D=&data%5Bavatar%5D=&data%5BdepartId%5D=14&data%5Btelphone%5D=&data%5Bmail%5D=&data%5Bsex%5D=1&data%5Bposition%5D=&data%5BjobNumber%5D=&data%5Bstatus%5D=0
+2014/08/18 13:27:59 [error] [php] Trying to get property of non-object (/var/www/html/tt.mogujie.com/TT/protected/components/Controller.php:33)
+Stack trace:
+#0 /var/www/html/tt.mogujie.com/TT/framework/web/CController.php(308): CInlineAction->runWithParams()
+#1 /var/www/html/tt.mogujie.com/TT/framework/web/CController.php(286): UserController->runAction()
+#2 /var/www/html/tt.mogujie.com/TT/framework/web/CController.php(265): UserController->runActionWithFilters()
+#3 /var/www/html/tt.mogujie.com/TT/framework/web/CWebApplication.php(282): UserController->run()
+#4 /var/www/html/tt.mogujie.com/TT/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#5 /var/www/html/tt.mogujie.com/TT/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#6 /var/www/html/tt.mogujie.com/TT/index.php(12): CWebApplication->run()
+REQUEST_URI=/user/add
+2014/08/18 13:43:55 [error] [php] Trying to get property of non-object (/var/www/html/tt.mogujie.com/TT/protected/components/Controller.php:33)
+Stack trace:
+#0 /var/www/html/tt.mogujie.com/TT/framework/web/CController.php(308): CInlineAction->runWithParams()
+#1 /var/www/html/tt.mogujie.com/TT/framework/web/CController.php(286): UserController->runAction()
+#2 /var/www/html/tt.mogujie.com/TT/framework/web/CController.php(265): UserController->runActionWithFilters()
+#3 /var/www/html/tt.mogujie.com/TT/framework/web/CWebApplication.php(282): UserController->run()
+#4 /var/www/html/tt.mogujie.com/TT/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#5 /var/www/html/tt.mogujie.com/TT/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#6 /var/www/html/tt.mogujie.com/TT/index.php(12): CWebApplication->run()
+REQUEST_URI=/user/add
+2014/08/18 13:43:57 [error] [php] Trying to get property of non-object (/var/www/html/tt.mogujie.com/TT/protected/components/Controller.php:33)
+Stack trace:
+#0 /var/www/html/tt.mogujie.com/TT/framework/web/CController.php(308): CInlineAction->runWithParams()
+#1 /var/www/html/tt.mogujie.com/TT/framework/web/CController.php(286): UserController->runAction()
+#2 /var/www/html/tt.mogujie.com/TT/framework/web/CController.php(265): UserController->runActionWithFilters()
+#3 /var/www/html/tt.mogujie.com/TT/framework/web/CWebApplication.php(282): UserController->run()
+#4 /var/www/html/tt.mogujie.com/TT/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#5 /var/www/html/tt.mogujie.com/TT/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#6 /var/www/html/tt.mogujie.com/TT/index.php(12): CWebApplication->run()
+REQUEST_URI=/user/add
+2014/08/18 13:46:02 [error] [php] Trying to get property of non-object (/var/www/html/tt.mogujie.com/TT/protected/components/Controller.php:33)
+Stack trace:
+#0 /var/www/html/tt.mogujie.com/TT/framework/web/CController.php(308): CInlineAction->runWithParams()
+#1 /var/www/html/tt.mogujie.com/TT/framework/web/CController.php(286): UserController->runAction()
+#2 /var/www/html/tt.mogujie.com/TT/framework/web/CController.php(265): UserController->runActionWithFilters()
+#3 /var/www/html/tt.mogujie.com/TT/framework/web/CWebApplication.php(282): UserController->run()
+#4 /var/www/html/tt.mogujie.com/TT/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#5 /var/www/html/tt.mogujie.com/TT/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#6 /var/www/html/tt.mogujie.com/TT/index.php(12): CWebApplication->run()
+REQUEST_URI=/user/add
+2014/08/18 13:46:37 [error] [php] Trying to get property of non-object (/var/www/html/tt.mogujie.com/TT/protected/components/Controller.php:33)
+Stack trace:
+#0 /var/www/html/tt.mogujie.com/TT/framework/web/CController.php(308): CInlineAction->runWithParams()
+#1 /var/www/html/tt.mogujie.com/TT/framework/web/CController.php(286): UserController->runAction()
+#2 /var/www/html/tt.mogujie.com/TT/framework/web/CController.php(265): UserController->runActionWithFilters()
+#3 /var/www/html/tt.mogujie.com/TT/framework/web/CWebApplication.php(282): UserController->run()
+#4 /var/www/html/tt.mogujie.com/TT/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#5 /var/www/html/tt.mogujie.com/TT/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#6 /var/www/html/tt.mogujie.com/TT/index.php(12): CWebApplication->run()
+REQUEST_URI=/user/add
+2014/08/18 13:51:27 [error] [php] Trying to get property of non-object (/var/www/html/tt.mogujie.com/TT/protected/components/Controller.php:33)
+Stack trace:
+#0 /var/www/html/tt.mogujie.com/TT/framework/web/CController.php(308): CInlineAction->runWithParams()
+#1 /var/www/html/tt.mogujie.com/TT/framework/web/CController.php(286): UserController->runAction()
+#2 /var/www/html/tt.mogujie.com/TT/framework/web/CController.php(265): UserController->runActionWithFilters()
+#3 /var/www/html/tt.mogujie.com/TT/framework/web/CWebApplication.php(282): UserController->run()
+#4 /var/www/html/tt.mogujie.com/TT/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#5 /var/www/html/tt.mogujie.com/TT/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#6 /var/www/html/tt.mogujie.com/TT/index.php(12): CWebApplication->run()
+REQUEST_URI=/user/add
+2014/08/18 13:52:28 [error] [php] Trying to get property of non-object (/var/www/html/tt.mogujie.com/TT/protected/components/Controller.php:33)
+Stack trace:
+#0 /var/www/html/tt.mogujie.com/TT/framework/web/CController.php(308): CInlineAction->runWithParams()
+#1 /var/www/html/tt.mogujie.com/TT/framework/web/CController.php(286): UserController->runAction()
+#2 /var/www/html/tt.mogujie.com/TT/framework/web/CController.php(265): UserController->runActionWithFilters()
+#3 /var/www/html/tt.mogujie.com/TT/framework/web/CWebApplication.php(282): UserController->run()
+#4 /var/www/html/tt.mogujie.com/TT/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#5 /var/www/html/tt.mogujie.com/TT/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#6 /var/www/html/tt.mogujie.com/TT/index.php(12): CWebApplication->run()
+REQUEST_URI=/user/add
+2014/08/18 13:52:31 [error] [php] Trying to get property of non-object (/var/www/html/tt.mogujie.com/TT/protected/components/Controller.php:33)
+Stack trace:
+#0 /var/www/html/tt.mogujie.com/TT/framework/web/CController.php(308): CInlineAction->runWithParams()
+#1 /var/www/html/tt.mogujie.com/TT/framework/web/CController.php(286): UserController->runAction()
+#2 /var/www/html/tt.mogujie.com/TT/framework/web/CController.php(265): UserController->runActionWithFilters()
+#3 /var/www/html/tt.mogujie.com/TT/framework/web/CWebApplication.php(282): UserController->run()
+#4 /var/www/html/tt.mogujie.com/TT/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#5 /var/www/html/tt.mogujie.com/TT/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#6 /var/www/html/tt.mogujie.com/TT/index.php(12): CWebApplication->run()
+REQUEST_URI=/user/add
+2014/08/18 14:05:04 [error] [php] Trying to get property of non-object (/var/www/html/tt.mogujie.com/TT/protected/components/Controller.php:33)
+Stack trace:
+#0 /var/www/html/tt.mogujie.com/TT/framework/web/CController.php(308): CInlineAction->runWithParams()
+#1 /var/www/html/tt.mogujie.com/TT/framework/web/CController.php(286): UserController->runAction()
+#2 /var/www/html/tt.mogujie.com/TT/framework/web/CController.php(265): UserController->runActionWithFilters()
+#3 /var/www/html/tt.mogujie.com/TT/framework/web/CWebApplication.php(282): UserController->run()
+#4 /var/www/html/tt.mogujie.com/TT/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#5 /var/www/html/tt.mogujie.com/TT/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#6 /var/www/html/tt.mogujie.com/TT/index.php(12): CWebApplication->run()
+REQUEST_URI=/user/add
+2014/08/18 14:10:47 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "favicon.ico"。' in /var/www/html/tt.mogujie.com/TT/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/html/tt.mogujie.com/TT/framework/web/CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 /var/www/html/tt.mogujie.com/TT/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /var/www/html/tt.mogujie.com/TT/index.php(12): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2014/08/18 14:15:02 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "favicon.ico"。' in /var/www/html/tt.mogujie.com/TT/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/html/tt.mogujie.com/TT/framework/web/CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 /var/www/html/tt.mogujie.com/TT/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /var/www/html/tt.mogujie.com/TT/index.php(12): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2014/08/18 14:26:10 [error] [php] Trying to get property of non-object (/var/www/html/tt.mogujie.com/TT/protected/components/Controller.php:33)
+Stack trace:
+#0 /var/www/html/tt.mogujie.com/TT/framework/web/CController.php(308): CInlineAction->runWithParams()
+#1 /var/www/html/tt.mogujie.com/TT/framework/web/CController.php(286): UserController->runAction()
+#2 /var/www/html/tt.mogujie.com/TT/framework/web/CController.php(265): UserController->runActionWithFilters()
+#3 /var/www/html/tt.mogujie.com/TT/framework/web/CWebApplication.php(282): UserController->run()
+#4 /var/www/html/tt.mogujie.com/TT/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#5 /var/www/html/tt.mogujie.com/TT/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#6 /var/www/html/tt.mogujie.com/TT/index.php(12): CWebApplication->run()
+REQUEST_URI=/user/add
+2014/08/18 14:29:59 [error] [php] Trying to get property of non-object (/var/www/html/tt.mogujie.com/TT/protected/components/Controller.php:33)
+Stack trace:
+#0 /var/www/html/tt.mogujie.com/TT/framework/web/CController.php(308): CInlineAction->runWithParams()
+#1 /var/www/html/tt.mogujie.com/TT/framework/web/CController.php(286): UserController->runAction()
+#2 /var/www/html/tt.mogujie.com/TT/framework/web/CController.php(265): UserController->runActionWithFilters()
+#3 /var/www/html/tt.mogujie.com/TT/framework/web/CWebApplication.php(282): UserController->run()
+#4 /var/www/html/tt.mogujie.com/TT/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#5 /var/www/html/tt.mogujie.com/TT/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#6 /var/www/html/tt.mogujie.com/TT/index.php(12): CWebApplication->run()
+REQUEST_URI=/user/add
+2014/08/18 14:30:12 [error] [php] Trying to get property of non-object (/var/www/html/tt.mogujie.com/TT/protected/components/Controller.php:33)
+Stack trace:
+#0 /var/www/html/tt.mogujie.com/TT/framework/web/CController.php(308): CInlineAction->runWithParams()
+#1 /var/www/html/tt.mogujie.com/TT/framework/web/CController.php(286): UserController->runAction()
+#2 /var/www/html/tt.mogujie.com/TT/framework/web/CController.php(265): UserController->runActionWithFilters()
+#3 /var/www/html/tt.mogujie.com/TT/framework/web/CWebApplication.php(282): UserController->run()
+#4 /var/www/html/tt.mogujie.com/TT/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#5 /var/www/html/tt.mogujie.com/TT/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#6 /var/www/html/tt.mogujie.com/TT/index.php(12): CWebApplication->run()
+REQUEST_URI=/user/add
+2014/08/18 14:31:35 [error] [php] Trying to get property of non-object (/var/www/html/tt.mogujie.com/TT/protected/components/Controller.php:33)
+Stack trace:
+#0 /var/www/html/tt.mogujie.com/TT/framework/web/CController.php(308): CInlineAction->runWithParams()
+#1 /var/www/html/tt.mogujie.com/TT/framework/web/CController.php(286): UserController->runAction()
+#2 /var/www/html/tt.mogujie.com/TT/framework/web/CController.php(265): UserController->runActionWithFilters()
+#3 /var/www/html/tt.mogujie.com/TT/framework/web/CWebApplication.php(282): UserController->run()
+#4 /var/www/html/tt.mogujie.com/TT/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#5 /var/www/html/tt.mogujie.com/TT/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#6 /var/www/html/tt.mogujie.com/TT/index.php(12): CWebApplication->run()
+REQUEST_URI=/user/add
+2014/08/18 14:31:43 [error] [php] Trying to get property of non-object (/var/www/html/tt.mogujie.com/TT/protected/components/Controller.php:33)
+Stack trace:
+#0 /var/www/html/tt.mogujie.com/TT/framework/web/CController.php(308): CInlineAction->runWithParams()
+#1 /var/www/html/tt.mogujie.com/TT/framework/web/CController.php(286): UserController->runAction()
+#2 /var/www/html/tt.mogujie.com/TT/framework/web/CController.php(265): UserController->runActionWithFilters()
+#3 /var/www/html/tt.mogujie.com/TT/framework/web/CWebApplication.php(282): UserController->run()
+#4 /var/www/html/tt.mogujie.com/TT/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#5 /var/www/html/tt.mogujie.com/TT/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#6 /var/www/html/tt.mogujie.com/TT/index.php(12): CWebApplication->run()
+REQUEST_URI=/user/add
+2014/08/18 14:32:46 [error] [php] Trying to get property of non-object (/var/www/html/tt.mogujie.com/TT/protected/components/Controller.php:33)
+Stack trace:
+#0 /var/www/html/tt.mogujie.com/TT/framework/web/CController.php(308): CInlineAction->runWithParams()
+#1 /var/www/html/tt.mogujie.com/TT/framework/web/CController.php(286): UserController->runAction()
+#2 /var/www/html/tt.mogujie.com/TT/framework/web/CController.php(265): UserController->runActionWithFilters()
+#3 /var/www/html/tt.mogujie.com/TT/framework/web/CWebApplication.php(282): UserController->run()
+#4 /var/www/html/tt.mogujie.com/TT/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#5 /var/www/html/tt.mogujie.com/TT/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#6 /var/www/html/tt.mogujie.com/TT/index.php(12): CWebApplication->run()
+REQUEST_URI=/user/add
+2014/08/18 14:39:29 [error] [php] Trying to get property of non-object (/var/www/html/tt.mogujie.com/TT/protected/components/Controller.php:33)
+Stack trace:
+#0 /var/www/html/tt.mogujie.com/TT/framework/web/CController.php(308): CInlineAction->runWithParams()
+#1 /var/www/html/tt.mogujie.com/TT/framework/web/CController.php(286): GroupController->runAction()
+#2 /var/www/html/tt.mogujie.com/TT/framework/web/CController.php(265): GroupController->runActionWithFilters()
+#3 /var/www/html/tt.mogujie.com/TT/framework/web/CWebApplication.php(282): GroupController->run()
+#4 /var/www/html/tt.mogujie.com/TT/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#5 /var/www/html/tt.mogujie.com/TT/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#6 /var/www/html/tt.mogujie.com/TT/index.php(12): CWebApplication->run()
+REQUEST_URI=/group/add
+2014/08/18 14:40:54 [error] [php] Undefined index: selUserId (/var/www/html/tt.mogujie.com/TT/protected/controllers/GroupController.php:30)
+Stack trace:
+#0 /var/www/html/tt.mogujie.com/TT/framework/web/CController.php(286): GroupController->runAction()
+#1 /var/www/html/tt.mogujie.com/TT/framework/web/CController.php(265): GroupController->runActionWithFilters()
+#2 /var/www/html/tt.mogujie.com/TT/framework/web/CWebApplication.php(282): GroupController->run()
+#3 /var/www/html/tt.mogujie.com/TT/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#4 /var/www/html/tt.mogujie.com/TT/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#5 /var/www/html/tt.mogujie.com/TT/index.php(12): CWebApplication->run()
+REQUEST_URI=/group/add
+2014/08/18 14:41:15 [error] [php] Undefined index: selUserId (/var/www/html/tt.mogujie.com/TT/protected/controllers/GroupController.php:31)
+Stack trace:
+#0 /var/www/html/tt.mogujie.com/TT/framework/web/CController.php(286): GroupController->runAction()
+#1 /var/www/html/tt.mogujie.com/TT/framework/web/CController.php(265): GroupController->runActionWithFilters()
+#2 /var/www/html/tt.mogujie.com/TT/framework/web/CWebApplication.php(282): GroupController->run()
+#3 /var/www/html/tt.mogujie.com/TT/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#4 /var/www/html/tt.mogujie.com/TT/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#5 /var/www/html/tt.mogujie.com/TT/index.php(12): CWebApplication->run()
+REQUEST_URI=/group/add
+2014/08/18 14:41:38 [error] [php] Undefined index: selUserId (/var/www/html/tt.mogujie.com/TT/protected/controllers/GroupController.php:31)
+Stack trace:
+#0 /var/www/html/tt.mogujie.com/TT/framework/web/CController.php(286): GroupController->runAction()
+#1 /var/www/html/tt.mogujie.com/TT/framework/web/CController.php(265): GroupController->runActionWithFilters()
+#2 /var/www/html/tt.mogujie.com/TT/framework/web/CWebApplication.php(282): GroupController->run()
+#3 /var/www/html/tt.mogujie.com/TT/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#4 /var/www/html/tt.mogujie.com/TT/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#5 /var/www/html/tt.mogujie.com/TT/index.php(12): CWebApplication->run()
+REQUEST_URI=/group/add
+2014/08/18 14:41:47 [error] [php] Undefined index: selUserId (/var/www/html/tt.mogujie.com/TT/protected/controllers/GroupController.php:31)
+Stack trace:
+#0 /var/www/html/tt.mogujie.com/TT/framework/web/CController.php(286): GroupController->runAction()
+#1 /var/www/html/tt.mogujie.com/TT/framework/web/CController.php(265): GroupController->runActionWithFilters()
+#2 /var/www/html/tt.mogujie.com/TT/framework/web/CWebApplication.php(282): GroupController->run()
+#3 /var/www/html/tt.mogujie.com/TT/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#4 /var/www/html/tt.mogujie.com/TT/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#5 /var/www/html/tt.mogujie.com/TT/index.php(12): CWebApplication->run()
+REQUEST_URI=/group/add
