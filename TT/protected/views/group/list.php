@@ -11,6 +11,7 @@
 <html>
 
 <body>
+    <a href="/group/add/" class="btn btn-default btn-add">添加</a>
 群组列表页面
 <table class="table">
     <thead>
@@ -61,5 +62,18 @@
     ));
 ?>
 </table>
+<style>
+    .pagination{
+        width: 100%;
+    }
+    #content{
+        position: relative;
+    }
+    .btn-add{
+        position: absolute;
+        right: 0px;
+        top: 40px;
+    }
+</style>
 </body>
 </html>

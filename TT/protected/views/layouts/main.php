@@ -25,6 +25,21 @@
                 <ul class="nav navbar-nav">
                     <li class="active"><a href="/user/list">Home</a></li>
                     <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">管理<span class="caret"></span></a>
+                        <ul class="dropdown-menu" role="menu">
+                            <li><a href="/user/list">用户管理</a></li>
+                            <li><a href="/depart/list">组织架构</a></li>
+                            <li><a href="/group/list">群组管理</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">系统配置<span class="caret"></span></a>
+                        <ul class="dropdown-menu" role="menu">
+                            <li><a href="/admin/add">管理员配置</a></li>
+                            <li><a href="/config/add">系统配置</a></li>
+                        </ul>
+                    </li>
+<!--                     <li class="dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown">用户管理<span class="caret"></span></a>
                         <ul class="dropdown-menu" role="menu">
                             <li><a href="/user/add">添加</a></li>
@@ -45,8 +60,8 @@
                             <li><a href="/group/add">添加</a></li>
                             <li><a href="/group/list">列表</a></li>
                         </ul>
-                    </li>
-                    <li class="dropdown">
+                    </li> -->
+<!--                     <li class="dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown">管理员管理<span class="caret"></span></a>
                         <ul class="dropdown-menu" role="menu">
                             <li><a href="/admin/add">修改</a></li>
@@ -57,7 +72,7 @@
                         <ul class="dropdown-menu" role="menu">
                             <li><a href="/config/add">修改</a></li>
                         </ul>
-                    </li>
+                    </li> -->
                 </ul>
                 <ul class="nav navbar-nav navbar-right">
                     <li class="dropdown">

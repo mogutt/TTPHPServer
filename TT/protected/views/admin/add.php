@@ -9,31 +9,41 @@
  */
 
 ?>
-<form role="form" method="post" enctype="multipart/form-data">
+<form class="form-horizontal" role="form" method="post" enctype="multipart/form-data">
     <div class="form-group">
-        <label for="exampleInputEmail1">用户名</label>
-        <input type="text" class="form-control" id="exampleInputEmail1" placeholder="输入用户名" name="data[uname]" value="admin">
+        <label for="exampleInputEmail1" class="col-sm-2 control-label">用户名</label>
+        <div class="col-sm-4">
+            <input type="text" class="form-control" id="exampleInputEmail1" placeholder="输入用户名" name="data[uname]" value="admin">
+        </div>
     </div>
     <div class="form-group">
-        <label for="exampleInputPassword1">原始密码</label>
-        <input type="password" class="form-control" id="exampleInputPassword" placeholder="输入密码" name="data[oldpwd]" value="">
-
+        <label for="exampleInputPassword1" class="col-sm-2 control-label">原始密码</label>
+        <div class="col-sm-4">
+            <input type="password" class="form-control" id="exampleInputPassword" placeholder="输入密码" name="data[oldpwd]" value="">
+        </div>
     </div>
     <div class="form-group">
-        <label for="exampleInputPassword1">新密码</label>
-        <input type="password" class="form-control" id="exampleInputPassword" placeholder="输入密码" name="data[newpwd1]" value="">
+        <label for="exampleInputPassword1" class="col-sm-2 control-label">新密码</label>
+        <div class="col-sm-4">
+            <input type="password" class="form-control" id="exampleInputPassword" placeholder="输入密码" name="data[newpwd1]" value="">
+        </div>
     </div>
     <div class="form-group">
-        <label for="exampleInputPassword1">确认新密码</label>
-        <input type="password" class="form-control" id="exampleInputPassword" placeholder="再次输入密码" name="data[newpwd2]" value="">
+        <label for="exampleInputPassword1" class="col-sm-2 control-label">确认新密码</label>
+        <div class="col-sm-4">
+            <input type="password" class="form-control" id="exampleInputPassword" placeholder="再次输入密码" name="data[newpwd2]" value="">
+        </div>
     </div>
-
-    <button type="submit" class="btn btn-default">
-        <?php
-            if(Yii::app()->controller->action->id == 'add')
-                echo '修改';
-            else
-                echo '添加';
-        ?>
-    </button>
+    <div class="form-group">
+        <div class="col-sm-offset-2 col-sm-10">
+            <button type="submit" class="btn btn-default">
+                <?php
+                    if(Yii::app()->controller->action->id == 'add')
+                      echo '修改';
+                    else
+                        echo '添加';
+                ?>
+            </button>
+        </div>
+    </div>
 </form>

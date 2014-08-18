@@ -11,6 +11,7 @@
 <html>
 
 <body>
+    <a href="/depart/add/" class="btn btn-default btn-sm btn-add">添加</a>
 部门列表页面
 <table class="table">
     <thead>
@@ -51,5 +52,18 @@
     ));
 ?>
 </table>
+<style>
+    .pagination{
+        width: 100%;
+    }
+    #content{
+        position: relative;
+    }
+    .btn-add{
+        position: absolute;
+        right: 0px;
+        top: 0px;
+    }
+</style>
 </body>
 </html>

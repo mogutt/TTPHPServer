@@ -11,6 +11,7 @@
 <html>
 
 <body>
+    <a href="/user/add/" class="btn btn-default btn-add">添加</a>
 用户列表页面
 <table class="table">
     <thead>
@@ -62,5 +63,18 @@
     ));
 ?>
 </table>
+<style>
+    .pagination{
+        width: 100%;
+    }
+    #content{
+        position: relative;
+    }
+    .btn-add{
+        position: absolute;
+        right: 50px;
+        top: 50px;
+    }
+</style>
 </body>
 </html>
