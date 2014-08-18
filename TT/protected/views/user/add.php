@@ -122,7 +122,7 @@
     $().ready(function() {
         $("#signupForm").validate({
             rules: {
-                firstname: "required",
+                title: "required",
                 lastname: "required",
                 username: {
                     required: true,
@@ -148,7 +148,7 @@
                 agree: "required"
             },
             messages: {
-                firstname: "Please enter your firstname",
+                title: "Please enter your firstname",
                 lastname: "Please enter your lastname",
                 username: {
                     required: "Please enter a username",
