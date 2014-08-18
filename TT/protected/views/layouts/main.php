@@ -9,6 +9,7 @@
 	<meta name="language" content="zh" />
 	<title><?php echo CHtml::encode($this->pageTitle); ?></title>
     <script src="/js/jquery.js"></script>
+    <script src="/js/jquery.validate.min.js"></script>
 </head>
 
 <body>
@@ -80,5 +81,5 @@
 </div><!-- page -->
 </body>
 <script src="/js/bootstrap.min.js"></script>
-<script src="/js/jquery.validate.min.js"></script>
+
 </html>

@@ -21,7 +21,7 @@
         width:600px;
     }
 </style>
-<form role="form" method="post" enctype="multipart/form-data" class="formclass">
+<form role="form" method="post" enctype="multipart/form-data" class="formclass" id="signupForm">
     <div class="form-group">
         <label for="title">用户标题<span class="import">*</span></label>
         <input type="text" class="form-control" id="title" placeholder="输入用户标题" name="data[title]" value="<?php $str = !empty($data->title) ? $data->title : ''; echo $str; ?>">
@@ -119,20 +119,10 @@
     })
 </script>
 <script>
-    $.validator.setDefaults({
-        submitHandler: function() {
-            alert("submitted!");
-        }
-    });
-
     $().ready(function() {
-        // validate the comment form when it is submitted
-
-
-        // validate signup form on keyup and submit
         $("#signupForm").validate({
             rules: {
-                title: "required",
+                firstname: "required",
                 lastname: "required",
                 username: {
                     required: true,
@@ -158,7 +148,7 @@
                 agree: "required"
             },
             messages: {
-                title: "Please enter your firstname",
+                firstname: "Please enter your firstname",
                 lastname: "Please enter your lastname",
                 username: {
                     required: "Please enter a username",
@@ -176,27 +166,6 @@
                 email: "Please enter a valid email address",
                 agree: "Please accept our policy"
             }
-        });
-
-        // propose username by combining first- and lastname
-        $("#username").focus(function() {
-            var firstname = $("#title").val();
-            var lastname = $("#lastname").val();
-            if (firstname && lastname && !this.value) {
-                this.value = firstname + "." + lastname;
-            }
-        });
-
-        //code to hide topic selection, disable for demo
-        var newsletter = $("#newsletter");
-        // newsletter topics are optional, hide at first
-        var inital = newsletter.is(":checked");
-        var topics = $("#newsletter_topics")[inital ? "removeClass" : "addClass"]("gray");
-        var topicInputs = topics.find("input").attr("disabled", !inital);
-        // show when newsletter is checked
-        newsletter.click(function() {
-            topics[this.checked ? "removeClass" : "addClass"]("gray");
-            topicInputs.attr("disabled", !this.checked);
         });
     });
 </script>
