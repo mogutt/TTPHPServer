@@ -41,6 +41,7 @@ class IMUsers extends CActiveRecord
             array('uname,nickName', 'length', 'max'=>40),
             array('avatar,position,mail', 'length', 'max'=>255),
             array('id, title, uname, pwd, avatar ,sex, telphone, jobNumber , created, updated ', 'safe'),
+            array('mail ', 'email'),
 		);
 	}
 

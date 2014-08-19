@@ -33,16 +33,16 @@
     foreach($list as $k => $v){
 ?>
     <tr>
-        <td><?php echo $v['id'];?></td>
-        <td><?php echo $v['title'];?></td>
-        <td><?php echo $v['uname'];?></td>
-        <td><?php echo $v['nickName'];?></td>
-        <td><?php echo $this->getDepartName($v['departId']);?></td>
-        <td><?php echo $this->getSex($v['sex']);?></td>
-        <td><?php echo $v['telphone'];?></td>
-        <td><?php echo $v['jobNumber'];?></td>
-        <td><?php echo $v['mail'];?></td>
-        <td><?php echo $this->showStatus($v['status']);?></td>
+        <td><?php echo CHtml::encode($v['id']);?></td>
+        <td><?php echo CHtml::encode($v['title']);?></td>
+        <td><?php echo CHtml::encode($v['uname']);?></td>
+        <td><?php echo CHtml::encode($v['nickName']);?></td>
+        <td><?php echo CHtml::encode($this->getDepartName($v['departId']));?></td>
+        <td><?php echo CHtml::encode($this->getSex($v['sex']));?></td>
+        <td><?php echo CHtml::encode($v['telphone']);?></td>
+        <td><?php echo CHtml::encode($v['jobNumber']);?></td>
+        <td><?php echo CHtml::encode($v['mail']);?></td>
+        <td><?php echo CHtml::encode($this->showStatus($v['status']));?></td>
         <td>
             <a href="/user/edit/<?php echo $v['id'];?>"><button type="button" class="btn btn-info">修改</button></a>
 

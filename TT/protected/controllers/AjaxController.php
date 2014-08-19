@@ -14,8 +14,10 @@ class AjaxController extends Controller{
         $result['status'] = false;
         $result['msg'] = '登录失败';
         $result['url'] = '/user/add';
-
         $adminInfo = Yii::app()->cache->get('cache_admininfo');
+        if(!$adminInfo){
+            $this->getAdminCache();
+        }
         $admin['uname'] = $adminInfo[0]['uname'];
         $admin['pwd'] = $adminInfo[0]['pwd'];
         $uname = trim(Yii::app()->request->getPost('uname'));

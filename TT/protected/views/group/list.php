@@ -32,15 +32,15 @@
     foreach($list as $k => $v){
 ?>
     <tr>
-        <td><?php echo $v['groupId'];?></td>
-        <td><?php echo $v['groupName'];?></td>
+        <td><?php echo CHtml::encode($v['groupId']);?></td>
+        <td><?php echo CHtml::encode($v['groupName']);?></td>
         <td><img src="<?php echo $v['avatar'];?>" style="width:100px;max-height: 200px;"></td>
-        <td><?php echo $v['adesc'];?></td>
-        <td><?php echo $this->getUserInfo($v['createUserId']);?></td>
-        <td><?php echo $this->groupType($v['groupType']);?></td>
-        <td><?php echo $v['memberCnt'];?></td>
-        <td><?php echo date('Y-m-d',$v['created']);?></td>
-        <td><?php echo $this->showStatus($v['status']);?></td>
+        <td><?php echo CHtml::encode($v['adesc']);?></td>
+        <td><?php echo CHtml::encode($this->getUserInfo($v['createUserId']));?></td>
+        <td><?php echo CHtml::encode($this->groupType($v['groupType']));?></td>
+        <td><?php echo CHtml::encode($v['memberCnt']);?></td>
+        <td><?php echo CHtml::encode(date('Y-m-d',$v['created']));?></td>
+        <td><?php echo CHtml::encode($this->showStatus($v['status']));?></td>
         <td>
             <a href="/group/edit/<?php echo $v['groupId'];?>"><button type="button" class="btn btn-info">修改</button></a>
             <!--a href="/group/del/<?php echo $v['groupId'];?>"><button type="button" class="btn btn-danger">删除</button></a-->
