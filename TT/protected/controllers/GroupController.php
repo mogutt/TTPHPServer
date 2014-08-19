@@ -23,11 +23,13 @@
             try{
              $group = new IMGroup();
              $group->attributes = $data;
-             $group->avatar = $this->upload('data[avatar]');
-             if(empty($group->avatar)){
+	     if(empty($_FILES['data[avatar]']))
                  $group->avatar = Yii::app()->params['avatar'];
-             }
-             $selUserId = $data['selUserId'];
+	     else
+             	$group->avatar = $this->upload('data[avatar]');
+	     $selUserId = array();
+	     if(!empty($data['selUserId']))
+             	$selUserId = $data['selUserId'];
              $countSel = 0;
              if(!empty($selUserId)){
                 $countSel = count($data['selUserId']);

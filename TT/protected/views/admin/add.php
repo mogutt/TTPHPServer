@@ -9,7 +9,12 @@
  */
 
 ?>
-<form class="form-horizontal" role="form" method="post" enctype="multipart/form-data">
+<style>
+ .formclass{
+        width:600px;
+  } 
+</style>
+<form role="form-horizontal" method="post" enctype="multipart/form-data" class="formclass">
     <div class="form-group">
         <label for="exampleInputEmail1" class="col-sm-2 control-label">用户名</label>
         <div class="col-sm-4">

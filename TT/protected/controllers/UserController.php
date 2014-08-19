@@ -17,9 +17,11 @@
             $data = Yii::app()->request->getPost('data');
             $user->attributes = $data;
             $user->pwd = md5($data['pwd']);
-            $user->avatar = $this->upload('data[avatar]');
-            if(empty($user->avatar)){
+	    if(empty($_FILES['data[avatar]']))
                 $user->avatar = Yii::app()->params['avatar'];
+	    else
+            	$user->avatar = $this->upload('data[avatar]');
+            if(empty($user->avatar)){
             }
             $time = time();
             $user->departId = $data['departId'];
@@ -32,7 +34,7 @@
                 $this->showAlert('success','添加成功');
                 $this->getUserCache();
             }else{
-                $this->showAlert('fail','添加失败');
+                $this->showAlert('fail','添加失败,请添加完整信息');
             }
         }
          $departs = Yii::app()->cache->get('cache_depart');

@@ -14,8 +14,11 @@
     .uploadclass{
         width:80px;
     }
+ .formclass{
+        width:600px;
+  } 
 </style>
-<form role="form" method="post" enctype="multipart/form-data" class="form-horizontal">
+<form role="form" method="post" enctype="multipart/form-data" class="form-horizontal formclass">
     <div class="form-group">
         <label for="exampleInputEmail1" class="col-sm-2 control-label">群名称</label>
         <div class="col-sm-4">
