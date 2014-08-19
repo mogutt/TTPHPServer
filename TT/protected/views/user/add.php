@@ -127,7 +127,7 @@
             </div>
         </div>    
     </div>
-    <button type="submit" class="btn btn-default">
+    <button type="submit" class="btn btn-primary">
         <?php
             if(Yii::app()->controller->action->id == 'edit')
                 echo '修改';

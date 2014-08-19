@@ -9,7 +9,7 @@
  */
 
 ?>
-<form role="form-horizontal" method="post" enctype="multipart/form-data" class="formclass">
+<form class="form-horizontal" method="post" enctype="multipart/form-data">
     <div class="form-group">
         <label for="exampleInputEmail1" class="col-sm-2 control-label">Login Server IP</label>
         <div class="col-sm-4">
@@ -34,4 +34,10 @@
             </button>
         </div>
     </div>
+    <script type="text/javascript">
+        $(function(){
+            $(".top-nav li").removeClass("active");
+            $(".li_config").addClass("active");
+        })
+    </script>
 </form>

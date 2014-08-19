@@ -65,5 +65,11 @@
         top: 0px;
     }
 </style>
+<script type="text/javascript">
+    $(function(){
+        $(".top-nav li").removeClass("active");
+        $(".li_manage").addClass("active");
+    })
+</script>
 </body>
 </html>
