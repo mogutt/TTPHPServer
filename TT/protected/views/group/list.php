@@ -13,7 +13,7 @@
 <body>
     <a href="/group/add/" class="btn btn-default btn-add">添加</a>
 群组列表页面
-<table class="table">
+<table class="table table-bordered">
     <thead>
     <tr>
         <td>GroupId</td>
@@ -34,7 +34,7 @@
     <tr>
         <td><?php echo CHtml::encode($v['groupId']);?></td>
         <td><?php echo CHtml::encode($v['groupName']);?></td>
-        <td><img src="<?php echo $v['avatar'];?>" style="width:100px;max-height: 200px;"></td>
+        <td><img src="<?php echo $this->showImg($v['avatar']);?>" style="width:100px;max-height: 200px;"></td>
         <td><?php echo CHtml::encode($v['adesc']);?></td>
         <td><?php echo CHtml::encode($this->getUserInfo($v['createUserId']));?></td>
         <td><?php echo CHtml::encode($this->groupType($v['groupType']));?></td>

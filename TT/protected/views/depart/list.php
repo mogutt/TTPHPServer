@@ -12,8 +12,8 @@
 
 <body>
     <a href="/depart/add/" class="btn btn-default btn-sm btn-add">添加</a>
-部门列表页面
-<table class="table">
+<h3>部门列表页面</h3>
+<table class="table table-bordered">
     <thead>
     <tr>
         <td>ID</td>

@@ -72,7 +72,7 @@
             }
             .btn-add{
                 position: absolute;
-                right: 50px;
+                right: 0;
                 top: 50px;
             }
         </style>

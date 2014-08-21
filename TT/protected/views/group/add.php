@@ -29,13 +29,13 @@
         <label for="exampleInputFile" class="col-sm-2 control-label">群头像</label>
         <div class="col-sm-4">
             <input type="hidden" id="exampleInputFile" name="data[avatar]" value="<?php $str = !empty($data->avatar) ? $data->avatar : ''; echo $str; ?>">
-            <input type="file" id="exampleInputFile" name="data[avatar]">
+            <input type="file" id="exampleInputFile" name="data[mod_avatar]">
             <?php
-            if(!empty($data->avatar)){
-                ?>
-                <img src="<?php echo $data->avatar;?>" class="uploadclass">
+                if(!empty($data->avatar)){
+            ?>
+                <img src="<?php echo $this->showImg($data->avatar);?>" class="uploadclass">
             <?php
-            }
+                }
             ?>
         </div>
     </div>

@@ -23,10 +23,11 @@
             try{
              $group = new IMGroup();
              $group->attributes = $data;
-	     if(empty($_FILES['data[avatar]']))
-                 $group->avatar = Yii::app()->params['avatar'];
-	     else
-             	$group->avatar = $this->upload('data[avatar]');
+             if($_FILES['data']['tmp_name']['mod_avatar']){
+                 $group->avatar = $this->upload('data[mod_avatar]');
+             }else{
+                 $group->avatar = '';
+             }
 	     $selUserId = array();
 	     if(!empty($data['selUserId']))
              	$selUserId = $data['selUserId'];
@@ -142,12 +143,21 @@
          try{
              if(Yii::app()->request->isPostRequest){
                  $data = Yii::app()->request->getPost('data');
+                 // var_dump($data);
+                 // var_dump($group);
                  $group->attributes = $data;
-                 if(!empty($data['avatar']) && $group->avatar != $data['avatar']){
-                     $group->avatar = $this->upload('data[avatar]');
-                 }elseif(empty($data['avatar'])){
-                     $group->avatar = Yii::app()->params['avatar'];
+                 // var_dump($_FILES['data']);
+                 if($_FILES['data']['tmp_name']['mod_avatar']){
+                     $group->avatar = $this->upload('data[mod_avatar]');
+                 }else{
+                     $group->avatar = '';
                  }
+                 // var_dump($data);
+                 // if(!empty($data['avatar']) && $group->avatar != $data['avatar']){
+                 //     $group->avatar = $this->upload('data[avatar]');
+                 // }elseif(empty($data['avatar'])){
+                 //     $group->avatar = Yii::app()->params['avatar'];
+                 // }
                  $selUserId = $data['selUserId'];
                  $countSel = 0;
                  if(!empty($selUserId)){

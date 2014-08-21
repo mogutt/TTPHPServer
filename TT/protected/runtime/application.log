@@ -1538,3 +1538,964 @@ Stack trace:
 #5 {main}
 REQUEST_URI=/user
 ---
+2014/08/20 19:35:10 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "favicon.ico"。' in /media/psf/Home/Sites/im/TT/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /media/psf/Home/Sites/im/TT/framework/web/CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 /media/psf/Home/Sites/im/TT/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /media/psf/Home/Sites/im/TT/index.php(12): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2014/08/21 14:13:43 [error] [php] Illegal offset type in isset or empty (/media/psf/Home/Sites/im/TT/framework/web/CUploadedFile.php:86)
+Stack trace:
+#0 unknown(0): UserController->actionEdit()
+#1 /media/psf/Home/Sites/im/TT/framework/web/actions/CAction.php(108): ReflectionMethod->invokeArgs()
+#2 /media/psf/Home/Sites/im/TT/framework/web/actions/CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#3 /media/psf/Home/Sites/im/TT/framework/web/CController.php(308): CInlineAction->runWithParams()
+#4 /media/psf/Home/Sites/im/TT/framework/web/CController.php(286): UserController->runAction()
+#5 /media/psf/Home/Sites/im/TT/framework/web/CController.php(265): UserController->runActionWithFilters()
+#6 /media/psf/Home/Sites/im/TT/framework/web/CWebApplication.php(282): UserController->run()
+#7 /media/psf/Home/Sites/im/TT/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#8 /media/psf/Home/Sites/im/TT/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#9 /media/psf/Home/Sites/im/TT/index.php(12): CWebApplication->run()
+REQUEST_URI=/user/edit/10030
+2014/08/21 14:14:07 [error] [php] Illegal offset type in isset or empty (/media/psf/Home/Sites/im/TT/framework/web/CUploadedFile.php:86)
+Stack trace:
+#0 unknown(0): UserController->actionEdit()
+#1 /media/psf/Home/Sites/im/TT/framework/web/actions/CAction.php(108): ReflectionMethod->invokeArgs()
+#2 /media/psf/Home/Sites/im/TT/framework/web/actions/CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#3 /media/psf/Home/Sites/im/TT/framework/web/CController.php(308): CInlineAction->runWithParams()
+#4 /media/psf/Home/Sites/im/TT/framework/web/CController.php(286): UserController->runAction()
+#5 /media/psf/Home/Sites/im/TT/framework/web/CController.php(265): UserController->runActionWithFilters()
+#6 /media/psf/Home/Sites/im/TT/framework/web/CWebApplication.php(282): UserController->run()
+#7 /media/psf/Home/Sites/im/TT/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#8 /media/psf/Home/Sites/im/TT/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#9 /media/psf/Home/Sites/im/TT/index.php(12): CWebApplication->run()
+REQUEST_URI=/user/edit/10030
+2014/08/21 14:14:12 [error] [php] Illegal offset type in isset or empty (/media/psf/Home/Sites/im/TT/framework/web/CUploadedFile.php:86)
+Stack trace:
+#0 unknown(0): UserController->actionEdit()
+#1 /media/psf/Home/Sites/im/TT/framework/web/actions/CAction.php(108): ReflectionMethod->invokeArgs()
+#2 /media/psf/Home/Sites/im/TT/framework/web/actions/CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#3 /media/psf/Home/Sites/im/TT/framework/web/CController.php(308): CInlineAction->runWithParams()
+#4 /media/psf/Home/Sites/im/TT/framework/web/CController.php(286): UserController->runAction()
+#5 /media/psf/Home/Sites/im/TT/framework/web/CController.php(265): UserController->runActionWithFilters()
+#6 /media/psf/Home/Sites/im/TT/framework/web/CWebApplication.php(282): UserController->run()
+#7 /media/psf/Home/Sites/im/TT/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#8 /media/psf/Home/Sites/im/TT/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#9 /media/psf/Home/Sites/im/TT/index.php(12): CWebApplication->run()
+REQUEST_URI=/user/edit/10030
+2014/08/21 14:14:16 [error] [php] Illegal offset type in isset or empty (/media/psf/Home/Sites/im/TT/framework/web/CUploadedFile.php:86)
+Stack trace:
+#0 unknown(0): UserController->actionEdit()
+#1 /media/psf/Home/Sites/im/TT/framework/web/actions/CAction.php(108): ReflectionMethod->invokeArgs()
+#2 /media/psf/Home/Sites/im/TT/framework/web/actions/CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#3 /media/psf/Home/Sites/im/TT/framework/web/CController.php(308): CInlineAction->runWithParams()
+#4 /media/psf/Home/Sites/im/TT/framework/web/CController.php(286): UserController->runAction()
+#5 /media/psf/Home/Sites/im/TT/framework/web/CController.php(265): UserController->runActionWithFilters()
+#6 /media/psf/Home/Sites/im/TT/framework/web/CWebApplication.php(282): UserController->run()
+#7 /media/psf/Home/Sites/im/TT/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#8 /media/psf/Home/Sites/im/TT/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#9 /media/psf/Home/Sites/im/TT/index.php(12): CWebApplication->run()
+REQUEST_URI=/user/edit/10030
+2014/08/21 14:19:32 [error] [php] move_uploaded_file(/var/www/html/tt.mogujie.com/TT/uploadImage/140860197253928铁.png) [<a href='function.move-uploaded-file'>function.move-uploaded-file</a>]: failed to open stream: No such file or directory (/media/psf/Home/Sites/im/TT/framework/web/CUploadedFile.php:196)
+Stack trace:
+#0 /media/psf/Home/Sites/im/TT/protected/controllers/UserController.php(118): UserController->upload()
+#1 unknown(0): UserController->actionEdit()
+#2 /media/psf/Home/Sites/im/TT/framework/web/actions/CAction.php(108): ReflectionMethod->invokeArgs()
+#3 /media/psf/Home/Sites/im/TT/framework/web/actions/CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#4 /media/psf/Home/Sites/im/TT/framework/web/CController.php(308): CInlineAction->runWithParams()
+#5 /media/psf/Home/Sites/im/TT/framework/web/CController.php(286): UserController->runAction()
+#6 /media/psf/Home/Sites/im/TT/framework/web/CController.php(265): UserController->runActionWithFilters()
+#7 /media/psf/Home/Sites/im/TT/framework/web/CWebApplication.php(282): UserController->run()
+#8 /media/psf/Home/Sites/im/TT/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#9 /media/psf/Home/Sites/im/TT/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#10 /media/psf/Home/Sites/im/TT/index.php(12): CWebApplication->run()
+REQUEST_URI=/user/edit/10030
+2014/08/21 14:20:11 [error] [php] move_uploaded_file(/var/www/html/tt.mogujie.com/TT/uploadImage/140860201195813铁.png) [<a href='function.move-uploaded-file'>function.move-uploaded-file</a>]: failed to open stream: No such file or directory (/media/psf/Home/Sites/im/TT/framework/web/CUploadedFile.php:196)
+Stack trace:
+#0 /media/psf/Home/Sites/im/TT/protected/controllers/UserController.php(118): UserController->upload()
+#1 unknown(0): UserController->actionEdit()
+#2 /media/psf/Home/Sites/im/TT/framework/web/actions/CAction.php(108): ReflectionMethod->invokeArgs()
+#3 /media/psf/Home/Sites/im/TT/framework/web/actions/CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#4 /media/psf/Home/Sites/im/TT/framework/web/CController.php(308): CInlineAction->runWithParams()
+#5 /media/psf/Home/Sites/im/TT/framework/web/CController.php(286): UserController->runAction()
+#6 /media/psf/Home/Sites/im/TT/framework/web/CController.php(265): UserController->runActionWithFilters()
+#7 /media/psf/Home/Sites/im/TT/framework/web/CWebApplication.php(282): UserController->run()
+#8 /media/psf/Home/Sites/im/TT/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#9 /media/psf/Home/Sites/im/TT/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#10 /media/psf/Home/Sites/im/TT/index.php(12): CWebApplication->run()
+REQUEST_URI=/user/edit/10030
+2014/08/21 14:22:59 [error] [php] move_uploaded_file(/var/www/html/tt.mogujie.com/TT/uploadImage/14086021792423铁.png) [<a href='function.move-uploaded-file'>function.move-uploaded-file</a>]: failed to open stream: No such file or directory (/media/psf/Home/Sites/im/TT/framework/web/CUploadedFile.php:196)
+Stack trace:
+#0 /media/psf/Home/Sites/im/TT/protected/controllers/UserController.php(127): UserController->upload()
+#1 unknown(0): UserController->actionEdit()
+#2 /media/psf/Home/Sites/im/TT/framework/web/actions/CAction.php(108): ReflectionMethod->invokeArgs()
+#3 /media/psf/Home/Sites/im/TT/framework/web/actions/CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#4 /media/psf/Home/Sites/im/TT/framework/web/CController.php(308): CInlineAction->runWithParams()
+#5 /media/psf/Home/Sites/im/TT/framework/web/CController.php(286): UserController->runAction()
+#6 /media/psf/Home/Sites/im/TT/framework/web/CController.php(265): UserController->runActionWithFilters()
+#7 /media/psf/Home/Sites/im/TT/framework/web/CWebApplication.php(282): UserController->run()
+#8 /media/psf/Home/Sites/im/TT/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#9 /media/psf/Home/Sites/im/TT/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#10 /media/psf/Home/Sites/im/TT/index.php(12): CWebApplication->run()
+REQUEST_URI=/user/edit/10030
+2014/08/21 14:23:47 [error] [php] move_uploaded_file(/var/www/html/tt.mogujie.com/TT/uploadImage/140860222731098铁.png) [<a href='function.move-uploaded-file'>function.move-uploaded-file</a>]: failed to open stream: No such file or directory (/media/psf/Home/Sites/im/TT/framework/web/CUploadedFile.php:196)
+Stack trace:
+#0 /media/psf/Home/Sites/im/TT/protected/controllers/UserController.php(127): UserController->upload()
+#1 unknown(0): UserController->actionEdit()
+#2 /media/psf/Home/Sites/im/TT/framework/web/actions/CAction.php(108): ReflectionMethod->invokeArgs()
+#3 /media/psf/Home/Sites/im/TT/framework/web/actions/CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#4 /media/psf/Home/Sites/im/TT/framework/web/CController.php(308): CInlineAction->runWithParams()
+#5 /media/psf/Home/Sites/im/TT/framework/web/CController.php(286): UserController->runAction()
+#6 /media/psf/Home/Sites/im/TT/framework/web/CController.php(265): UserController->runActionWithFilters()
+#7 /media/psf/Home/Sites/im/TT/framework/web/CWebApplication.php(282): UserController->run()
+#8 /media/psf/Home/Sites/im/TT/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#9 /media/psf/Home/Sites/im/TT/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#10 /media/psf/Home/Sites/im/TT/index.php(12): CWebApplication->run()
+REQUEST_URI=/user/edit/10030
+2014/08/21 14:23:49 [error] [php] move_uploaded_file(/var/www/html/tt.mogujie.com/TT/uploadImage/140860222951004铁.png) [<a href='function.move-uploaded-file'>function.move-uploaded-file</a>]: failed to open stream: No such file or directory (/media/psf/Home/Sites/im/TT/framework/web/CUploadedFile.php:196)
+Stack trace:
+#0 /media/psf/Home/Sites/im/TT/protected/controllers/UserController.php(127): UserController->upload()
+#1 unknown(0): UserController->actionEdit()
+#2 /media/psf/Home/Sites/im/TT/framework/web/actions/CAction.php(108): ReflectionMethod->invokeArgs()
+#3 /media/psf/Home/Sites/im/TT/framework/web/actions/CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#4 /media/psf/Home/Sites/im/TT/framework/web/CController.php(308): CInlineAction->runWithParams()
+#5 /media/psf/Home/Sites/im/TT/framework/web/CController.php(286): UserController->runAction()
+#6 /media/psf/Home/Sites/im/TT/framework/web/CController.php(265): UserController->runActionWithFilters()
+#7 /media/psf/Home/Sites/im/TT/framework/web/CWebApplication.php(282): UserController->run()
+#8 /media/psf/Home/Sites/im/TT/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#9 /media/psf/Home/Sites/im/TT/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#10 /media/psf/Home/Sites/im/TT/index.php(12): CWebApplication->run()
+REQUEST_URI=/user/edit/10030
+2014/08/21 14:24:24 [error] [php] move_uploaded_file(/var/www/html/tt.mogujie.com/TT/uploadImage/140860226461049铁.png) [<a href='function.move-uploaded-file'>function.move-uploaded-file</a>]: failed to open stream: No such file or directory (/media/psf/Home/Sites/im/TT/framework/web/CUploadedFile.php:196)
+Stack trace:
+#0 /media/psf/Home/Sites/im/TT/protected/controllers/UserController.php(127): UserController->upload()
+#1 unknown(0): UserController->actionEdit()
+#2 /media/psf/Home/Sites/im/TT/framework/web/actions/CAction.php(108): ReflectionMethod->invokeArgs()
+#3 /media/psf/Home/Sites/im/TT/framework/web/actions/CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#4 /media/psf/Home/Sites/im/TT/framework/web/CController.php(308): CInlineAction->runWithParams()
+#5 /media/psf/Home/Sites/im/TT/framework/web/CController.php(286): UserController->runAction()
+#6 /media/psf/Home/Sites/im/TT/framework/web/CController.php(265): UserController->runActionWithFilters()
+#7 /media/psf/Home/Sites/im/TT/framework/web/CWebApplication.php(282): UserController->run()
+#8 /media/psf/Home/Sites/im/TT/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#9 /media/psf/Home/Sites/im/TT/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#10 /media/psf/Home/Sites/im/TT/index.php(12): CWebApplication->run()
+REQUEST_URI=/user/edit/10030
+2014/08/21 14:24:31 [error] [php] move_uploaded_file(/var/www/html/tt.mogujie.com/TT/uploadImage/140860227151126铁.png) [<a href='function.move-uploaded-file'>function.move-uploaded-file</a>]: failed to open stream: No such file or directory (/media/psf/Home/Sites/im/TT/framework/web/CUploadedFile.php:196)
+Stack trace:
+#0 /media/psf/Home/Sites/im/TT/protected/controllers/UserController.php(127): UserController->upload()
+#1 unknown(0): UserController->actionEdit()
+#2 /media/psf/Home/Sites/im/TT/framework/web/actions/CAction.php(108): ReflectionMethod->invokeArgs()
+#3 /media/psf/Home/Sites/im/TT/framework/web/actions/CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#4 /media/psf/Home/Sites/im/TT/framework/web/CController.php(308): CInlineAction->runWithParams()
+#5 /media/psf/Home/Sites/im/TT/framework/web/CController.php(286): UserController->runAction()
+#6 /media/psf/Home/Sites/im/TT/framework/web/CController.php(265): UserController->runActionWithFilters()
+#7 /media/psf/Home/Sites/im/TT/framework/web/CWebApplication.php(282): UserController->run()
+#8 /media/psf/Home/Sites/im/TT/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#9 /media/psf/Home/Sites/im/TT/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#10 /media/psf/Home/Sites/im/TT/index.php(12): CWebApplication->run()
+REQUEST_URI=/user/edit/10030
+2014/08/21 14:24:34 [error] [php] move_uploaded_file(/var/www/html/tt.mogujie.com/TT/uploadImage/140860227452129铁.png) [<a href='function.move-uploaded-file'>function.move-uploaded-file</a>]: failed to open stream: No such file or directory (/media/psf/Home/Sites/im/TT/framework/web/CUploadedFile.php:196)
+Stack trace:
+#0 /media/psf/Home/Sites/im/TT/protected/controllers/UserController.php(127): UserController->upload()
+#1 unknown(0): UserController->actionEdit()
+#2 /media/psf/Home/Sites/im/TT/framework/web/actions/CAction.php(108): ReflectionMethod->invokeArgs()
+#3 /media/psf/Home/Sites/im/TT/framework/web/actions/CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#4 /media/psf/Home/Sites/im/TT/framework/web/CController.php(308): CInlineAction->runWithParams()
+#5 /media/psf/Home/Sites/im/TT/framework/web/CController.php(286): UserController->runAction()
+#6 /media/psf/Home/Sites/im/TT/framework/web/CController.php(265): UserController->runActionWithFilters()
+#7 /media/psf/Home/Sites/im/TT/framework/web/CWebApplication.php(282): UserController->run()
+#8 /media/psf/Home/Sites/im/TT/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#9 /media/psf/Home/Sites/im/TT/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#10 /media/psf/Home/Sites/im/TT/index.php(12): CWebApplication->run()
+REQUEST_URI=/user/edit/10030
+2014/08/21 14:24:46 [error] [php] move_uploaded_file(/var/www/html/tt.mogujie.com/TT/uploadImage/140860228673070铁.png) [<a href='function.move-uploaded-file'>function.move-uploaded-file</a>]: failed to open stream: No such file or directory (/media/psf/Home/Sites/im/TT/framework/web/CUploadedFile.php:196)
+Stack trace:
+#0 /media/psf/Home/Sites/im/TT/protected/controllers/UserController.php(127): UserController->upload()
+#1 unknown(0): UserController->actionEdit()
+#2 /media/psf/Home/Sites/im/TT/framework/web/actions/CAction.php(108): ReflectionMethod->invokeArgs()
+#3 /media/psf/Home/Sites/im/TT/framework/web/actions/CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#4 /media/psf/Home/Sites/im/TT/framework/web/CController.php(308): CInlineAction->runWithParams()
+#5 /media/psf/Home/Sites/im/TT/framework/web/CController.php(286): UserController->runAction()
+#6 /media/psf/Home/Sites/im/TT/framework/web/CController.php(265): UserController->runActionWithFilters()
+#7 /media/psf/Home/Sites/im/TT/framework/web/CWebApplication.php(282): UserController->run()
+#8 /media/psf/Home/Sites/im/TT/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#9 /media/psf/Home/Sites/im/TT/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#10 /media/psf/Home/Sites/im/TT/index.php(12): CWebApplication->run()
+REQUEST_URI=/user/edit/10030
+2014/08/21 14:25:06 [error] [php] move_uploaded_file(/var/www/html/tt.mogujie.com/TT/uploadImage/140860230620039铁.png) [<a href='function.move-uploaded-file'>function.move-uploaded-file</a>]: failed to open stream: No such file or directory (/media/psf/Home/Sites/im/TT/framework/web/CUploadedFile.php:196)
+Stack trace:
+#0 /media/psf/Home/Sites/im/TT/protected/controllers/UserController.php(127): UserController->upload()
+#1 unknown(0): UserController->actionEdit()
+#2 /media/psf/Home/Sites/im/TT/framework/web/actions/CAction.php(108): ReflectionMethod->invokeArgs()
+#3 /media/psf/Home/Sites/im/TT/framework/web/actions/CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#4 /media/psf/Home/Sites/im/TT/framework/web/CController.php(308): CInlineAction->runWithParams()
+#5 /media/psf/Home/Sites/im/TT/framework/web/CController.php(286): UserController->runAction()
+#6 /media/psf/Home/Sites/im/TT/framework/web/CController.php(265): UserController->runActionWithFilters()
+#7 /media/psf/Home/Sites/im/TT/framework/web/CWebApplication.php(282): UserController->run()
+#8 /media/psf/Home/Sites/im/TT/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#9 /media/psf/Home/Sites/im/TT/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#10 /media/psf/Home/Sites/im/TT/index.php(12): CWebApplication->run()
+REQUEST_URI=/user/edit/10030
+2014/08/21 14:26:36 [error] [php] move_uploaded_file(TT/uploadImage/14086023962159铁.png) [<a href='function.move-uploaded-file'>function.move-uploaded-file</a>]: failed to open stream: No such file or directory (/media/psf/Home/Sites/im/TT/framework/web/CUploadedFile.php:196)
+Stack trace:
+#0 /media/psf/Home/Sites/im/TT/protected/controllers/UserController.php(127): UserController->upload()
+#1 unknown(0): UserController->actionEdit()
+#2 /media/psf/Home/Sites/im/TT/framework/web/actions/CAction.php(108): ReflectionMethod->invokeArgs()
+#3 /media/psf/Home/Sites/im/TT/framework/web/actions/CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#4 /media/psf/Home/Sites/im/TT/framework/web/CController.php(308): CInlineAction->runWithParams()
+#5 /media/psf/Home/Sites/im/TT/framework/web/CController.php(286): UserController->runAction()
+#6 /media/psf/Home/Sites/im/TT/framework/web/CController.php(265): UserController->runActionWithFilters()
+#7 /media/psf/Home/Sites/im/TT/framework/web/CWebApplication.php(282): UserController->run()
+#8 /media/psf/Home/Sites/im/TT/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#9 /media/psf/Home/Sites/im/TT/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#10 /media/psf/Home/Sites/im/TT/index.php(12): CWebApplication->run()
+REQUEST_URI=/user/edit/10030
+2014/08/21 14:26:37 [error] [php] move_uploaded_file(TT/uploadImage/140860239799627铁.png) [<a href='function.move-uploaded-file'>function.move-uploaded-file</a>]: failed to open stream: No such file or directory (/media/psf/Home/Sites/im/TT/framework/web/CUploadedFile.php:196)
+Stack trace:
+#0 /media/psf/Home/Sites/im/TT/protected/controllers/UserController.php(127): UserController->upload()
+#1 unknown(0): UserController->actionEdit()
+#2 /media/psf/Home/Sites/im/TT/framework/web/actions/CAction.php(108): ReflectionMethod->invokeArgs()
+#3 /media/psf/Home/Sites/im/TT/framework/web/actions/CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#4 /media/psf/Home/Sites/im/TT/framework/web/CController.php(308): CInlineAction->runWithParams()
+#5 /media/psf/Home/Sites/im/TT/framework/web/CController.php(286): UserController->runAction()
+#6 /media/psf/Home/Sites/im/TT/framework/web/CController.php(265): UserController->runActionWithFilters()
+#7 /media/psf/Home/Sites/im/TT/framework/web/CWebApplication.php(282): UserController->run()
+#8 /media/psf/Home/Sites/im/TT/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#9 /media/psf/Home/Sites/im/TT/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#10 /media/psf/Home/Sites/im/TT/index.php(12): CWebApplication->run()
+REQUEST_URI=/user/edit/10030
+2014/08/21 14:26:40 [error] [php] move_uploaded_file(/TT/uploadImage/140860240045636铁.png) [<a href='function.move-uploaded-file'>function.move-uploaded-file</a>]: failed to open stream: No such file or directory (/media/psf/Home/Sites/im/TT/framework/web/CUploadedFile.php:196)
+Stack trace:
+#0 /media/psf/Home/Sites/im/TT/protected/controllers/UserController.php(127): UserController->upload()
+#1 unknown(0): UserController->actionEdit()
+#2 /media/psf/Home/Sites/im/TT/framework/web/actions/CAction.php(108): ReflectionMethod->invokeArgs()
+#3 /media/psf/Home/Sites/im/TT/framework/web/actions/CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#4 /media/psf/Home/Sites/im/TT/framework/web/CController.php(308): CInlineAction->runWithParams()
+#5 /media/psf/Home/Sites/im/TT/framework/web/CController.php(286): UserController->runAction()
+#6 /media/psf/Home/Sites/im/TT/framework/web/CController.php(265): UserController->runActionWithFilters()
+#7 /media/psf/Home/Sites/im/TT/framework/web/CWebApplication.php(282): UserController->run()
+#8 /media/psf/Home/Sites/im/TT/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#9 /media/psf/Home/Sites/im/TT/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#10 /media/psf/Home/Sites/im/TT/index.php(12): CWebApplication->run()
+REQUEST_URI=/user/edit/10030
+2014/08/21 14:26:43 [error] [php] move_uploaded_file(./TT/uploadImage/140860240370225铁.png) [<a href='function.move-uploaded-file'>function.move-uploaded-file</a>]: failed to open stream: No such file or directory (/media/psf/Home/Sites/im/TT/framework/web/CUploadedFile.php:196)
+Stack trace:
+#0 /media/psf/Home/Sites/im/TT/protected/controllers/UserController.php(127): UserController->upload()
+#1 unknown(0): UserController->actionEdit()
+#2 /media/psf/Home/Sites/im/TT/framework/web/actions/CAction.php(108): ReflectionMethod->invokeArgs()
+#3 /media/psf/Home/Sites/im/TT/framework/web/actions/CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#4 /media/psf/Home/Sites/im/TT/framework/web/CController.php(308): CInlineAction->runWithParams()
+#5 /media/psf/Home/Sites/im/TT/framework/web/CController.php(286): UserController->runAction()
+#6 /media/psf/Home/Sites/im/TT/framework/web/CController.php(265): UserController->runActionWithFilters()
+#7 /media/psf/Home/Sites/im/TT/framework/web/CWebApplication.php(282): UserController->run()
+#8 /media/psf/Home/Sites/im/TT/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#9 /media/psf/Home/Sites/im/TT/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#10 /media/psf/Home/Sites/im/TT/index.php(12): CWebApplication->run()
+REQUEST_URI=/user/edit/10030
+2014/08/21 14:26:46 [error] [php] move_uploaded_file(/TT/uploadImage/140860240641640铁.png) [<a href='function.move-uploaded-file'>function.move-uploaded-file</a>]: failed to open stream: No such file or directory (/media/psf/Home/Sites/im/TT/framework/web/CUploadedFile.php:196)
+Stack trace:
+#0 /media/psf/Home/Sites/im/TT/protected/controllers/UserController.php(127): UserController->upload()
+#1 unknown(0): UserController->actionEdit()
+#2 /media/psf/Home/Sites/im/TT/framework/web/actions/CAction.php(108): ReflectionMethod->invokeArgs()
+#3 /media/psf/Home/Sites/im/TT/framework/web/actions/CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#4 /media/psf/Home/Sites/im/TT/framework/web/CController.php(308): CInlineAction->runWithParams()
+#5 /media/psf/Home/Sites/im/TT/framework/web/CController.php(286): UserController->runAction()
+#6 /media/psf/Home/Sites/im/TT/framework/web/CController.php(265): UserController->runActionWithFilters()
+#7 /media/psf/Home/Sites/im/TT/framework/web/CWebApplication.php(282): UserController->run()
+#8 /media/psf/Home/Sites/im/TT/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#9 /media/psf/Home/Sites/im/TT/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#10 /media/psf/Home/Sites/im/TT/index.php(12): CWebApplication->run()
+REQUEST_URI=/user/edit/10030
+2014/08/21 14:27:44 [error] [php] move_uploaded_file(/Users/scorpio/Sites/im/TT/uploadImage/140860246461309铁.png) [<a href='function.move-uploaded-file'>function.move-uploaded-file</a>]: failed to open stream: No such file or directory (/media/psf/Home/Sites/im/TT/framework/web/CUploadedFile.php:196)
+Stack trace:
+#0 /media/psf/Home/Sites/im/TT/protected/controllers/UserController.php(127): UserController->upload()
+#1 unknown(0): UserController->actionEdit()
+#2 /media/psf/Home/Sites/im/TT/framework/web/actions/CAction.php(108): ReflectionMethod->invokeArgs()
+#3 /media/psf/Home/Sites/im/TT/framework/web/actions/CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#4 /media/psf/Home/Sites/im/TT/framework/web/CController.php(308): CInlineAction->runWithParams()
+#5 /media/psf/Home/Sites/im/TT/framework/web/CController.php(286): UserController->runAction()
+#6 /media/psf/Home/Sites/im/TT/framework/web/CController.php(265): UserController->runActionWithFilters()
+#7 /media/psf/Home/Sites/im/TT/framework/web/CWebApplication.php(282): UserController->run()
+#8 /media/psf/Home/Sites/im/TT/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#9 /media/psf/Home/Sites/im/TT/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#10 /media/psf/Home/Sites/im/TT/index.php(12): CWebApplication->run()
+REQUEST_URI=/user/edit/10030
+2014/08/21 14:27:46 [error] [php] move_uploaded_file(/Users/scorpio/Sites/im/TT/uploadImage/14086024661175铁.png) [<a href='function.move-uploaded-file'>function.move-uploaded-file</a>]: failed to open stream: No such file or directory (/media/psf/Home/Sites/im/TT/framework/web/CUploadedFile.php:196)
+Stack trace:
+#0 /media/psf/Home/Sites/im/TT/protected/controllers/UserController.php(127): UserController->upload()
+#1 unknown(0): UserController->actionEdit()
+#2 /media/psf/Home/Sites/im/TT/framework/web/actions/CAction.php(108): ReflectionMethod->invokeArgs()
+#3 /media/psf/Home/Sites/im/TT/framework/web/actions/CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#4 /media/psf/Home/Sites/im/TT/framework/web/CController.php(308): CInlineAction->runWithParams()
+#5 /media/psf/Home/Sites/im/TT/framework/web/CController.php(286): UserController->runAction()
+#6 /media/psf/Home/Sites/im/TT/framework/web/CController.php(265): UserController->runActionWithFilters()
+#7 /media/psf/Home/Sites/im/TT/framework/web/CWebApplication.php(282): UserController->run()
+#8 /media/psf/Home/Sites/im/TT/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#9 /media/psf/Home/Sites/im/TT/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#10 /media/psf/Home/Sites/im/TT/index.php(12): CWebApplication->run()
+REQUEST_URI=/user/edit/10030
+2014/08/21 14:27:54 [error] [php] move_uploaded_file(/Users/scorpio/Sites/im/TT/uploadImage/140860247440668铁.png) [<a href='function.move-uploaded-file'>function.move-uploaded-file</a>]: failed to open stream: No such file or directory (/media/psf/Home/Sites/im/TT/framework/web/CUploadedFile.php:196)
+Stack trace:
+#0 /media/psf/Home/Sites/im/TT/protected/controllers/UserController.php(127): UserController->upload()
+#1 unknown(0): UserController->actionEdit()
+#2 /media/psf/Home/Sites/im/TT/framework/web/actions/CAction.php(108): ReflectionMethod->invokeArgs()
+#3 /media/psf/Home/Sites/im/TT/framework/web/actions/CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#4 /media/psf/Home/Sites/im/TT/framework/web/CController.php(308): CInlineAction->runWithParams()
+#5 /media/psf/Home/Sites/im/TT/framework/web/CController.php(286): UserController->runAction()
+#6 /media/psf/Home/Sites/im/TT/framework/web/CController.php(265): UserController->runActionWithFilters()
+#7 /media/psf/Home/Sites/im/TT/framework/web/CWebApplication.php(282): UserController->run()
+#8 /media/psf/Home/Sites/im/TT/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#9 /media/psf/Home/Sites/im/TT/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#10 /media/psf/Home/Sites/im/TT/index.php(12): CWebApplication->run()
+REQUEST_URI=/user/edit/10030
+2014/08/21 14:27:55 [error] [php] move_uploaded_file(/Users/scorpio/Sites/im/TT/uploadImage/140860247587388铁.png) [<a href='function.move-uploaded-file'>function.move-uploaded-file</a>]: failed to open stream: No such file or directory (/media/psf/Home/Sites/im/TT/framework/web/CUploadedFile.php:196)
+Stack trace:
+#0 /media/psf/Home/Sites/im/TT/protected/controllers/UserController.php(127): UserController->upload()
+#1 unknown(0): UserController->actionEdit()
+#2 /media/psf/Home/Sites/im/TT/framework/web/actions/CAction.php(108): ReflectionMethod->invokeArgs()
+#3 /media/psf/Home/Sites/im/TT/framework/web/actions/CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#4 /media/psf/Home/Sites/im/TT/framework/web/CController.php(308): CInlineAction->runWithParams()
+#5 /media/psf/Home/Sites/im/TT/framework/web/CController.php(286): UserController->runAction()
+#6 /media/psf/Home/Sites/im/TT/framework/web/CController.php(265): UserController->runActionWithFilters()
+#7 /media/psf/Home/Sites/im/TT/framework/web/CWebApplication.php(282): UserController->run()
+#8 /media/psf/Home/Sites/im/TT/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#9 /media/psf/Home/Sites/im/TT/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#10 /media/psf/Home/Sites/im/TT/index.php(12): CWebApplication->run()
+REQUEST_URI=/user/edit/10030
+2014/08/21 14:27:56 [error] [php] move_uploaded_file(/Users/scorpio/Sites/im/TT/uploadImage/140860247645872铁.png) [<a href='function.move-uploaded-file'>function.move-uploaded-file</a>]: failed to open stream: No such file or directory (/media/psf/Home/Sites/im/TT/framework/web/CUploadedFile.php:196)
+Stack trace:
+#0 /media/psf/Home/Sites/im/TT/protected/controllers/UserController.php(127): UserController->upload()
+#1 unknown(0): UserController->actionEdit()
+#2 /media/psf/Home/Sites/im/TT/framework/web/actions/CAction.php(108): ReflectionMethod->invokeArgs()
+#3 /media/psf/Home/Sites/im/TT/framework/web/actions/CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#4 /media/psf/Home/Sites/im/TT/framework/web/CController.php(308): CInlineAction->runWithParams()
+#5 /media/psf/Home/Sites/im/TT/framework/web/CController.php(286): UserController->runAction()
+#6 /media/psf/Home/Sites/im/TT/framework/web/CController.php(265): UserController->runActionWithFilters()
+#7 /media/psf/Home/Sites/im/TT/framework/web/CWebApplication.php(282): UserController->run()
+#8 /media/psf/Home/Sites/im/TT/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#9 /media/psf/Home/Sites/im/TT/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#10 /media/psf/Home/Sites/im/TT/index.php(12): CWebApplication->run()
+REQUEST_URI=/user/edit/10030
+2014/08/21 14:27:57 [error] [php] move_uploaded_file(/Users/scorpio/Sites/im/TT/uploadImage/140860247751724铁.png) [<a href='function.move-uploaded-file'>function.move-uploaded-file</a>]: failed to open stream: No such file or directory (/media/psf/Home/Sites/im/TT/framework/web/CUploadedFile.php:196)
+Stack trace:
+#0 /media/psf/Home/Sites/im/TT/protected/controllers/UserController.php(127): UserController->upload()
+#1 unknown(0): UserController->actionEdit()
+#2 /media/psf/Home/Sites/im/TT/framework/web/actions/CAction.php(108): ReflectionMethod->invokeArgs()
+#3 /media/psf/Home/Sites/im/TT/framework/web/actions/CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#4 /media/psf/Home/Sites/im/TT/framework/web/CController.php(308): CInlineAction->runWithParams()
+#5 /media/psf/Home/Sites/im/TT/framework/web/CController.php(286): UserController->runAction()
+#6 /media/psf/Home/Sites/im/TT/framework/web/CController.php(265): UserController->runActionWithFilters()
+#7 /media/psf/Home/Sites/im/TT/framework/web/CWebApplication.php(282): UserController->run()
+#8 /media/psf/Home/Sites/im/TT/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#9 /media/psf/Home/Sites/im/TT/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#10 /media/psf/Home/Sites/im/TT/index.php(12): CWebApplication->run()
+REQUEST_URI=/user/edit/10030
+2014/08/21 14:27:58 [error] [php] move_uploaded_file(/Users/scorpio/Sites/im/TT/uploadImage/140860247887980铁.png) [<a href='function.move-uploaded-file'>function.move-uploaded-file</a>]: failed to open stream: No such file or directory (/media/psf/Home/Sites/im/TT/framework/web/CUploadedFile.php:196)
+Stack trace:
+#0 /media/psf/Home/Sites/im/TT/protected/controllers/UserController.php(127): UserController->upload()
+#1 unknown(0): UserController->actionEdit()
+#2 /media/psf/Home/Sites/im/TT/framework/web/actions/CAction.php(108): ReflectionMethod->invokeArgs()
+#3 /media/psf/Home/Sites/im/TT/framework/web/actions/CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#4 /media/psf/Home/Sites/im/TT/framework/web/CController.php(308): CInlineAction->runWithParams()
+#5 /media/psf/Home/Sites/im/TT/framework/web/CController.php(286): UserController->runAction()
+#6 /media/psf/Home/Sites/im/TT/framework/web/CController.php(265): UserController->runActionWithFilters()
+#7 /media/psf/Home/Sites/im/TT/framework/web/CWebApplication.php(282): UserController->run()
+#8 /media/psf/Home/Sites/im/TT/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#9 /media/psf/Home/Sites/im/TT/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#10 /media/psf/Home/Sites/im/TT/index.php(12): CWebApplication->run()
+REQUEST_URI=/user/edit/10030
+2014/08/21 14:28:31 [error] [php] move_uploaded_file(/Users/scorpio/Sites/im/TT/uploadImage/140860251191053铁.png) [<a href='function.move-uploaded-file'>function.move-uploaded-file</a>]: failed to open stream: No such file or directory (/media/psf/Home/Sites/im/TT/framework/web/CUploadedFile.php:196)
+Stack trace:
+#0 /media/psf/Home/Sites/im/TT/protected/controllers/UserController.php(127): UserController->upload()
+#1 unknown(0): UserController->actionEdit()
+#2 /media/psf/Home/Sites/im/TT/framework/web/actions/CAction.php(108): ReflectionMethod->invokeArgs()
+#3 /media/psf/Home/Sites/im/TT/framework/web/actions/CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#4 /media/psf/Home/Sites/im/TT/framework/web/CController.php(308): CInlineAction->runWithParams()
+#5 /media/psf/Home/Sites/im/TT/framework/web/CController.php(286): UserController->runAction()
+#6 /media/psf/Home/Sites/im/TT/framework/web/CController.php(265): UserController->runActionWithFilters()
+#7 /media/psf/Home/Sites/im/TT/framework/web/CWebApplication.php(282): UserController->run()
+#8 /media/psf/Home/Sites/im/TT/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#9 /media/psf/Home/Sites/im/TT/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#10 /media/psf/Home/Sites/im/TT/index.php(12): CWebApplication->run()
+REQUEST_URI=/user/edit/10030
+2014/08/21 14:28:33 [error] [php] move_uploaded_file(/Users/scorpio/Sites/im/TT/uploadImage/140860251337249铁.png) [<a href='function.move-uploaded-file'>function.move-uploaded-file</a>]: failed to open stream: No such file or directory (/media/psf/Home/Sites/im/TT/framework/web/CUploadedFile.php:196)
+Stack trace:
+#0 /media/psf/Home/Sites/im/TT/protected/controllers/UserController.php(127): UserController->upload()
+#1 unknown(0): UserController->actionEdit()
+#2 /media/psf/Home/Sites/im/TT/framework/web/actions/CAction.php(108): ReflectionMethod->invokeArgs()
+#3 /media/psf/Home/Sites/im/TT/framework/web/actions/CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#4 /media/psf/Home/Sites/im/TT/framework/web/CController.php(308): CInlineAction->runWithParams()
+#5 /media/psf/Home/Sites/im/TT/framework/web/CController.php(286): UserController->runAction()
+#6 /media/psf/Home/Sites/im/TT/framework/web/CController.php(265): UserController->runActionWithFilters()
+#7 /media/psf/Home/Sites/im/TT/framework/web/CWebApplication.php(282): UserController->run()
+#8 /media/psf/Home/Sites/im/TT/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#9 /media/psf/Home/Sites/im/TT/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#10 /media/psf/Home/Sites/im/TT/index.php(12): CWebApplication->run()
+REQUEST_URI=/user/edit/10030
+2014/08/21 14:28:37 [error] [php] move_uploaded_file(/Users/scorpio/Sites/im/TT/uploadImage//140860251772733铁.png) [<a href='function.move-uploaded-file'>function.move-uploaded-file</a>]: failed to open stream: No such file or directory (/media/psf/Home/Sites/im/TT/framework/web/CUploadedFile.php:196)
+Stack trace:
+#0 /media/psf/Home/Sites/im/TT/protected/controllers/UserController.php(127): UserController->upload()
+#1 unknown(0): UserController->actionEdit()
+#2 /media/psf/Home/Sites/im/TT/framework/web/actions/CAction.php(108): ReflectionMethod->invokeArgs()
+#3 /media/psf/Home/Sites/im/TT/framework/web/actions/CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#4 /media/psf/Home/Sites/im/TT/framework/web/CController.php(308): CInlineAction->runWithParams()
+#5 /media/psf/Home/Sites/im/TT/framework/web/CController.php(286): UserController->runAction()
+#6 /media/psf/Home/Sites/im/TT/framework/web/CController.php(265): UserController->runActionWithFilters()
+#7 /media/psf/Home/Sites/im/TT/framework/web/CWebApplication.php(282): UserController->run()
+#8 /media/psf/Home/Sites/im/TT/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#9 /media/psf/Home/Sites/im/TT/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#10 /media/psf/Home/Sites/im/TT/index.php(12): CWebApplication->run()
+REQUEST_URI=/user/edit/10030
+2014/08/21 14:28:44 [error] [php] move_uploaded_file(TT/uploadImage/140860252440436铁.png) [<a href='function.move-uploaded-file'>function.move-uploaded-file</a>]: failed to open stream: No such file or directory (/media/psf/Home/Sites/im/TT/framework/web/CUploadedFile.php:196)
+Stack trace:
+#0 /media/psf/Home/Sites/im/TT/protected/controllers/UserController.php(127): UserController->upload()
+#1 unknown(0): UserController->actionEdit()
+#2 /media/psf/Home/Sites/im/TT/framework/web/actions/CAction.php(108): ReflectionMethod->invokeArgs()
+#3 /media/psf/Home/Sites/im/TT/framework/web/actions/CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#4 /media/psf/Home/Sites/im/TT/framework/web/CController.php(308): CInlineAction->runWithParams()
+#5 /media/psf/Home/Sites/im/TT/framework/web/CController.php(286): UserController->runAction()
+#6 /media/psf/Home/Sites/im/TT/framework/web/CController.php(265): UserController->runActionWithFilters()
+#7 /media/psf/Home/Sites/im/TT/framework/web/CWebApplication.php(282): UserController->run()
+#8 /media/psf/Home/Sites/im/TT/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#9 /media/psf/Home/Sites/im/TT/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#10 /media/psf/Home/Sites/im/TT/index.php(12): CWebApplication->run()
+REQUEST_URI=/user/edit/10030
+2014/08/21 14:28:46 [error] [php] move_uploaded_file(/TT/uploadImage/140860252684582铁.png) [<a href='function.move-uploaded-file'>function.move-uploaded-file</a>]: failed to open stream: No such file or directory (/media/psf/Home/Sites/im/TT/framework/web/CUploadedFile.php:196)
+Stack trace:
+#0 /media/psf/Home/Sites/im/TT/protected/controllers/UserController.php(127): UserController->upload()
+#1 unknown(0): UserController->actionEdit()
+#2 /media/psf/Home/Sites/im/TT/framework/web/actions/CAction.php(108): ReflectionMethod->invokeArgs()
+#3 /media/psf/Home/Sites/im/TT/framework/web/actions/CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#4 /media/psf/Home/Sites/im/TT/framework/web/CController.php(308): CInlineAction->runWithParams()
+#5 /media/psf/Home/Sites/im/TT/framework/web/CController.php(286): UserController->runAction()
+#6 /media/psf/Home/Sites/im/TT/framework/web/CController.php(265): UserController->runActionWithFilters()
+#7 /media/psf/Home/Sites/im/TT/framework/web/CWebApplication.php(282): UserController->run()
+#8 /media/psf/Home/Sites/im/TT/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#9 /media/psf/Home/Sites/im/TT/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#10 /media/psf/Home/Sites/im/TT/index.php(12): CWebApplication->run()
+REQUEST_URI=/user/edit/10030
+2014/08/21 14:28:50 [error] [php] move_uploaded_file(./TT/uploadImage/140860253066709铁.png) [<a href='function.move-uploaded-file'>function.move-uploaded-file</a>]: failed to open stream: No such file or directory (/media/psf/Home/Sites/im/TT/framework/web/CUploadedFile.php:196)
+Stack trace:
+#0 /media/psf/Home/Sites/im/TT/protected/controllers/UserController.php(127): UserController->upload()
+#1 unknown(0): UserController->actionEdit()
+#2 /media/psf/Home/Sites/im/TT/framework/web/actions/CAction.php(108): ReflectionMethod->invokeArgs()
+#3 /media/psf/Home/Sites/im/TT/framework/web/actions/CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#4 /media/psf/Home/Sites/im/TT/framework/web/CController.php(308): CInlineAction->runWithParams()
+#5 /media/psf/Home/Sites/im/TT/framework/web/CController.php(286): UserController->runAction()
+#6 /media/psf/Home/Sites/im/TT/framework/web/CController.php(265): UserController->runActionWithFilters()
+#7 /media/psf/Home/Sites/im/TT/framework/web/CWebApplication.php(282): UserController->run()
+#8 /media/psf/Home/Sites/im/TT/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#9 /media/psf/Home/Sites/im/TT/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#10 /media/psf/Home/Sites/im/TT/index.php(12): CWebApplication->run()
+REQUEST_URI=/user/edit/10030
+2014/08/21 14:28:53 [error] [php] move_uploaded_file(TT/uploadImage/140860253333747铁.png) [<a href='function.move-uploaded-file'>function.move-uploaded-file</a>]: failed to open stream: No such file or directory (/media/psf/Home/Sites/im/TT/framework/web/CUploadedFile.php:196)
+Stack trace:
+#0 /media/psf/Home/Sites/im/TT/protected/controllers/UserController.php(127): UserController->upload()
+#1 unknown(0): UserController->actionEdit()
+#2 /media/psf/Home/Sites/im/TT/framework/web/actions/CAction.php(108): ReflectionMethod->invokeArgs()
+#3 /media/psf/Home/Sites/im/TT/framework/web/actions/CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#4 /media/psf/Home/Sites/im/TT/framework/web/CController.php(308): CInlineAction->runWithParams()
+#5 /media/psf/Home/Sites/im/TT/framework/web/CController.php(286): UserController->runAction()
+#6 /media/psf/Home/Sites/im/TT/framework/web/CController.php(265): UserController->runActionWithFilters()
+#7 /media/psf/Home/Sites/im/TT/framework/web/CWebApplication.php(282): UserController->run()
+#8 /media/psf/Home/Sites/im/TT/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#9 /media/psf/Home/Sites/im/TT/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#10 /media/psf/Home/Sites/im/TT/index.php(12): CWebApplication->run()
+REQUEST_URI=/user/edit/10030
+2014/08/21 14:28:58 [error] [php] move_uploaded_file(/var/www/html/tt.mogujie.com/TT/uploadImage/14086025384826铁.png) [<a href='function.move-uploaded-file'>function.move-uploaded-file</a>]: failed to open stream: No such file or directory (/media/psf/Home/Sites/im/TT/framework/web/CUploadedFile.php:196)
+Stack trace:
+#0 /media/psf/Home/Sites/im/TT/protected/controllers/UserController.php(127): UserController->upload()
+#1 unknown(0): UserController->actionEdit()
+#2 /media/psf/Home/Sites/im/TT/framework/web/actions/CAction.php(108): ReflectionMethod->invokeArgs()
+#3 /media/psf/Home/Sites/im/TT/framework/web/actions/CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#4 /media/psf/Home/Sites/im/TT/framework/web/CController.php(308): CInlineAction->runWithParams()
+#5 /media/psf/Home/Sites/im/TT/framework/web/CController.php(286): UserController->runAction()
+#6 /media/psf/Home/Sites/im/TT/framework/web/CController.php(265): UserController->runActionWithFilters()
+#7 /media/psf/Home/Sites/im/TT/framework/web/CWebApplication.php(282): UserController->run()
+#8 /media/psf/Home/Sites/im/TT/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#9 /media/psf/Home/Sites/im/TT/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#10 /media/psf/Home/Sites/im/TT/index.php(12): CWebApplication->run()
+REQUEST_URI=/user/edit/10030
+2014/08/21 14:29:01 [error] [php] move_uploaded_file(/var/www/html/tt.mogujie.com/TT/uploadImage/140860254181131铁.png) [<a href='function.move-uploaded-file'>function.move-uploaded-file</a>]: failed to open stream: No such file or directory (/media/psf/Home/Sites/im/TT/framework/web/CUploadedFile.php:196)
+Stack trace:
+#0 /media/psf/Home/Sites/im/TT/protected/controllers/UserController.php(127): UserController->upload()
+#1 unknown(0): UserController->actionEdit()
+#2 /media/psf/Home/Sites/im/TT/framework/web/actions/CAction.php(108): ReflectionMethod->invokeArgs()
+#3 /media/psf/Home/Sites/im/TT/framework/web/actions/CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#4 /media/psf/Home/Sites/im/TT/framework/web/CController.php(308): CInlineAction->runWithParams()
+#5 /media/psf/Home/Sites/im/TT/framework/web/CController.php(286): UserController->runAction()
+#6 /media/psf/Home/Sites/im/TT/framework/web/CController.php(265): UserController->runActionWithFilters()
+#7 /media/psf/Home/Sites/im/TT/framework/web/CWebApplication.php(282): UserController->run()
+#8 /media/psf/Home/Sites/im/TT/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#9 /media/psf/Home/Sites/im/TT/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#10 /media/psf/Home/Sites/im/TT/index.php(12): CWebApplication->run()
+REQUEST_URI=/user/edit/10030
+2014/08/21 14:29:22 [error] [php] move_uploaded_file(/var/www/html/tt.mogujie.com/TT/uploadImage/140860256258238铁.png) [<a href='function.move-uploaded-file'>function.move-uploaded-file</a>]: failed to open stream: No such file or directory (/media/psf/Home/Sites/im/TT/framework/web/CUploadedFile.php:196)
+Stack trace:
+#0 /media/psf/Home/Sites/im/TT/protected/controllers/UserController.php(127): UserController->upload()
+#1 unknown(0): UserController->actionEdit()
+#2 /media/psf/Home/Sites/im/TT/framework/web/actions/CAction.php(108): ReflectionMethod->invokeArgs()
+#3 /media/psf/Home/Sites/im/TT/framework/web/actions/CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#4 /media/psf/Home/Sites/im/TT/framework/web/CController.php(308): CInlineAction->runWithParams()
+#5 /media/psf/Home/Sites/im/TT/framework/web/CController.php(286): UserController->runAction()
+#6 /media/psf/Home/Sites/im/TT/framework/web/CController.php(265): UserController->runActionWithFilters()
+#7 /media/psf/Home/Sites/im/TT/framework/web/CWebApplication.php(282): UserController->run()
+#8 /media/psf/Home/Sites/im/TT/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#9 /media/psf/Home/Sites/im/TT/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#10 /media/psf/Home/Sites/im/TT/index.php(12): CWebApplication->run()
+REQUEST_URI=/user/edit/10030
+2014/08/21 14:29:23 [error] [php] move_uploaded_file(/var/www/html/tt.mogujie.com/TT/uploadImage/140860256370855铁.png) [<a href='function.move-uploaded-file'>function.move-uploaded-file</a>]: failed to open stream: No such file or directory (/media/psf/Home/Sites/im/TT/framework/web/CUploadedFile.php:196)
+Stack trace:
+#0 /media/psf/Home/Sites/im/TT/protected/controllers/UserController.php(127): UserController->upload()
+#1 unknown(0): UserController->actionEdit()
+#2 /media/psf/Home/Sites/im/TT/framework/web/actions/CAction.php(108): ReflectionMethod->invokeArgs()
+#3 /media/psf/Home/Sites/im/TT/framework/web/actions/CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#4 /media/psf/Home/Sites/im/TT/framework/web/CController.php(308): CInlineAction->runWithParams()
+#5 /media/psf/Home/Sites/im/TT/framework/web/CController.php(286): UserController->runAction()
+#6 /media/psf/Home/Sites/im/TT/framework/web/CController.php(265): UserController->runActionWithFilters()
+#7 /media/psf/Home/Sites/im/TT/framework/web/CWebApplication.php(282): UserController->run()
+#8 /media/psf/Home/Sites/im/TT/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#9 /media/psf/Home/Sites/im/TT/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#10 /media/psf/Home/Sites/im/TT/index.php(12): CWebApplication->run()
+REQUEST_URI=/user/edit/10030
+2014/08/21 14:29:24 [error] [php] move_uploaded_file(/var/www/html/tt.mogujie.com/TT/uploadImage/140860256471942铁.png) [<a href='function.move-uploaded-file'>function.move-uploaded-file</a>]: failed to open stream: No such file or directory (/media/psf/Home/Sites/im/TT/framework/web/CUploadedFile.php:196)
+Stack trace:
+#0 /media/psf/Home/Sites/im/TT/protected/controllers/UserController.php(127): UserController->upload()
+#1 unknown(0): UserController->actionEdit()
+#2 /media/psf/Home/Sites/im/TT/framework/web/actions/CAction.php(108): ReflectionMethod->invokeArgs()
+#3 /media/psf/Home/Sites/im/TT/framework/web/actions/CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#4 /media/psf/Home/Sites/im/TT/framework/web/CController.php(308): CInlineAction->runWithParams()
+#5 /media/psf/Home/Sites/im/TT/framework/web/CController.php(286): UserController->runAction()
+#6 /media/psf/Home/Sites/im/TT/framework/web/CController.php(265): UserController->runActionWithFilters()
+#7 /media/psf/Home/Sites/im/TT/framework/web/CWebApplication.php(282): UserController->run()
+#8 /media/psf/Home/Sites/im/TT/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#9 /media/psf/Home/Sites/im/TT/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#10 /media/psf/Home/Sites/im/TT/index.php(12): CWebApplication->run()
+REQUEST_URI=/user/edit/10030
+2014/08/21 14:29:24 [error] [php] move_uploaded_file(/var/www/html/tt.mogujie.com/TT/uploadImage/1408602564523铁.png) [<a href='function.move-uploaded-file'>function.move-uploaded-file</a>]: failed to open stream: No such file or directory (/media/psf/Home/Sites/im/TT/framework/web/CUploadedFile.php:196)
+Stack trace:
+#0 /media/psf/Home/Sites/im/TT/protected/controllers/UserController.php(127): UserController->upload()
+#1 unknown(0): UserController->actionEdit()
+#2 /media/psf/Home/Sites/im/TT/framework/web/actions/CAction.php(108): ReflectionMethod->invokeArgs()
+#3 /media/psf/Home/Sites/im/TT/framework/web/actions/CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#4 /media/psf/Home/Sites/im/TT/framework/web/CController.php(308): CInlineAction->runWithParams()
+#5 /media/psf/Home/Sites/im/TT/framework/web/CController.php(286): UserController->runAction()
+#6 /media/psf/Home/Sites/im/TT/framework/web/CController.php(265): UserController->runActionWithFilters()
+#7 /media/psf/Home/Sites/im/TT/framework/web/CWebApplication.php(282): UserController->run()
+#8 /media/psf/Home/Sites/im/TT/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#9 /media/psf/Home/Sites/im/TT/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#10 /media/psf/Home/Sites/im/TT/index.php(12): CWebApplication->run()
+REQUEST_URI=/user/edit/10030
+2014/08/21 14:29:24 [error] [php] move_uploaded_file(/var/www/html/tt.mogujie.com/TT/uploadImage/140860256489275铁.png) [<a href='function.move-uploaded-file'>function.move-uploaded-file</a>]: failed to open stream: No such file or directory (/media/psf/Home/Sites/im/TT/framework/web/CUploadedFile.php:196)
+Stack trace:
+#0 /media/psf/Home/Sites/im/TT/protected/controllers/UserController.php(127): UserController->upload()
+#1 unknown(0): UserController->actionEdit()
+#2 /media/psf/Home/Sites/im/TT/framework/web/actions/CAction.php(108): ReflectionMethod->invokeArgs()
+#3 /media/psf/Home/Sites/im/TT/framework/web/actions/CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#4 /media/psf/Home/Sites/im/TT/framework/web/CController.php(308): CInlineAction->runWithParams()
+#5 /media/psf/Home/Sites/im/TT/framework/web/CController.php(286): UserController->runAction()
+#6 /media/psf/Home/Sites/im/TT/framework/web/CController.php(265): UserController->runActionWithFilters()
+#7 /media/psf/Home/Sites/im/TT/framework/web/CWebApplication.php(282): UserController->run()
+#8 /media/psf/Home/Sites/im/TT/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#9 /media/psf/Home/Sites/im/TT/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#10 /media/psf/Home/Sites/im/TT/index.php(12): CWebApplication->run()
+REQUEST_URI=/user/edit/10030
+2014/08/21 14:29:25 [error] [php] move_uploaded_file(/var/www/html/tt.mogujie.com/TT/uploadImage/140860256586799铁.png) [<a href='function.move-uploaded-file'>function.move-uploaded-file</a>]: failed to open stream: No such file or directory (/media/psf/Home/Sites/im/TT/framework/web/CUploadedFile.php:196)
+Stack trace:
+#0 /media/psf/Home/Sites/im/TT/protected/controllers/UserController.php(127): UserController->upload()
+#1 unknown(0): UserController->actionEdit()
+#2 /media/psf/Home/Sites/im/TT/framework/web/actions/CAction.php(108): ReflectionMethod->invokeArgs()
+#3 /media/psf/Home/Sites/im/TT/framework/web/actions/CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#4 /media/psf/Home/Sites/im/TT/framework/web/CController.php(308): CInlineAction->runWithParams()
+#5 /media/psf/Home/Sites/im/TT/framework/web/CController.php(286): UserController->runAction()
+#6 /media/psf/Home/Sites/im/TT/framework/web/CController.php(265): UserController->runActionWithFilters()
+#7 /media/psf/Home/Sites/im/TT/framework/web/CWebApplication.php(282): UserController->run()
+#8 /media/psf/Home/Sites/im/TT/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#9 /media/psf/Home/Sites/im/TT/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#10 /media/psf/Home/Sites/im/TT/index.php(12): CWebApplication->run()
+REQUEST_URI=/user/edit/10030
+2014/08/21 14:29:26 [error] [php] move_uploaded_file(/var/www/html/tt.mogujie.com/TT/uploadImage/140860256691521铁.png) [<a href='function.move-uploaded-file'>function.move-uploaded-file</a>]: failed to open stream: No such file or directory (/media/psf/Home/Sites/im/TT/framework/web/CUploadedFile.php:196)
+Stack trace:
+#0 /media/psf/Home/Sites/im/TT/protected/controllers/UserController.php(127): UserController->upload()
+#1 unknown(0): UserController->actionEdit()
+#2 /media/psf/Home/Sites/im/TT/framework/web/actions/CAction.php(108): ReflectionMethod->invokeArgs()
+#3 /media/psf/Home/Sites/im/TT/framework/web/actions/CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#4 /media/psf/Home/Sites/im/TT/framework/web/CController.php(308): CInlineAction->runWithParams()
+#5 /media/psf/Home/Sites/im/TT/framework/web/CController.php(286): UserController->runAction()
+#6 /media/psf/Home/Sites/im/TT/framework/web/CController.php(265): UserController->runActionWithFilters()
+#7 /media/psf/Home/Sites/im/TT/framework/web/CWebApplication.php(282): UserController->run()
+#8 /media/psf/Home/Sites/im/TT/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#9 /media/psf/Home/Sites/im/TT/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#10 /media/psf/Home/Sites/im/TT/index.php(12): CWebApplication->run()
+REQUEST_URI=/user/edit/10030
+2014/08/21 14:29:51 [error] [php] move_uploaded_file(/var/www/html/tt.mogujie.com/TT/uploadImage/140860259112398铁.png) [<a href='function.move-uploaded-file'>function.move-uploaded-file</a>]: failed to open stream: No such file or directory (/media/psf/Home/Sites/im/TT/framework/web/CUploadedFile.php:196)
+Stack trace:
+#0 /media/psf/Home/Sites/im/TT/protected/controllers/UserController.php(127): UserController->upload()
+#1 unknown(0): UserController->actionEdit()
+#2 /media/psf/Home/Sites/im/TT/framework/web/actions/CAction.php(108): ReflectionMethod->invokeArgs()
+#3 /media/psf/Home/Sites/im/TT/framework/web/actions/CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#4 /media/psf/Home/Sites/im/TT/framework/web/CController.php(308): CInlineAction->runWithParams()
+#5 /media/psf/Home/Sites/im/TT/framework/web/CController.php(286): UserController->runAction()
+#6 /media/psf/Home/Sites/im/TT/framework/web/CController.php(265): UserController->runActionWithFilters()
+#7 /media/psf/Home/Sites/im/TT/framework/web/CWebApplication.php(282): UserController->run()
+#8 /media/psf/Home/Sites/im/TT/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#9 /media/psf/Home/Sites/im/TT/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#10 /media/psf/Home/Sites/im/TT/index.php(12): CWebApplication->run()
+REQUEST_URI=/user/edit/10030
+2014/08/21 14:30:22 [error] [php] move_uploaded_file(/Users/scorpio/Sites/im/TT/uploadImage/140860262229941铁.png) [<a href='function.move-uploaded-file'>function.move-uploaded-file</a>]: failed to open stream: No such file or directory (/media/psf/Home/Sites/im/TT/framework/web/CUploadedFile.php:196)
+Stack trace:
+#0 /media/psf/Home/Sites/im/TT/protected/controllers/UserController.php(127): UserController->upload()
+#1 unknown(0): UserController->actionEdit()
+#2 /media/psf/Home/Sites/im/TT/framework/web/actions/CAction.php(108): ReflectionMethod->invokeArgs()
+#3 /media/psf/Home/Sites/im/TT/framework/web/actions/CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#4 /media/psf/Home/Sites/im/TT/framework/web/CController.php(308): CInlineAction->runWithParams()
+#5 /media/psf/Home/Sites/im/TT/framework/web/CController.php(286): UserController->runAction()
+#6 /media/psf/Home/Sites/im/TT/framework/web/CController.php(265): UserController->runActionWithFilters()
+#7 /media/psf/Home/Sites/im/TT/framework/web/CWebApplication.php(282): UserController->run()
+#8 /media/psf/Home/Sites/im/TT/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#9 /media/psf/Home/Sites/im/TT/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#10 /media/psf/Home/Sites/im/TT/index.php(12): CWebApplication->run()
+REQUEST_URI=/user/edit/10030
+2014/08/21 14:30:23 [error] [php] move_uploaded_file(/Users/scorpio/Sites/im/TT/uploadImage/140860262327826铁.png) [<a href='function.move-uploaded-file'>function.move-uploaded-file</a>]: failed to open stream: No such file or directory (/media/psf/Home/Sites/im/TT/framework/web/CUploadedFile.php:196)
+Stack trace:
+#0 /media/psf/Home/Sites/im/TT/protected/controllers/UserController.php(127): UserController->upload()
+#1 unknown(0): UserController->actionEdit()
+#2 /media/psf/Home/Sites/im/TT/framework/web/actions/CAction.php(108): ReflectionMethod->invokeArgs()
+#3 /media/psf/Home/Sites/im/TT/framework/web/actions/CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#4 /media/psf/Home/Sites/im/TT/framework/web/CController.php(308): CInlineAction->runWithParams()
+#5 /media/psf/Home/Sites/im/TT/framework/web/CController.php(286): UserController->runAction()
+#6 /media/psf/Home/Sites/im/TT/framework/web/CController.php(265): UserController->runActionWithFilters()
+#7 /media/psf/Home/Sites/im/TT/framework/web/CWebApplication.php(282): UserController->run()
+#8 /media/psf/Home/Sites/im/TT/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#9 /media/psf/Home/Sites/im/TT/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#10 /media/psf/Home/Sites/im/TT/index.php(12): CWebApplication->run()
+REQUEST_URI=/user/edit/10030
+2014/08/21 14:31:12 [error] [php] move_uploaded_file(/Users/scorpio/Sites/im/TT/uploadImage/140860267259982铁.png) [<a href='function.move-uploaded-file'>function.move-uploaded-file</a>]: failed to open stream: No such file or directory (/media/psf/Home/Sites/im/TT/framework/web/CUploadedFile.php:196)
+Stack trace:
+#0 /media/psf/Home/Sites/im/TT/protected/controllers/UserController.php(127): UserController->upload()
+#1 unknown(0): UserController->actionEdit()
+#2 /media/psf/Home/Sites/im/TT/framework/web/actions/CAction.php(108): ReflectionMethod->invokeArgs()
+#3 /media/psf/Home/Sites/im/TT/framework/web/actions/CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#4 /media/psf/Home/Sites/im/TT/framework/web/CController.php(308): CInlineAction->runWithParams()
+#5 /media/psf/Home/Sites/im/TT/framework/web/CController.php(286): UserController->runAction()
+#6 /media/psf/Home/Sites/im/TT/framework/web/CController.php(265): UserController->runActionWithFilters()
+#7 /media/psf/Home/Sites/im/TT/framework/web/CWebApplication.php(282): UserController->run()
+#8 /media/psf/Home/Sites/im/TT/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#9 /media/psf/Home/Sites/im/TT/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#10 /media/psf/Home/Sites/im/TT/index.php(12): CWebApplication->run()
+REQUEST_URI=/user/edit/10030
+2014/08/21 14:31:35 [error] [php] move_uploaded_file(/Users/scorpio/Sites/im/TT/uploadImage/14086026952858铁.png) [<a href='function.move-uploaded-file'>function.move-uploaded-file</a>]: failed to open stream: No such file or directory (/media/psf/Home/Sites/im/TT/framework/web/CUploadedFile.php:196)
+Stack trace:
+#0 /media/psf/Home/Sites/im/TT/protected/controllers/UserController.php(127): UserController->upload()
+#1 unknown(0): UserController->actionEdit()
+#2 /media/psf/Home/Sites/im/TT/framework/web/actions/CAction.php(108): ReflectionMethod->invokeArgs()
+#3 /media/psf/Home/Sites/im/TT/framework/web/actions/CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#4 /media/psf/Home/Sites/im/TT/framework/web/CController.php(308): CInlineAction->runWithParams()
+#5 /media/psf/Home/Sites/im/TT/framework/web/CController.php(286): UserController->runAction()
+#6 /media/psf/Home/Sites/im/TT/framework/web/CController.php(265): UserController->runActionWithFilters()
+#7 /media/psf/Home/Sites/im/TT/framework/web/CWebApplication.php(282): UserController->run()
+#8 /media/psf/Home/Sites/im/TT/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#9 /media/psf/Home/Sites/im/TT/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#10 /media/psf/Home/Sites/im/TT/index.php(12): CWebApplication->run()
+REQUEST_URI=/user/edit/10030
+2014/08/21 14:31:43 [error] [php] move_uploaded_file(/140860270348214铁.png) [<a href='function.move-uploaded-file'>function.move-uploaded-file</a>]: failed to open stream: Permission denied (/media/psf/Home/Sites/im/TT/framework/web/CUploadedFile.php:196)
+Stack trace:
+#0 /media/psf/Home/Sites/im/TT/protected/controllers/UserController.php(127): UserController->upload()
+#1 unknown(0): UserController->actionEdit()
+#2 /media/psf/Home/Sites/im/TT/framework/web/actions/CAction.php(108): ReflectionMethod->invokeArgs()
+#3 /media/psf/Home/Sites/im/TT/framework/web/actions/CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#4 /media/psf/Home/Sites/im/TT/framework/web/CController.php(308): CInlineAction->runWithParams()
+#5 /media/psf/Home/Sites/im/TT/framework/web/CController.php(286): UserController->runAction()
+#6 /media/psf/Home/Sites/im/TT/framework/web/CController.php(265): UserController->runActionWithFilters()
+#7 /media/psf/Home/Sites/im/TT/framework/web/CWebApplication.php(282): UserController->run()
+#8 /media/psf/Home/Sites/im/TT/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#9 /media/psf/Home/Sites/im/TT/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#10 /media/psf/Home/Sites/im/TT/index.php(12): CWebApplication->run()
+REQUEST_URI=/user/edit/10030
+2014/08/21 14:35:26 [error] [php] move_uploaded_file(/var/www/html/tt.mogujie.com/TT/uploadImage/140860292630173铁.png) [<a href='function.move-uploaded-file'>function.move-uploaded-file</a>]: failed to open stream: No such file or directory (/media/psf/Home/Sites/im/TT/framework/web/CUploadedFile.php:196)
+Stack trace:
+#0 /media/psf/Home/Sites/im/TT/protected/controllers/UserController.php(127): UserController->upload()
+#1 unknown(0): UserController->actionEdit()
+#2 /media/psf/Home/Sites/im/TT/framework/web/actions/CAction.php(108): ReflectionMethod->invokeArgs()
+#3 /media/psf/Home/Sites/im/TT/framework/web/actions/CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#4 /media/psf/Home/Sites/im/TT/framework/web/CController.php(308): CInlineAction->runWithParams()
+#5 /media/psf/Home/Sites/im/TT/framework/web/CController.php(286): UserController->runAction()
+#6 /media/psf/Home/Sites/im/TT/framework/web/CController.php(265): UserController->runActionWithFilters()
+#7 /media/psf/Home/Sites/im/TT/framework/web/CWebApplication.php(282): UserController->run()
+#8 /media/psf/Home/Sites/im/TT/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#9 /media/psf/Home/Sites/im/TT/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#10 /media/psf/Home/Sites/im/TT/index.php(12): CWebApplication->run()
+REQUEST_URI=/user/edit/10030
+2014/08/21 14:36:52 [error] [php] move_uploaded_file(../uploadImage/140860301248563铁.png) [<a href='function.move-uploaded-file'>function.move-uploaded-file</a>]: failed to open stream: No such file or directory (/media/psf/Home/Sites/im/TT/framework/web/CUploadedFile.php:196)
+Stack trace:
+#0 /media/psf/Home/Sites/im/TT/protected/controllers/UserController.php(127): UserController->upload()
+#1 unknown(0): UserController->actionEdit()
+#2 /media/psf/Home/Sites/im/TT/framework/web/actions/CAction.php(108): ReflectionMethod->invokeArgs()
+#3 /media/psf/Home/Sites/im/TT/framework/web/actions/CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#4 /media/psf/Home/Sites/im/TT/framework/web/CController.php(308): CInlineAction->runWithParams()
+#5 /media/psf/Home/Sites/im/TT/framework/web/CController.php(286): UserController->runAction()
+#6 /media/psf/Home/Sites/im/TT/framework/web/CController.php(265): UserController->runActionWithFilters()
+#7 /media/psf/Home/Sites/im/TT/framework/web/CWebApplication.php(282): UserController->run()
+#8 /media/psf/Home/Sites/im/TT/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#9 /media/psf/Home/Sites/im/TT/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#10 /media/psf/Home/Sites/im/TT/index.php(12): CWebApplication->run()
+REQUEST_URI=/user/edit/10030
+2014/08/21 14:37:39 [error] [php] curl_setopt() [<a href='function.curl-setopt'>function.curl-setopt</a>]: CURLOPT_FOLLOWLOCATION cannot be activated when safe_mode is enabled or an open_basedir is set (/media/psf/Home/Sites/im/TT/protected/components/Controller.php:53)
+Stack trace:
+#0 unknown(0): UserController->actionEdit()
+#1 /media/psf/Home/Sites/im/TT/framework/web/actions/CAction.php(108): ReflectionMethod->invokeArgs()
+#2 /media/psf/Home/Sites/im/TT/framework/web/actions/CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#3 /media/psf/Home/Sites/im/TT/framework/web/CController.php(308): CInlineAction->runWithParams()
+#4 /media/psf/Home/Sites/im/TT/framework/web/CController.php(286): UserController->runAction()
+#5 /media/psf/Home/Sites/im/TT/framework/web/CController.php(265): UserController->runActionWithFilters()
+#6 /media/psf/Home/Sites/im/TT/framework/web/CWebApplication.php(282): UserController->run()
+#7 /media/psf/Home/Sites/im/TT/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#8 /media/psf/Home/Sites/im/TT/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#9 /media/psf/Home/Sites/im/TT/index.php(12): CWebApplication->run()
+REQUEST_URI=/user/edit/10030
+2014/08/21 14:41:00 [error] [php] move_uploaded_file(/../uploadImage/14086032602069020120227121242732_easyicon_cn_512.png) [<a href='function.move-uploaded-file'>function.move-uploaded-file</a>]: failed to open stream: No such file or directory (/media/psf/Home/Sites/im/TT/framework/web/CUploadedFile.php:196)
+Stack trace:
+#0 /media/psf/Home/Sites/im/TT/protected/controllers/UserController.php(127): UserController->upload()
+#1 unknown(0): UserController->actionEdit()
+#2 /media/psf/Home/Sites/im/TT/framework/web/actions/CAction.php(108): ReflectionMethod->invokeArgs()
+#3 /media/psf/Home/Sites/im/TT/framework/web/actions/CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#4 /media/psf/Home/Sites/im/TT/framework/web/CController.php(308): CInlineAction->runWithParams()
+#5 /media/psf/Home/Sites/im/TT/framework/web/CController.php(286): UserController->runAction()
+#6 /media/psf/Home/Sites/im/TT/framework/web/CController.php(265): UserController->runActionWithFilters()
+#7 /media/psf/Home/Sites/im/TT/framework/web/CWebApplication.php(282): UserController->run()
+#8 /media/psf/Home/Sites/im/TT/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#9 /media/psf/Home/Sites/im/TT/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#10 /media/psf/Home/Sites/im/TT/index.php(12): CWebApplication->run()
+REQUEST_URI=/user/edit/10030
+2014/08/21 14:43:20 [error] [php] move_uploaded_file(/uploadImage/14086034004577020120227121242732_easyicon_cn_512.png) [<a href='function.move-uploaded-file'>function.move-uploaded-file</a>]: failed to open stream: No such file or directory (/media/psf/Home/Sites/im/TT/framework/web/CUploadedFile.php:196)
+Stack trace:
+#0 /media/psf/Home/Sites/im/TT/protected/controllers/UserController.php(127): UserController->upload()
+#1 unknown(0): UserController->actionEdit()
+#2 /media/psf/Home/Sites/im/TT/framework/web/actions/CAction.php(108): ReflectionMethod->invokeArgs()
+#3 /media/psf/Home/Sites/im/TT/framework/web/actions/CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#4 /media/psf/Home/Sites/im/TT/framework/web/CController.php(308): CInlineAction->runWithParams()
+#5 /media/psf/Home/Sites/im/TT/framework/web/CController.php(286): UserController->runAction()
+#6 /media/psf/Home/Sites/im/TT/framework/web/CController.php(265): UserController->runActionWithFilters()
+#7 /media/psf/Home/Sites/im/TT/framework/web/CWebApplication.php(282): UserController->run()
+#8 /media/psf/Home/Sites/im/TT/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#9 /media/psf/Home/Sites/im/TT/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#10 /media/psf/Home/Sites/im/TT/index.php(12): CWebApplication->run()
+REQUEST_URI=/user/edit/10030
+2014/08/21 14:43:22 [error] [php] move_uploaded_file(/uploadImage/1408603402700220120227121242732_easyicon_cn_512.png) [<a href='function.move-uploaded-file'>function.move-uploaded-file</a>]: failed to open stream: No such file or directory (/media/psf/Home/Sites/im/TT/framework/web/CUploadedFile.php:196)
+Stack trace:
+#0 /media/psf/Home/Sites/im/TT/protected/controllers/UserController.php(127): UserController->upload()
+#1 unknown(0): UserController->actionEdit()
+#2 /media/psf/Home/Sites/im/TT/framework/web/actions/CAction.php(108): ReflectionMethod->invokeArgs()
+#3 /media/psf/Home/Sites/im/TT/framework/web/actions/CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#4 /media/psf/Home/Sites/im/TT/framework/web/CController.php(308): CInlineAction->runWithParams()
+#5 /media/psf/Home/Sites/im/TT/framework/web/CController.php(286): UserController->runAction()
+#6 /media/psf/Home/Sites/im/TT/framework/web/CController.php(265): UserController->runActionWithFilters()
+#7 /media/psf/Home/Sites/im/TT/framework/web/CWebApplication.php(282): UserController->run()
+#8 /media/psf/Home/Sites/im/TT/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#9 /media/psf/Home/Sites/im/TT/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#10 /media/psf/Home/Sites/im/TT/index.php(12): CWebApplication->run()
+REQUEST_URI=/user/edit/10030
+2014/08/21 14:44:29 [error] [php] move_uploaded_file(/uploadImage/14086034691791620120227121242732_easyicon_cn_512.png) [<a href='function.move-uploaded-file'>function.move-uploaded-file</a>]: failed to open stream: No such file or directory (/media/psf/Home/Sites/im/TT/framework/web/CUploadedFile.php:196)
+Stack trace:
+#0 /media/psf/Home/Sites/im/TT/protected/controllers/UserController.php(127): UserController->upload()
+#1 unknown(0): UserController->actionEdit()
+#2 /media/psf/Home/Sites/im/TT/framework/web/actions/CAction.php(108): ReflectionMethod->invokeArgs()
+#3 /media/psf/Home/Sites/im/TT/framework/web/actions/CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#4 /media/psf/Home/Sites/im/TT/framework/web/CController.php(308): CInlineAction->runWithParams()
+#5 /media/psf/Home/Sites/im/TT/framework/web/CController.php(286): UserController->runAction()
+#6 /media/psf/Home/Sites/im/TT/framework/web/CController.php(265): UserController->runActionWithFilters()
+#7 /media/psf/Home/Sites/im/TT/framework/web/CWebApplication.php(282): UserController->run()
+#8 /media/psf/Home/Sites/im/TT/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#9 /media/psf/Home/Sites/im/TT/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#10 /media/psf/Home/Sites/im/TT/index.php(12): CWebApplication->run()
+REQUEST_URI=/user/edit/10030
+2014/08/21 14:44:37 [error] [php] move_uploaded_file(/uploadImage//14086034778825720120227121242732_easyicon_cn_512.png) [<a href='function.move-uploaded-file'>function.move-uploaded-file</a>]: failed to open stream: No such file or directory (/media/psf/Home/Sites/im/TT/framework/web/CUploadedFile.php:196)
+Stack trace:
+#0 /media/psf/Home/Sites/im/TT/protected/controllers/UserController.php(127): UserController->upload()
+#1 unknown(0): UserController->actionEdit()
+#2 /media/psf/Home/Sites/im/TT/framework/web/actions/CAction.php(108): ReflectionMethod->invokeArgs()
+#3 /media/psf/Home/Sites/im/TT/framework/web/actions/CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#4 /media/psf/Home/Sites/im/TT/framework/web/CController.php(308): CInlineAction->runWithParams()
+#5 /media/psf/Home/Sites/im/TT/framework/web/CController.php(286): UserController->runAction()
+#6 /media/psf/Home/Sites/im/TT/framework/web/CController.php(265): UserController->runActionWithFilters()
+#7 /media/psf/Home/Sites/im/TT/framework/web/CWebApplication.php(282): UserController->run()
+#8 /media/psf/Home/Sites/im/TT/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#9 /media/psf/Home/Sites/im/TT/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#10 /media/psf/Home/Sites/im/TT/index.php(12): CWebApplication->run()
+REQUEST_URI=/user/edit/10030
+2014/08/21 14:44:40 [error] [php] move_uploaded_file(/uploadImage/14086034805359020120227121242732_easyicon_cn_512.png) [<a href='function.move-uploaded-file'>function.move-uploaded-file</a>]: failed to open stream: No such file or directory (/media/psf/Home/Sites/im/TT/framework/web/CUploadedFile.php:196)
+Stack trace:
+#0 /media/psf/Home/Sites/im/TT/protected/controllers/UserController.php(127): UserController->upload()
+#1 unknown(0): UserController->actionEdit()
+#2 /media/psf/Home/Sites/im/TT/framework/web/actions/CAction.php(108): ReflectionMethod->invokeArgs()
+#3 /media/psf/Home/Sites/im/TT/framework/web/actions/CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#4 /media/psf/Home/Sites/im/TT/framework/web/CController.php(308): CInlineAction->runWithParams()
+#5 /media/psf/Home/Sites/im/TT/framework/web/CController.php(286): UserController->runAction()
+#6 /media/psf/Home/Sites/im/TT/framework/web/CController.php(265): UserController->runActionWithFilters()
+#7 /media/psf/Home/Sites/im/TT/framework/web/CWebApplication.php(282): UserController->run()
+#8 /media/psf/Home/Sites/im/TT/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#9 /media/psf/Home/Sites/im/TT/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#10 /media/psf/Home/Sites/im/TT/index.php(12): CWebApplication->run()
+REQUEST_URI=/user/edit/10030
+2014/08/21 14:45:01 [error] [php] move_uploaded_file(/uploadImage/14086035014960020120227121242732_easyicon_cn_512.png) [<a href='function.move-uploaded-file'>function.move-uploaded-file</a>]: failed to open stream: No such file or directory (/media/psf/Home/Sites/im/TT/framework/web/CUploadedFile.php:196)
+Stack trace:
+#0 /media/psf/Home/Sites/im/TT/protected/controllers/UserController.php(127): UserController->upload()
+#1 unknown(0): UserController->actionEdit()
+#2 /media/psf/Home/Sites/im/TT/framework/web/actions/CAction.php(108): ReflectionMethod->invokeArgs()
+#3 /media/psf/Home/Sites/im/TT/framework/web/actions/CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#4 /media/psf/Home/Sites/im/TT/framework/web/CController.php(308): CInlineAction->runWithParams()
+#5 /media/psf/Home/Sites/im/TT/framework/web/CController.php(286): UserController->runAction()
+#6 /media/psf/Home/Sites/im/TT/framework/web/CController.php(265): UserController->runActionWithFilters()
+#7 /media/psf/Home/Sites/im/TT/framework/web/CWebApplication.php(282): UserController->run()
+#8 /media/psf/Home/Sites/im/TT/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#9 /media/psf/Home/Sites/im/TT/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#10 /media/psf/Home/Sites/im/TT/index.php(12): CWebApplication->run()
+REQUEST_URI=/user/edit/10030
+2014/08/21 14:48:26 [error] [php] move_uploaded_file(/media/psf/Home/Sites/im/TT/protected../14086037065100120120227121242732_easyicon_cn_512.png) [<a href='function.move-uploaded-file'>function.move-uploaded-file</a>]: failed to open stream: No such file or directory (/media/psf/Home/Sites/im/TT/framework/web/CUploadedFile.php:196)
+Stack trace:
+#0 /media/psf/Home/Sites/im/TT/protected/controllers/UserController.php(127): UserController->upload()
+#1 unknown(0): UserController->actionEdit()
+#2 /media/psf/Home/Sites/im/TT/framework/web/actions/CAction.php(108): ReflectionMethod->invokeArgs()
+#3 /media/psf/Home/Sites/im/TT/framework/web/actions/CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#4 /media/psf/Home/Sites/im/TT/framework/web/CController.php(308): CInlineAction->runWithParams()
+#5 /media/psf/Home/Sites/im/TT/framework/web/CController.php(286): UserController->runAction()
+#6 /media/psf/Home/Sites/im/TT/framework/web/CController.php(265): UserController->runActionWithFilters()
+#7 /media/psf/Home/Sites/im/TT/framework/web/CWebApplication.php(282): UserController->run()
+#8 /media/psf/Home/Sites/im/TT/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#9 /media/psf/Home/Sites/im/TT/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#10 /media/psf/Home/Sites/im/TT/index.php(12): CWebApplication->run()
+REQUEST_URI=/user/edit/10030
+2014/08/21 15:01:22 [error] [exception.CHttpException.400] exception 'CHttpException' with message '您的请求无效。' in /media/psf/Home/Sites/im/TT/framework/web/CController.php:336
+Stack trace:
+#0 /media/psf/Home/Sites/im/TT/framework/web/CController.php(309): CController->invalidActionParams(Object(CInlineAction))
+#1 /media/psf/Home/Sites/im/TT/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#2 /media/psf/Home/Sites/im/TT/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#3 /media/psf/Home/Sites/im/TT/framework/web/CWebApplication.php(282): CController->run('edit')
+#4 /media/psf/Home/Sites/im/TT/framework/web/CWebApplication.php(141): CWebApplication->runController('group/edit/g0/0...')
+#5 /media/psf/Home/Sites/im/TT/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#6 /media/psf/Home/Sites/im/TT/index.php(12): CApplication->run()
+#7 {main}
+REQUEST_URI=/group/edit/g0/000/000/1408604483986374_140230942430.png
+HTTP_REFERER=http://im.com/group/edit/104230
+---
+2014/08/21 15:02:07 [error] [exception.CHttpException.400] exception 'CHttpException' with message '您的请求无效。' in /media/psf/Home/Sites/im/TT/framework/web/CController.php:336
+Stack trace:
+#0 /media/psf/Home/Sites/im/TT/framework/web/CController.php(309): CController->invalidActionParams(Object(CInlineAction))
+#1 /media/psf/Home/Sites/im/TT/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#2 /media/psf/Home/Sites/im/TT/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#3 /media/psf/Home/Sites/im/TT/framework/web/CWebApplication.php(282): CController->run('edit')
+#4 /media/psf/Home/Sites/im/TT/framework/web/CWebApplication.php(141): CWebApplication->runController('group/edit/g0/0...')
+#5 /media/psf/Home/Sites/im/TT/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#6 /media/psf/Home/Sites/im/TT/index.php(12): CApplication->run()
+#7 {main}
+REQUEST_URI=/group/edit/g0/000/000/1408604529004819_140230942430.png
+HTTP_REFERER=http://im.com/group/edit/104230
+---
+2014/08/21 15:02:21 [error] [exception.CHttpException.400] exception 'CHttpException' with message '您的请求无效。' in /media/psf/Home/Sites/im/TT/framework/web/CController.php:336
+Stack trace:
+#0 /media/psf/Home/Sites/im/TT/framework/web/CController.php(309): CController->invalidActionParams(Object(CInlineAction))
+#1 /media/psf/Home/Sites/im/TT/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#2 /media/psf/Home/Sites/im/TT/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#3 /media/psf/Home/Sites/im/TT/framework/web/CWebApplication.php(282): CController->run('edit')
+#4 /media/psf/Home/Sites/im/TT/framework/web/CWebApplication.php(141): CWebApplication->runController('group/edit/g0/0...')
+#5 /media/psf/Home/Sites/im/TT/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#6 /media/psf/Home/Sites/im/TT/index.php(12): CApplication->run()
+#7 {main}
+REQUEST_URI=/group/edit/g0/000/000/1408604543537313_140230942430.png
+HTTP_REFERER=http://im.com/group/edit/104230
+---
+2014/08/21 15:05:42 [error] [exception.CHttpException.404] exception 'CHttpException' with message '系统无法找到请求的 "g0" 动作.' in /media/psf/Home/Sites/im/TT/framework/web/CController.php:483
+Stack trace:
+#0 /media/psf/Home/Sites/im/TT/framework/web/CController.php(270): CController->missingAction('g0')
+#1 /media/psf/Home/Sites/im/TT/framework/web/CWebApplication.php(282): CController->run('g0')
+#2 /media/psf/Home/Sites/im/TT/framework/web/CWebApplication.php(141): CWebApplication->runController('group/g0/000/00...')
+#3 /media/psf/Home/Sites/im/TT/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#4 /media/psf/Home/Sites/im/TT/index.php(12): CApplication->run()
+#5 {main}
+REQUEST_URI=/group/g0/000/000/1408604569503975_140230942430.png
+HTTP_REFERER=http://im.com/group/list
+---
+2014/08/21 15:06:03 [error] [exception.CHttpException.404] exception 'CHttpException' with message '系统无法找到请求的 "g0" 动作.' in /media/psf/Home/Sites/im/TT/framework/web/CController.php:483
+Stack trace:
+#0 /media/psf/Home/Sites/im/TT/framework/web/CController.php(270): CController->missingAction('g0')
+#1 /media/psf/Home/Sites/im/TT/framework/web/CWebApplication.php(282): CController->run('g0')
+#2 /media/psf/Home/Sites/im/TT/framework/web/CWebApplication.php(141): CWebApplication->runController('group/g0/000/00...')
+#3 /media/psf/Home/Sites/im/TT/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#4 /media/psf/Home/Sites/im/TT/index.php(12): CApplication->run()
+#5 {main}
+REQUEST_URI=/group/g0/000/000/1408604569503975_140230942430.png
+HTTP_REFERER=http://im.com/group/list
+---
+2014/08/21 15:06:03 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "avatar_default.jpg"。' in /media/psf/Home/Sites/im/TT/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /media/psf/Home/Sites/im/TT/framework/web/CWebApplication.php(141): CWebApplication->runController('avatar_default....')
+#1 /media/psf/Home/Sites/im/TT/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /media/psf/Home/Sites/im/TT/index.php(12): CApplication->run()
+#3 {main}
+REQUEST_URI=/avatar_default.jpg
+HTTP_REFERER=http://im.com/group/list
+---
+2014/08/21 15:07:31 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "avatar_default.jpg"。' in /media/psf/Home/Sites/im/TT/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /media/psf/Home/Sites/im/TT/framework/web/CWebApplication.php(141): CWebApplication->runController('avatar_default....')
+#1 /media/psf/Home/Sites/im/TT/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /media/psf/Home/Sites/im/TT/index.php(12): CApplication->run()
+#3 {main}
+REQUEST_URI=/avatar_default.jpg
+HTTP_REFERER=http://im.com/group/list
+---
+2014/08/21 15:07:31 [error] [exception.CHttpException.404] exception 'CHttpException' with message '系统无法找到请求的 "g0" 动作.' in /media/psf/Home/Sites/im/TT/framework/web/CController.php:483
+Stack trace:
+#0 /media/psf/Home/Sites/im/TT/framework/web/CController.php(270): CController->missingAction('g0')
+#1 /media/psf/Home/Sites/im/TT/framework/web/CWebApplication.php(282): CController->run('g0')
+#2 /media/psf/Home/Sites/im/TT/framework/web/CWebApplication.php(141): CWebApplication->runController('group/g0/000/00...')
+#3 /media/psf/Home/Sites/im/TT/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#4 /media/psf/Home/Sites/im/TT/index.php(12): CApplication->run()
+#5 {main}
+REQUEST_URI=/group/g0/000/000/1408604846961199_140230942430.png
+HTTP_REFERER=http://im.com/group/list
+---
+2014/08/21 15:07:31 [error] [exception.CHttpException.404] exception 'CHttpException' with message '系统无法找到请求的 "g0" 动作.' in /media/psf/Home/Sites/im/TT/framework/web/CController.php:483
+Stack trace:
+#0 /media/psf/Home/Sites/im/TT/framework/web/CController.php(270): CController->missingAction('g0')
+#1 /media/psf/Home/Sites/im/TT/framework/web/CWebApplication.php(282): CController->run('g0')
+#2 /media/psf/Home/Sites/im/TT/framework/web/CWebApplication.php(141): CWebApplication->runController('group/g0/000/00...')
+#3 /media/psf/Home/Sites/im/TT/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#4 /media/psf/Home/Sites/im/TT/index.php(12): CApplication->run()
+#5 {main}
+REQUEST_URI=/group/g0/000/000/1408604569503975_140230942430.png
+HTTP_REFERER=http://im.com/group/list
+---
+2014/08/21 15:07:36 [error] [exception.CHttpException.404] exception 'CHttpException' with message '系统无法找到请求的 "g0" 动作.' in /media/psf/Home/Sites/im/TT/framework/web/CController.php:483
+Stack trace:
+#0 /media/psf/Home/Sites/im/TT/framework/web/CController.php(270): CController->missingAction('g0')
+#1 /media/psf/Home/Sites/im/TT/framework/web/CWebApplication.php(282): CController->run('g0')
+#2 /media/psf/Home/Sites/im/TT/framework/web/CWebApplication.php(141): CWebApplication->runController('group/g0/000/00...')
+#3 /media/psf/Home/Sites/im/TT/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#4 /media/psf/Home/Sites/im/TT/index.php(12): CApplication->run()
+#5 {main}
+REQUEST_URI=/group/g0/000/000/1408604569503975_140230942430.png
+HTTP_REFERER=http://im.com/group/list
+---
+2014/08/21 15:07:36 [error] [exception.CHttpException.404] exception 'CHttpException' with message '系统无法找到请求的 "g0" 动作.' in /media/psf/Home/Sites/im/TT/framework/web/CController.php:483
+Stack trace:
+#0 /media/psf/Home/Sites/im/TT/framework/web/CController.php(270): CController->missingAction('g0')
+#1 /media/psf/Home/Sites/im/TT/framework/web/CWebApplication.php(282): CController->run('g0')
+#2 /media/psf/Home/Sites/im/TT/framework/web/CWebApplication.php(141): CWebApplication->runController('group/g0/000/00...')
+#3 /media/psf/Home/Sites/im/TT/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#4 /media/psf/Home/Sites/im/TT/index.php(12): CApplication->run()
+#5 {main}
+REQUEST_URI=/group/g0/000/000/1408604846961199_140230942430.png
+HTTP_REFERER=http://im.com/group/list
+---
+2014/08/21 15:07:36 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "avatar_default.jpg"。' in /media/psf/Home/Sites/im/TT/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /media/psf/Home/Sites/im/TT/framework/web/CWebApplication.php(141): CWebApplication->runController('avatar_default....')
+#1 /media/psf/Home/Sites/im/TT/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /media/psf/Home/Sites/im/TT/index.php(12): CApplication->run()
+#3 {main}
+REQUEST_URI=/avatar_default.jpg
+HTTP_REFERER=http://im.com/group/list
+---

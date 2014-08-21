@@ -57,6 +57,7 @@
              $pager->currentPage = 1;
 
          $list = IMDepartment::model()->findAll(array(
+            'condition' => 'status = 0',
              'order' => 'id DESC',
              'offset' => $pager->getCurrentPage()*$pager->getPageSize(),
              'limit' => $pager->pageSize,

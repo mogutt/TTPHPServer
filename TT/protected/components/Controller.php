@@ -30,7 +30,8 @@ class Controller extends CController
             return '';
  	    $image = CUploadedFile::getInstanceByName($filename);
 
-        $name = Yii::app()->params['uploadPath'].'/'.time().mt_rand(0,99999).$image->name;
+        // $name = '/media/psf/Home/Sites/im/TT/uploadImage'.'/'.time().mt_rand(0,99999).$image->name;
+        $name = dirname(Yii::app()->request->scriptFile).'/uploadImage/'.time().mt_rand(0,99999).$image->name;
 	    if(!empty($name)){
 		    //验证图片后缀
 		    if(!in_array($image->type,array('image/jpeg','image/jpg','image/png'),true)){
@@ -53,7 +54,8 @@ class Controller extends CController
         $data = curl_exec($ch);//运行curl
               curl_close($ch);
         $data = json_decode($data);
-        return $data->url;
+        // var_dump($data);
+        return $data->path;
     }
 
     /**
@@ -279,7 +281,7 @@ class Controller extends CController
     //输出图片
     public function showImg($imgUrl){
         if(empty($imgUrl))
-            return '';
+            return 'images/avtar.jpg';
         $domain = Yii::app()->params['uploadSite'];
         return $domain.$imgUrl;
     }

@@ -17,11 +17,10 @@
             $data = Yii::app()->request->getPost('data');
             $user->attributes = $data;
             $user->pwd = md5($data['pwd']);
-	    if(empty($_FILES['data[avatar]']))
-                $user->avatar = Yii::app()->params['avatar'];
-	    else
-            	$user->avatar = $this->upload('data[avatar]');
-            if(empty($user->avatar)){
+            if($_FILES['data']['tmp_name']['mod_avatar']){
+                $user->avatar = $this->upload('data[mod_avatar]');
+            }else{
+                $user->avatar = '';
             }
             $time = time();
             $user->departId = $data['departId'];
@@ -65,6 +64,7 @@
 
         $list = IMUsers::model()->findAll(array(
             'order' => 'id DESC',
+            'condition' => 'status = 0',
             'offset' => $pager->getCurrentPage()*$pager->getPageSize(),
             'limit' => $pager->pageSize,
         ));
@@ -116,8 +116,9 @@
              if($user->pwd != $data['pwd'])
                 $user->pwd = md5($data['pwd']);
 
-             if($user->avatar != $data['avatar'])
-                $user->avatar = $this->upload('data[avatar]');
+            if($_FILES['data']['tmp_name']['mod_avatar']){
+                $user->avatar = $this->upload('data[mod_avatar]');
+            }
 
              $user->departId = $data['departId'];
              $user->status = $data['status'];

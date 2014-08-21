@@ -17,7 +17,7 @@ return array(
     //列表页面每页显示10条
     'perPage' => 10,
     
-    'uploadPath' => '/var/www/html/tt.mogujie.com/TT/uploadImage',
+    // 'uploadPath' => '/media/psf/Home/Sites/im/TT/uploadImage/',
     'site' => 'www.tt.tt',
     //创建群组时跟server端通信,发送群组内容
     'sendGroupInfodomain' => 'http://122.225.68.125:9800/query/createNormalGroup',
