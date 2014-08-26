@@ -10,6 +10,8 @@
 ?>
 <link rel="stylesheet" href="/css/bootstrap-multiselect.css" type="text/css"/>
 <link rel="stylesheet" href="/css/bootstrap-3.0.3.min.css" type="text/css"/>
+<link rel="stylesheet" href="/css/jquery.Jcrop.min.css" type="text/css"/>
+<script type="text/javascript" src="/js/jquery.Jcrop.min.js"></script>
 <style>
     .uploadclass{
         width:80px;
@@ -48,11 +50,15 @@
                     <input type="password" class="form-control" id="exampleInputPassword1" placeholder="输入密码" name="data[pwd]" value="<?php $str = !empty($data->pwd) ? $data->pwd : ''; echo $str; ?>">
                 </div>
             </div>
-            <div class="form-group">
+            <div class="form-group avatar-div">
+                <input type="hidden" id="x" name="x" />
+                <input type="hidden" id="y" name="y" />
+                <input type="hidden" id="w" name="w" />
+                <input type="hidden" id="h" name="h" />
                 <label for="exampleInputFile" class="col-sm-2 control-label">头像</label>
                 <div class="col-sm-4">
                     <input type="hidden" id="exampleInputFile" name="data[avatar]" value="<?php $str = !empty($data->avatar) ? $data->avatar : ''; echo $str; ?>">
-                    <input type="file" id="exampleInputFile" name="data[mod_avatar]">
+                    <input type="file" id="exampleInputFile" class="avatar" name="data[mod_avatar]">
                     <?php
                         if(!empty($data->avatar)){
                     ?>
@@ -60,6 +66,9 @@
                     <?php
                         }
                     ?>
+                    <div class="avatar-preview">
+
+                    </div>
                 </div> 
             </div>
             <div class="form-group">
@@ -144,7 +153,44 @@
 </form>
 <script type="text/javascript" src="/js/bootstrap-multiselect.js"></script>
 <script type="text/javascript">
+    function updateCoords(c)
+    {
+        jQuery('#x').val(c.x);
+        jQuery('#y').val(c.y);
+        jQuery('#w').val(c.w);
+        jQuery('#h').val(c.h);
+    };
+
     $(document).ready(function() {
         $('#depart').multiselect();
+        $('.avatar').change(function(){
+            var file = this.files[0];
+            var r = new FileReader();
+            r.readAsDataURL(file);
+            $(r).load(function(){
+                $('.avatar-preview').html('<img class="preview-img" src="'+this.result+'"alt=""/>');
+                $(".preview-img").Jcrop({
+                    aspectRatio: 1,
+                    onSelect: updateCoords,
+                    setSelect:   [ 100, 100, 50, 50 ]
+                });
+            });
+        });
     })
 </script>
+<style type="text/css">
+    .avatar-div{
+        position: relative;
+    }
+    .avatar-preview{
+        position: absolute;
+        width: 200px;
+        height: 200px;
+        top: -200px;
+        left: 200px;
+    }
+    .avatar-preview img{
+        max-width: 200px;
+        max-height: 200px;
+    }
+</style>

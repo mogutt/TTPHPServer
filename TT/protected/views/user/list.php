@@ -12,7 +12,7 @@
 
     <body>
         <a href="/user/add/" class="btn btn-default btn-add">添加</a>
-        用户列表页面
+        <h3>用户列表页面</h3>
         <table class="table table-bordered">
             <thead>
             <tr>
@@ -73,7 +73,7 @@
             .btn-add{
                 position: absolute;
                 right: 0;
-                top: 50px;
+                top: 0px;
             }
         </style>
         <script type="text/javascript">

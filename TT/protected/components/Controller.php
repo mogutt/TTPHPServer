@@ -58,6 +58,49 @@ class Controller extends CController
         return $data->path;
     }
 
+    public function _upload($name){
+        $domain = Yii::app()->params['uploadSite'];
+        //图片文件上传调用接口
+        $data = array('txt' => '@'.$name);
+        $ch = curl_init($domain);
+              curl_setopt($ch, CURLOPT_HEADER, 0);//设置header
+              curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);//要求结果为字符串且输出到屏幕上
+              curl_setopt($ch, CURLOPT_POST, 1);//post提交方式
+              curl_setopt($ch, CURLOPT_POSTFIELDS, $data);
+              curl_setopt($ch, CURLOPT_FOLLOWLOCATION , 1);
+        $data = curl_exec($ch);//运行curl
+              curl_close($ch);
+        $data = json_decode($data);
+        return $data->path;
+    }
+
+
+    public function image(){
+       $targ_w = $targ_h = 400;
+       $jpeg_quality = 90;
+       $src = $_FILES['data']['tmp_name']['mod_avatar'];
+       $size = getimagesize($_FILES['data']['tmp_name']['mod_avatar']);
+       if($size[0] > $size[1]){
+           $radio = $size[0] / 200;
+       }else{
+           $radio = $size[1] / 200;
+       }
+       $x = $_POST['x'] * $radio;
+       $y = $_POST['y'] * $radio;
+       $w = $_POST['w'] * $radio;
+       $h = $_POST['h'] * $radio;
+       // var_dump($radio);
+       // var_dump($x);
+       // exit();
+       $img_r = imagecreatefromjpeg($src);
+       $dst_r = ImageCreateTrueColor( $targ_w, $targ_h );
+
+       imagecopyresampled($dst_r,$img_r,0,0,$x,$y,$targ_w,$targ_h,$w,$h);
+       $file_name = dirname(Yii::app()->request->scriptFile).'/uploadImage/'.time().mt_rand(0,99999).$_FILES['data']['name']['mod_avatar'];
+       imagejpeg($dst_r, $file_name, $jpeg_quality);
+       return $file_name;
+    }
+
     /**
      * 群组类型
      */

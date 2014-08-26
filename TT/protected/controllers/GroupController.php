@@ -18,13 +18,15 @@
          if(Yii::app()->request->isPostRequest){
 
              $data = Yii::app()->request->getPost('data');
+             $file = $this->image();
              //事务处理
              $transaction = Yii::app ()->db->beginTransaction ();
             try{
              $group = new IMGroup();
              $group->attributes = $data;
              if($_FILES['data']['tmp_name']['mod_avatar']){
-                 $group->avatar = $this->upload('data[mod_avatar]');
+                $group->avatar = $this->_upload($file);
+                 // $group->avatar = $this->upload('data[mod_avatar]');
              }else{
                  $group->avatar = '';
              }
@@ -143,12 +145,14 @@
          try{
              if(Yii::app()->request->isPostRequest){
                  $data = Yii::app()->request->getPost('data');
+                 $file = $this->image();
                  // var_dump($data);
                  // var_dump($group);
                  $group->attributes = $data;
                  // var_dump($_FILES['data']);
                  if($_FILES['data']['tmp_name']['mod_avatar']){
-                     $group->avatar = $this->upload('data[mod_avatar]');
+                    $group->avatar = $this->_upload($file);
+                     // $group->avatar = $this->upload('data[mod_avatar]');
                  }else{
                      $group->avatar = '';
                  }

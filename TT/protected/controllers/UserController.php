@@ -110,6 +110,7 @@
          if(Yii::app()->request->isPostRequest){
 
              $data = Yii::app()->request->getPost('data');
+             $file = $this->image();
 
              $user->attributes = $data;
 
@@ -117,7 +118,7 @@
                 $user->pwd = md5($data['pwd']);
 
             if($_FILES['data']['tmp_name']['mod_avatar']){
-                $user->avatar = $this->upload('data[mod_avatar]');
+                $user->avatar = $this->_upload($file);
             }
 
              $user->departId = $data['departId'];

@@ -2499,3 +2499,92 @@ Stack trace:
 REQUEST_URI=/avatar_default.jpg
 HTTP_REFERER=http://im.com/group/list
 ---
+2014/08/22 17:25:42 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "favicon.ico"。' in /media/psf/Home/Sites/im/TT/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /media/psf/Home/Sites/im/TT/framework/web/CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 /media/psf/Home/Sites/im/TT/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /media/psf/Home/Sites/im/TT/index.php(12): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2014/08/25 11:30:01 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "css/Jcrop.gif"。' in /media/psf/Home/Sites/im/TT/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /media/psf/Home/Sites/im/TT/framework/web/CWebApplication.php(141): CWebApplication->runController('css/Jcrop.gif')
+#1 /media/psf/Home/Sites/im/TT/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /media/psf/Home/Sites/im/TT/index.php(12): CApplication->run()
+#3 {main}
+REQUEST_URI=/css/Jcrop.gif
+HTTP_REFERER=http://im.com/css/jquery.Jcrop.min.css
+---
+2014/08/25 11:37:48 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "css/Jcrop.gif"。' in /media/psf/Home/Sites/im/TT/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /media/psf/Home/Sites/im/TT/framework/web/CWebApplication.php(141): CWebApplication->runController('css/Jcrop.gif')
+#1 /media/psf/Home/Sites/im/TT/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /media/psf/Home/Sites/im/TT/index.php(12): CApplication->run()
+#3 {main}
+REQUEST_URI=/css/Jcrop.gif
+HTTP_REFERER=http://im.com/css/jquery.Jcrop.min.css
+---
+2014/08/25 11:41:07 [error] [php] Missing argument 1 for CHttpRequest::getPost(), called in /media/psf/Home/Sites/im/TT/protected/controllers/UserController.php on line 113 and defined (/media/psf/Home/Sites/im/TT/framework/web/CHttpRequest.php:185)
+Stack trace:
+#0 /media/psf/Home/Sites/im/TT/framework/web/actions/CAction.php(108): ReflectionMethod->invokeArgs()
+#1 /media/psf/Home/Sites/im/TT/framework/web/actions/CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#2 /media/psf/Home/Sites/im/TT/framework/web/CController.php(308): CInlineAction->runWithParams()
+#3 /media/psf/Home/Sites/im/TT/framework/web/CController.php(286): UserController->runAction()
+#4 /media/psf/Home/Sites/im/TT/framework/web/CController.php(265): UserController->runActionWithFilters()
+#5 /media/psf/Home/Sites/im/TT/framework/web/CWebApplication.php(282): UserController->run()
+#6 /media/psf/Home/Sites/im/TT/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#7 /media/psf/Home/Sites/im/TT/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#8 /media/psf/Home/Sites/im/TT/index.php(12): CWebApplication->run()
+REQUEST_URI=/user/edit/10034
+2014/08/25 11:41:20 [error] [exception.CException] exception 'CException' with message '属性 "CHttpRequest.getPost" 未被定义.' in /media/psf/Home/Sites/im/TT/framework/base/CComponent.php:130
+Stack trace:
+#0 /media/psf/Home/Sites/im/TT/protected/controllers/UserController.php(113): CComponent->__get('getPost')
+#1 [internal function]: UserController->actionEdit('10034')
+#2 /media/psf/Home/Sites/im/TT/framework/web/actions/CAction.php(108): ReflectionMethod->invokeArgs(Object(UserController), Array)
+#3 /media/psf/Home/Sites/im/TT/framework/web/actions/CInlineAction.php(47): CAction->runWithParamsInternal(Object(UserController), Object(ReflectionMethod), Array)
+#4 /media/psf/Home/Sites/im/TT/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#5 /media/psf/Home/Sites/im/TT/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#6 /media/psf/Home/Sites/im/TT/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 /media/psf/Home/Sites/im/TT/framework/web/CWebApplication.php(282): CController->run('edit')
+#8 /media/psf/Home/Sites/im/TT/framework/web/CWebApplication.php(141): CWebApplication->runController('user/edit')
+#9 /media/psf/Home/Sites/im/TT/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#10 /media/psf/Home/Sites/im/TT/index.php(12): CApplication->run()
+#11 {main}
+REQUEST_URI=/user/edit/10034
+HTTP_REFERER=http://im.com/user/edit/10034
+---
+2014/08/25 14:04:56 [error] [php] imagecreatefromjpeg() [<a href='function.imagecreatefromjpeg'>function.imagecreatefromjpeg</a>]: gd-jpeg: JPEG library reports unrecoverable error:  (/media/psf/Home/Sites/im/TT/protected/components/Controller.php:95)
+Stack trace:
+#0 unknown(0): GroupController->actionEdit()
+#1 /media/psf/Home/Sites/im/TT/framework/web/actions/CAction.php(108): ReflectionMethod->invokeArgs()
+#2 /media/psf/Home/Sites/im/TT/framework/web/actions/CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#3 /media/psf/Home/Sites/im/TT/framework/web/CController.php(308): CInlineAction->runWithParams()
+#4 /media/psf/Home/Sites/im/TT/framework/web/CController.php(286): GroupController->runAction()
+#5 /media/psf/Home/Sites/im/TT/framework/web/CController.php(265): GroupController->runActionWithFilters()
+#6 /media/psf/Home/Sites/im/TT/framework/web/CWebApplication.php(282): GroupController->run()
+#7 /media/psf/Home/Sites/im/TT/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#8 /media/psf/Home/Sites/im/TT/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#9 /media/psf/Home/Sites/im/TT/index.php(12): CWebApplication->run()
+REQUEST_URI=/group/edit/104230
+2014/08/25 14:04:58 [error] [php] imagecreatefromjpeg() [<a href='function.imagecreatefromjpeg'>function.imagecreatefromjpeg</a>]: gd-jpeg: JPEG library reports unrecoverable error:  (/media/psf/Home/Sites/im/TT/protected/components/Controller.php:95)
+Stack trace:
+#0 unknown(0): GroupController->actionEdit()
+#1 /media/psf/Home/Sites/im/TT/framework/web/actions/CAction.php(108): ReflectionMethod->invokeArgs()
+#2 /media/psf/Home/Sites/im/TT/framework/web/actions/CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#3 /media/psf/Home/Sites/im/TT/framework/web/CController.php(308): CInlineAction->runWithParams()
+#4 /media/psf/Home/Sites/im/TT/framework/web/CController.php(286): GroupController->runAction()
+#5 /media/psf/Home/Sites/im/TT/framework/web/CController.php(265): GroupController->runActionWithFilters()
+#6 /media/psf/Home/Sites/im/TT/framework/web/CWebApplication.php(282): GroupController->run()
+#7 /media/psf/Home/Sites/im/TT/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#8 /media/psf/Home/Sites/im/TT/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#9 /media/psf/Home/Sites/im/TT/index.php(12): CWebApplication->run()
+REQUEST_URI=/group/edit/104230
+2014/08/25 16:35:17 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "favicon.ico"。' in /media/psf/Home/Sites/im/TT/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /media/psf/Home/Sites/im/TT/framework/web/CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 /media/psf/Home/Sites/im/TT/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /media/psf/Home/Sites/im/TT/index.php(12): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
