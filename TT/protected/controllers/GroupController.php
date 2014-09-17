@@ -28,7 +28,7 @@
                 $group->avatar = $this->_upload($file);
                  // $group->avatar = $this->upload('data[mod_avatar]');
              }else{
-                 $group->avatar = '';
+                 // $group->avatar = '';
              }
 	     $selUserId = array();
 	     if(!empty($data['selUserId']))
@@ -154,7 +154,7 @@
                     $group->avatar = $this->_upload($file);
                      // $group->avatar = $this->upload('data[mod_avatar]');
                  }else{
-                     $group->avatar = '';
+                     // $group->avatar = '';
                  }
                  // var_dump($data);
                  // if(!empty($data['avatar']) && $group->avatar != $data['avatar']){

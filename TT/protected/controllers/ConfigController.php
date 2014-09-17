@@ -137,4 +137,21 @@
          ));
      }
 
+    /**
+     * 获取配置
+     */
+    public function actionJson(){
+        $oldconfig = IMConfig::model()->find(array(
+            'order' => 'id DESC',
+            'limit' => 1,
+        ));
+        $data = $oldconfig->attributes;
+        $res = array(
+            'login' => $data['cname'],
+            'file' => $data['value']
+        );
+        echo json_encode($res);
+    }
+    
+
  }

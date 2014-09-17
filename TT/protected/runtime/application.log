@@ -2588,3 +2588,154 @@ Stack trace:
 #3 {main}
 REQUEST_URI=/favicon.ico
 ---
+2014/08/27 17:19:04 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "favicon.ico"。' in /media/psf/Home/Sites/im/TT/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /media/psf/Home/Sites/im/TT/framework/web/CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 /media/psf/Home/Sites/im/TT/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /media/psf/Home/Sites/im/TT/index.php(12): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2014/08/29 13:42:18 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "favicon.ico"。' in /media/psf/Home/Sites/im/TT/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /media/psf/Home/Sites/im/TT/framework/web/CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 /media/psf/Home/Sites/im/TT/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /media/psf/Home/Sites/im/TT/index.php(12): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2014/08/30 11:26:47 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "favicon.ico"。' in /media/psf/Home/Sites/im/TT/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /media/psf/Home/Sites/im/TT/framework/web/CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 /media/psf/Home/Sites/im/TT/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /media/psf/Home/Sites/im/TT/index.php(12): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2014/09/02 11:11:47 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "favicon.ico"。' in /media/psf/Home/Sites/im/TT/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /media/psf/Home/Sites/im/TT/framework/web/CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 /media/psf/Home/Sites/im/TT/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /media/psf/Home/Sites/im/TT/index.php(12): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2014/09/04 15:33:34 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "favicon.ico"。' in /media/psf/Home/Sites/im/TT/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /media/psf/Home/Sites/im/TT/framework/web/CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 /media/psf/Home/Sites/im/TT/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /media/psf/Home/Sites/im/TT/index.php(12): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2014/09/04 15:40:10 [error] [php] Invalid argument supplied for foreach() (/media/psf/Home/Sites/im/TT/protected/views/user/list.php:33)
+Stack trace:
+#0 /media/psf/Home/Sites/im/TT/framework/web/CController.php(869): UserController->renderFile()
+#1 /media/psf/Home/Sites/im/TT/framework/web/CController.php(782): UserController->renderPartial()
+#2 /media/psf/Home/Sites/im/TT/protected/controllers/UserController.php(79): UserController->render()
+#3 unknown(0): UserController->actionList()
+#4 /media/psf/Home/Sites/im/TT/framework/web/actions/CAction.php(108): ReflectionMethod->invokeArgs()
+#5 /media/psf/Home/Sites/im/TT/framework/web/actions/CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#6 /media/psf/Home/Sites/im/TT/framework/web/CController.php(308): CInlineAction->runWithParams()
+#7 /media/psf/Home/Sites/im/TT/framework/web/CController.php(286): UserController->runAction()
+#8 /media/psf/Home/Sites/im/TT/framework/web/CController.php(265): UserController->runActionWithFilters()
+#9 /media/psf/Home/Sites/im/TT/framework/web/CWebApplication.php(282): UserController->run()
+#10 /media/psf/Home/Sites/im/TT/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#11 /media/psf/Home/Sites/im/TT/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#12 /media/psf/Home/Sites/im/TT/index.php(12): CWebApplication->run()
+REQUEST_URI=/user/list
+2014/09/04 15:40:12 [error] [php] Invalid argument supplied for foreach() (/media/psf/Home/Sites/im/TT/protected/views/user/list.php:33)
+Stack trace:
+#0 /media/psf/Home/Sites/im/TT/framework/web/CController.php(869): UserController->renderFile()
+#1 /media/psf/Home/Sites/im/TT/framework/web/CController.php(782): UserController->renderPartial()
+#2 /media/psf/Home/Sites/im/TT/protected/controllers/UserController.php(79): UserController->render()
+#3 unknown(0): UserController->actionList()
+#4 /media/psf/Home/Sites/im/TT/framework/web/actions/CAction.php(108): ReflectionMethod->invokeArgs()
+#5 /media/psf/Home/Sites/im/TT/framework/web/actions/CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#6 /media/psf/Home/Sites/im/TT/framework/web/CController.php(308): CInlineAction->runWithParams()
+#7 /media/psf/Home/Sites/im/TT/framework/web/CController.php(286): UserController->runAction()
+#8 /media/psf/Home/Sites/im/TT/framework/web/CController.php(265): UserController->runActionWithFilters()
+#9 /media/psf/Home/Sites/im/TT/framework/web/CWebApplication.php(282): UserController->run()
+#10 /media/psf/Home/Sites/im/TT/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#11 /media/psf/Home/Sites/im/TT/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#12 /media/psf/Home/Sites/im/TT/index.php(12): CWebApplication->run()
+REQUEST_URI=/user/list
+2014/09/04 15:40:22 [error] [php] Invalid argument supplied for foreach() (/media/psf/Home/Sites/im/TT/protected/views/user/list.php:33)
+Stack trace:
+#0 /media/psf/Home/Sites/im/TT/framework/web/CController.php(869): UserController->renderFile()
+#1 /media/psf/Home/Sites/im/TT/framework/web/CController.php(782): UserController->renderPartial()
+#2 /media/psf/Home/Sites/im/TT/protected/controllers/UserController.php(79): UserController->render()
+#3 unknown(0): UserController->actionList()
+#4 /media/psf/Home/Sites/im/TT/framework/web/actions/CAction.php(108): ReflectionMethod->invokeArgs()
+#5 /media/psf/Home/Sites/im/TT/framework/web/actions/CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#6 /media/psf/Home/Sites/im/TT/framework/web/CController.php(308): CInlineAction->runWithParams()
+#7 /media/psf/Home/Sites/im/TT/framework/web/CController.php(286): UserController->runAction()
+#8 /media/psf/Home/Sites/im/TT/framework/web/CController.php(265): UserController->runActionWithFilters()
+#9 /media/psf/Home/Sites/im/TT/framework/web/CWebApplication.php(282): UserController->run()
+#10 /media/psf/Home/Sites/im/TT/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#11 /media/psf/Home/Sites/im/TT/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#12 /media/psf/Home/Sites/im/TT/index.php(12): CWebApplication->run()
+REQUEST_URI=/user/list
+2014/09/04 15:41:08 [error] [php] Invalid argument supplied for foreach() (/media/psf/Home/Sites/im/TT/protected/views/depart/list.php:28)
+Stack trace:
+#0 /media/psf/Home/Sites/im/TT/framework/web/CController.php(869): DepartController->renderFile()
+#1 /media/psf/Home/Sites/im/TT/framework/web/CController.php(782): DepartController->renderPartial()
+#2 /media/psf/Home/Sites/im/TT/protected/controllers/DepartController.php(73): DepartController->render()
+#3 unknown(0): DepartController->actionList()
+#4 /media/psf/Home/Sites/im/TT/framework/web/actions/CAction.php(108): ReflectionMethod->invokeArgs()
+#5 /media/psf/Home/Sites/im/TT/framework/web/actions/CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#6 /media/psf/Home/Sites/im/TT/framework/web/CController.php(308): CInlineAction->runWithParams()
+#7 /media/psf/Home/Sites/im/TT/framework/web/CController.php(286): DepartController->runAction()
+#8 /media/psf/Home/Sites/im/TT/framework/web/CController.php(265): DepartController->runActionWithFilters()
+#9 /media/psf/Home/Sites/im/TT/framework/web/CWebApplication.php(282): DepartController->run()
+#10 /media/psf/Home/Sites/im/TT/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#11 /media/psf/Home/Sites/im/TT/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#12 /media/psf/Home/Sites/im/TT/index.php(12): CWebApplication->run()
+REQUEST_URI=/depart/list
+2014/09/04 15:49:42 [error] [php] getimagesize() [<a href='function.getimagesize'>function.getimagesize</a>]: Filename cannot be empty (/media/psf/Home/Sites/im/TT/protected/components/Controller.php:82)
+Stack trace:
+#0 unknown(0): UserController->actionEdit()
+#1 /media/psf/Home/Sites/im/TT/framework/web/actions/CAction.php(108): ReflectionMethod->invokeArgs()
+#2 /media/psf/Home/Sites/im/TT/framework/web/actions/CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#3 /media/psf/Home/Sites/im/TT/framework/web/CController.php(308): CInlineAction->runWithParams()
+#4 /media/psf/Home/Sites/im/TT/framework/web/CController.php(286): UserController->runAction()
+#5 /media/psf/Home/Sites/im/TT/framework/web/CController.php(265): UserController->runActionWithFilters()
+#6 /media/psf/Home/Sites/im/TT/framework/web/CWebApplication.php(282): UserController->run()
+#7 /media/psf/Home/Sites/im/TT/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#8 /media/psf/Home/Sites/im/TT/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#9 /media/psf/Home/Sites/im/TT/index.php(12): CWebApplication->run()
+REQUEST_URI=/user/edit/10037
+2014/09/04 15:49:52 [error] [php] getimagesize() [<a href='function.getimagesize'>function.getimagesize</a>]: Filename cannot be empty (/media/psf/Home/Sites/im/TT/protected/components/Controller.php:82)
+Stack trace:
+#0 unknown(0): UserController->actionEdit()
+#1 /media/psf/Home/Sites/im/TT/framework/web/actions/CAction.php(108): ReflectionMethod->invokeArgs()
+#2 /media/psf/Home/Sites/im/TT/framework/web/actions/CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#3 /media/psf/Home/Sites/im/TT/framework/web/CController.php(308): CInlineAction->runWithParams()
+#4 /media/psf/Home/Sites/im/TT/framework/web/CController.php(286): UserController->runAction()
+#5 /media/psf/Home/Sites/im/TT/framework/web/CController.php(265): UserController->runActionWithFilters()
+#6 /media/psf/Home/Sites/im/TT/framework/web/CWebApplication.php(282): UserController->run()
+#7 /media/psf/Home/Sites/im/TT/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#8 /media/psf/Home/Sites/im/TT/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#9 /media/psf/Home/Sites/im/TT/index.php(12): CWebApplication->run()
+REQUEST_URI=/user/edit/10036
+2014/09/04 15:50:30 [error] [php] getimagesize() [<a href='function.getimagesize'>function.getimagesize</a>]: Filename cannot be empty (/media/psf/Home/Sites/im/TT/protected/components/Controller.php:82)
+Stack trace:
+#0 unknown(0): GroupController->actionEdit()
+#1 /media/psf/Home/Sites/im/TT/framework/web/actions/CAction.php(108): ReflectionMethod->invokeArgs()
+#2 /media/psf/Home/Sites/im/TT/framework/web/actions/CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#3 /media/psf/Home/Sites/im/TT/framework/web/CController.php(308): CInlineAction->runWithParams()
+#4 /media/psf/Home/Sites/im/TT/framework/web/CController.php(286): GroupController->runAction()
+#5 /media/psf/Home/Sites/im/TT/framework/web/CController.php(265): GroupController->runActionWithFilters()
+#6 /media/psf/Home/Sites/im/TT/framework/web/CWebApplication.php(282): GroupController->run()
+#7 /media/psf/Home/Sites/im/TT/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#8 /media/psf/Home/Sites/im/TT/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#9 /media/psf/Home/Sites/im/TT/index.php(12): CWebApplication->run()
+REQUEST_URI=/group/edit/104240
+2014/09/11 14:09:28 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "favicon.ico"。' in /media/psf/Home/Sites/im/TT/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /media/psf/Home/Sites/im/TT/framework/web/CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 /media/psf/Home/Sites/im/TT/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /media/psf/Home/Sites/im/TT/index.php(12): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---

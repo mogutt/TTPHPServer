@@ -76,6 +76,9 @@ class Controller extends CController
 
 
     public function image(){
+        if(!$_FILES['data']['tmp_name']['mod_avatar']){
+            return false;
+        }
        $targ_w = $targ_h = 400;
        $jpeg_quality = 90;
        $src = $_FILES['data']['tmp_name']['mod_avatar'];
