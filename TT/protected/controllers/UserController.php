@@ -112,11 +112,12 @@
              $data = Yii::app()->request->getPost('data');
              $file = $this->image();
 
+             $pwd = $user->pwd;
+             if($pwd != $data['pwd'])
+                $pwd = md5($data['pwd']);
+
              $user->attributes = $data;
-
-             if($user->pwd != $data['pwd'])
-                $user->pwd = md5($data['pwd']);
-
+             $user->pwd = $pwd;
             if($_FILES['data']['tmp_name']['mod_avatar']){
                 $user->avatar = $this->_upload($file);
             }
