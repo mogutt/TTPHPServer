@@ -114,12 +114,16 @@
 
              $user->attributes = $data;
 
-             if($user->pwd != $data['pwd'])
-                $user->pwd = md5($data['pwd']);
+             $pwd = $user->pwd;
+             if($pwd != $data['pwd'])
+                $pwd = md5($data['pwd']);
 
-            if($_FILES['data']['tmp_name']['mod_avatar']){
-                $user->avatar = $this->_upload($file);
-            }
+             $user->attributes = $data;
+             $user->pwd = $pwd;
+             
+             if($_FILES['data']['tmp_name']['mod_avatar']){
+                 $user->avatar = $this->_upload($file);
+             }
 
              $user->departId = $data['departId'];
              $user->status = $data['status'];
