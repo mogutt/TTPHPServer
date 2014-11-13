@@ -15,7 +15,6 @@
       */
      public function actionAdd(){
          if(Yii::app()->request->isPostRequest){
-
              $oldadmin = IMAdmin::model()->find(array(
                 'order' => 'id DESC',
                 'limit' => 1,
@@ -27,17 +26,17 @@
                      $oldadmin->pwd = md5($data['newpwd1']);
                      $oldadmin->updated = time();
                      if($oldadmin->update()){
-			     $this->showAlert('success','操作成功');
-                             $this->getAdminCache();
-                         }else{
-			     $this->showAlert('fail','操作失败');
-                             echo $admin->getErrors();
-                         }
+						$this->showAlert('success','操作成功');
+                        $this->getAdminCache();
+                    }else{
+						$this->showAlert('fail','操作失败');
+                        //echo $admin->getErrors();
+                    }
                  }else{
-		     $this->showAlert('fail','2次密码不一致');
+					$this->showAlert('fail','2次密码不一致');
                  }
              }else{
-		     $this->showAlert('fail','原始密码错误');
+					$this->showAlert('fail','原始密码错误');
              }
          }
 
