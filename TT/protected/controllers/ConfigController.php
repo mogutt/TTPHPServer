@@ -27,19 +27,12 @@
              if(empty($oldconfig)){
                  $config = new IMConfig();
                  $config->attributes = $data;
-                 if($config->save()){
-                     echo '<div class="alert alert-success" role="alert">添加成功</div>';
-                 }else{
-                     echo '<div class="alert alert-danger" role="alert">添加成功</div>';
-                 }
-
+                 $config->save();
+				 $this->showAlert('success','添加成功');
              }else{
                  $oldconfig->attributes = $data;
-                 if($oldconfig->update()){
-                     echo '<div class="alert alert-success" role="alert">修改成功</div>';
-                 }else{
-                     echo '<div class="alert alert-danger" role="alert">修改成功</div>';
-                 }
+                 $oldconfig->update();
+				 $this->showAlert('success','添加成功');
              }
          }
          $this->render('add',array(
@@ -83,12 +76,11 @@
          if(empty($id))
              return;
 
-
          $count = IMDepartment::model()->deleteByPk($id);
          if($count > 0){
-             echo '<div class="alert alert-success" role="alert">添加成功</div>';
+			$this->showAlert('success','删除成功');
          }else{
-             echo '<div class="alert alert-success" role="alert">添加成功</div>';
+			$this->showAlert('fail','删除失败');
          }
 
      }
@@ -111,7 +103,7 @@
              $time = time();
              $depart->updated = $time;
              if($depart->update()){
-                 echo '<div class="alert alert-success" role="alert">修改成功</div>';
+				$this->showAlert('success','删除成功');
                  $departs = IMDepartment::model()->findAll(array(
                      'condition' => 'status = 0',
                  ));
@@ -127,7 +119,7 @@
                  if(!empty($cache))
                      Yii::app()->cache->set('cache_depart',$cache);
              }else{
-                 echo '<div class="alert alert-danger" role="alert">修改失败</div>';
+				$this->showAlert('fail','删除失败');
              }
          }
          $users = Yii::app()->cache->get('cache_user');

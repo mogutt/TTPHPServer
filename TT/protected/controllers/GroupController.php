@@ -17,19 +17,17 @@
 
          if(Yii::app()->request->isPostRequest){
 
-             $data = Yii::app()->request->getPost('data');
-             $file = $this->image();
-             //事务处理
-             $transaction = Yii::app ()->db->beginTransaction ();
-            try{
-             $group = new IMGroup();
-             $group->attributes = $data;
-             if($_FILES['data']['tmp_name']['mod_avatar']){
-                $group->avatar = $this->_upload($file);
-                 // $group->avatar = $this->upload('data[mod_avatar]');
-             }else{
-                 // $group->avatar = '';
-             }
+		 $data = Yii::app()->request->getPost('data');
+		 //事务处理
+		 $transaction = Yii::app ()->db->beginTransaction ();
+		 try{
+		 $group = new IMGroup();
+		 $group->attributes = $data;
+		 $group->avatar = '';
+		 if($_FILES['data']['tmp_name']['mod_avatar']){
+			$file = $this->image();
+			$group->avatar = $this->_upload($file);
+		 }
 	     $selUserId = array();
 	     if(!empty($data['selUserId']))
              	$selUserId = $data['selUserId'];
@@ -127,9 +125,9 @@
          $group->status = 1;
 
          if($group->save()){
-             echo '<div class="alert alert-success" role="alert">删除成功</div>';
+            $this->showAlert('success','删除成功');
          }else{
-             echo '<div class="alert alert-success" role="alert">删除失败</div>';
+            $this->showAlert('fail','删除失败');
          }
      }
 

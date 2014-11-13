@@ -17,10 +17,9 @@
             $data = Yii::app()->request->getPost('data');
             $user->attributes = $data;
             $user->pwd = md5($data['pwd']);
+            $user->avatar = '';
             if($_FILES['data']['tmp_name']['mod_avatar']){
                 $user->avatar = $this->upload('data[mod_avatar]');
-            }else{
-                $user->avatar = '';
             }
             $time = time();
             $user->departId = $data['departId'];
