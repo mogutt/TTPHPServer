@@ -140,6 +140,7 @@ class Controller extends CController
         $departs = IMDepartment::model()->findAll(array(
             'condition' => 'status = 0',
         ));
+        $cache = array();
         foreach($departs as $k => $v){
             $cache[$k]['id'] = $v->id;
             $cache[$k]['title'] = $v->title;
@@ -161,6 +162,7 @@ class Controller extends CController
         $users = IMUsers::model()->findAll(array(
             'condition' => 'status = 0',
         ));
+        $cache = array();
         foreach($users as $k => $v){
             $cache[$k]['userId'] = $v->id;
             $cache[$k]['title'] = $v->title;
@@ -178,22 +180,23 @@ class Controller extends CController
         $adminInfo = IMAdmin::model()->findAll(array(
             'condition' => 'status = 0',
         ));
-	if(empty($adminInfo)){
-	    $adminInfo = new IMAdmin();
-	    $adminInfo->uname = Yii::app()->params['defaultAdminUname'];
-	    $adminInfo->pwd = md5(Yii::app()->params['defaultAdminPwd']);	
-	    $adminInfo->status = 0;
-	    $adminInfo->created = time();
-	    if($adminInfo->save()){
-		    $cache['id'] = $adminInfo->id;
-		    $cache['uname'] = $adminInfo->uname;
-		    $cache['pwd'] = $adminInfo->pwd;
-			
-		if(!empty($cache))
-		    Yii::app()->cache->set('cache_admininfo',$cache);
-        	return $cache;
-	    }
-	}
+        $cache = array();
+        if(empty($adminInfo)){
+            $adminInfo = new IMAdmin();
+            $adminInfo->uname = Yii::app()->params['defaultAdminUname'];
+            $adminInfo->pwd = md5(Yii::app()->params['defaultAdminPwd']);
+            $adminInfo->status = 0;
+            $adminInfo->created = time();
+            if($adminInfo->save()){
+                $cache['id'] = $adminInfo->id;
+                $cache['uname'] = $adminInfo->uname;
+                $cache['pwd'] = $adminInfo->pwd;
+
+            if(!empty($cache))
+                Yii::app()->cache->set('cache_admininfo',$cache);
+                return $cache;
+            }
+        }
         foreach($adminInfo as $k => $v){
             $cache[$k]['id'] = $v->id;
             $cache[$k]['uname'] = $v->uname;

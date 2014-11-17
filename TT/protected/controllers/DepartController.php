@@ -53,6 +53,7 @@
          ));
          $pager = new CPagination($count);
          $pager->pageSize = Yii::app()->params['perPage'];
+         $data = array();
          if(empty($page))
              $pager->currentPage = 1;
 
