@@ -18,8 +18,8 @@ class AjaxController extends Controller{
         if(!$adminInfo){
             $this->getAdminCache();
         }
-        $admin['uname'] = reset($adminInfo)['uname'];
-        $admin['pwd'] = reset($adminInfo)['pwd'];
+        $admin['uname'] = $adminInfo[0]['uname'];
+        $admin['pwd'] = $adminInfo[0]['pwd'];
         $uname = trim(Yii::app()->request->getPost('uname'));
         $pwd = md5(trim(Yii::app()->request->getPost('pwd')));
         if($admin['uname'] == $uname && $admin['pwd'] == $pwd){
