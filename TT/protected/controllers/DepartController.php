@@ -16,11 +16,10 @@
      public function actionAdd(){
 
          if(Yii::app()->request->isPostRequest){
-
+             $time = time();
              $depart = new IMDepartment();
              $data = Yii::app()->request->getPost('data');
              $depart->attributes = $data;
-             $time = time();
              $depart->created = $time;
              $depart->updated = $depart->created;
 
@@ -57,10 +56,10 @@
              $pager->currentPage = 1;
 
          $list = IMDepartment::model()->findAll(array(
-            'condition' => 'status = 0',
-             'order' => 'id DESC',
-             'offset' => $pager->getCurrentPage()*$pager->getPageSize(),
-             'limit' => $pager->pageSize,
+			'condition' => 'status = 0',
+			'order' => 'id DESC',
+            'offset' => $pager->getCurrentPage() * $pager->getPageSize(),
+            'limit' => $pager->pageSize,
          ));
 
          foreach($list as $v){
@@ -84,10 +83,9 @@
          $depart = IMDepartment::model()->findByPk($id);
 
          if(Yii::app()->request->isPostRequest){
-
+             $time = time();
              $data = Yii::app()->request->getPost('data');
              $depart->attributes = $data;
-             $time = time();
              $depart->updated = $time;
              if($depart->update()){
                  $this->showAlert('success','修改成功');
