@@ -8,3 +8,7 @@
 * 多点登录
 * 组织架构
 
+
+# 个人修改说明
+* 请将application/config/config.php 第18行
+* $config['msfs_url'] = 'http://127.0.0.1:9600/'; 更改为自己的msfs服务器及port
