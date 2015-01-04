@@ -30,4 +30,15 @@ class Config extends TT_Controller {
 			echo 'success';
 		}
 	}
+    public function json()
+    {
+        $data = $this->config_model->getOne(array('status'=>0));
+        $res = array(
+            'login' => $data['cname'],
+            'file'=> $data['value']
+
+        );
+        echo json_encode($res);
+
+    }
 }
