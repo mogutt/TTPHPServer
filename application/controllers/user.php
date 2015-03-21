@@ -163,10 +163,12 @@ class User extends TT_Controller {
 	public function _upload($filename)
 	{
 		$ch = curl_init();
-		$data = array('filename'=>'@'.$filename);
+		$cfile = new CurlFile($filename);
+		$data = array('filename'=> $cfile);
 		curl_setopt($ch,CURLOPT_URL,$this->config->config['msfs_url']);
 		curl_setopt($ch,CURLOPT_RETURNTRANSFER,true);
 		curl_setopt($ch,CURLOPT_POST,true);
+		curl_setopt($ch, CURLOPT_SAFE_UPLOAD, false);
 		curl_setopt($ch,CURLOPT_POSTFIELDS,$data);
 		$result = curl_exec($ch);
 		curl_close($ch);
